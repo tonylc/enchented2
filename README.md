@@ -1,6 +1,6 @@
 # Love for Design Wedding Websites
 
-This repo contains an interactive prototype and user interface [widgets](views/components) for the Love for Design wedding website service. While it is constructed with Ruby on Rails (3.0 / Ruby 1.8.7) views, it does not currently read or write any data, instead using static content. Ruby's ERB templating features have been used to ease prototyping, minimize duplication, and implement Sass (see Themes).
+This repo contains an interactive prototype and user interface [widgets](/LoveForDesign/websites/tree/master/app/views/ui) for the Love for Design wedding website service. While it is constructed with Ruby on Rails (3.0 / Ruby 1.8.7) views, it does not currently read or write any data, instead using static content. Ruby's ERB templating features have been used to ease prototyping, minimize duplication, and implement Sass (see Themes).
 
 **Gem Dependencies:**
 
@@ -19,12 +19,10 @@ UI Widget Examples
 
 The Love for Design user interface is composed of reusable widgets that may be mixed and matched in pages throughout the prototype. Each widget is largely self-contained, with dependencies in other components only where some duplication can avoid unnecessary complexity. An example of each widget may be viewed using a URL in this style, with alternate views specified as available:
 
-@@@
-/example/list/photos/albums
-/example/list/photos
-/example/list/songs/playlist
-/example/list/videos
-@@@
+    /example/list/photos/albums
+    /example/list/photos
+    /example/list/songs/playlist
+    /example/list/videos
 
 
 Prototype
@@ -42,11 +40,9 @@ Three user roles have been defined, that may be added to the end of prototype UR
  
 **Example URLs:**
 
-@@@
-/prototype/welcome/new
-/prototype/welcome/couple
-/prototype/welcome/guest
-@@@
+    /prototype/welcome/new
+    /prototype/welcome/couple
+    /prototype/welcome/guest
 
 
 Themes

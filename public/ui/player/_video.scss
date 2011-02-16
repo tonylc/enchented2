@@ -12,9 +12,9 @@
         
     }
     
-    div.player.video div, div.player.video iframe, div.prompt.video div.player div {
+    div.player.video div, div.player.video iframe, div.prompt.video div.preview div {
     
-        width: 100%;
+        width: 100% !important;
         height: 360px;
         border: 0;
     

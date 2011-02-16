@@ -15,10 +15,15 @@
 
     $(window).load(function() {
 
-        if ($('body').hasClass('new')) {
+        // to-do: the following markup isn't always present, needs to fail silently
+
+        if (couple || trial) {
+            $('div.editor.text').edit();
+        }
+        
+        if (trial) {
             $('div.clipboard textarea').clipboard();
             $('div.prompt.search').search();
-            $('div.editor.text').edit();
             $('ul.buttons li input').buttons();
         }
 
@@ -27,8 +32,7 @@
         $('div.player.song.grooveshark').play({ source: 'grooveshark' });
         $('li.play a').live('click', function() {
         
-            $('div.player').removeAttr('id').play({ song: + $(this).parent().parent().closest('li').attr('id') });
-        
+            $('div.player').addClass('song').removeAttr('id').play({ source: 'grooveshark', clip: + $(this).parent().parent().closest('li').attr('id') });
             return false;
         
         });

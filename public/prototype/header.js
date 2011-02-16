@@ -4,7 +4,8 @@
 
     $(window).load(function() {
 
-        if ($('body').hasClass('couple')) {
+        if (trial || couple) {
+
             $('h2').sortable({ axis: 'x', update: function() {
             
                 var $order = $('h2').siblings('input');
@@ -24,6 +25,7 @@
                 $order.val(order);
             
             }});
+        
         }
 
     });

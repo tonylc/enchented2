@@ -1,6 +1,6 @@
 <div id="content">
 
-    <% if new? %>
+    <% if trial? %>
      
         <%= guide :to => "welcome" %>
         <%= editor :edit => "text", :view => "inline", :placeholder => "Your Welcome Message Goes Here" %>
@@ -17,12 +17,13 @@
 
 </div>
 
-    <% unless guest? %>
+    <% if 1 < 0 %>
+    <!-- unless guest? -->
     <div id="widgets">
     
         <ul>
 
-            <% unless new? %>
+            <% unless trial? %>
 
                 <li><a href="#text">Text</a></li>
                 <li><a href="#video">Video</a></li>

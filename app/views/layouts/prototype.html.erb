@@ -15,7 +15,7 @@
 
     <div id="page">
 
-        <% if new? %>
+        <% if (couple? || trial?) && page != 'start' %>
             <%= form_tag do %>
             <div id="wedding">
             
@@ -27,20 +27,22 @@
             <% end %>
         <% end %>
 
+        <!-- <%= page.upcase + ' PAGE' %> -->
         <%= yield %>
+
+        <!-- AUDIO PLAYER -->
+        <div class="player"></div>
 
     </div>
 
     <!-- NAVIGATION -->
+    <% if (page != 'start') %>
     <ul id="navigation">
 
-        <li><strong><a href="/welcome">Welcome</a></strong></li>
-        <li><a href="/wedding">The Wedding</a></li>
-        <li><a href="/photos">Photos</a></li>
-        <li><a href="/videos">Videos</a></li>
-        <li><a href="/music">Music</a></li>
+        <li><strong><%= go :to => "welcome" %></strong></li>
 
     </ul>
+    <% end %>
 
     <!-- FOOTER -->
     <div id="footer"><%= render "/prototype/footer" %></div>
@@ -48,7 +50,7 @@
     <!-- SCRIPTS -->
     <% if @libraries %><%= javascript_include_tag(*@libraries) %><% end %>
     <% if @adapters %><%= javascript_include_tag(*@adapters) %><% end %>
-    <%= javascript_include_tag('/ui/utilities/center', '/prototype/layout') %>
+    <%= javascript_include_tag('/ui/utilities/center', '/prototype/logic', '/prototype/layout') %>
     <% if @scripts %><%= javascript_include_tag(*@scripts) %><% end %>
 
 </body>

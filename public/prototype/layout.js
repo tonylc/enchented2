@@ -17,14 +17,18 @@
 
         $('div.widget > h3').addClass('move');
 
-        $('body.new div#content').sortable({
+        if (trial || couple) {
 
-            items: 'div.widget',
-            handle: 'h3.move',
-            forceHelperSize: true
-
-        });
-        
-        $('body.new div.widget').append('<a class="close" href="#">Close</a>');
+            $('div#content').sortable({
     
+                items: 'div.widget',
+                handle: 'h3.move',
+                forceHelperSize: true
+    
+            });
+            
+            $('div.widget:not(.form)').append('<a class="close" href="#">Close</a>');
+
+        }
+ 
     });

@@ -87,16 +87,16 @@
                     options.autoplay = 1;
                };
 
-                $player.parent().show();
-                $player.show().empty().append('<div id="player-' + options.clip +'"></div>');
-                swfobject.embedSWF("http://listen.grooveshark.com/songWidget.swf", 'player-' + options.clip, "100%", "40", "9.0.0", "../flash/expressInstall.swf", {
-                
-                    hostname: 'cowbell.grooveshark.com',
-                    songIDs: options.clip,
-                    style: 'metal',    bbg: '000000', bfg: '666666', bt: 'FFFFFF', bth: '000000', pbg: 'FFFFFF', pbgh: '666666', pfg: '000000', pfgh: 'FFFFFF', si: 'FFFFFF', lbg: 'FFFFFF', lbgh: '666666',    lfg: '000000', lfgh: 'FFFFFF',    sb: 'FFFFFF', sbh: '666666',
-                    p: options.autoplay
-                
-                });            
+               $player.parent().show();
+               $player.show().empty().append('<div id="player-' + options.clip +'"></div>');
+               swfobject.embedSWF("http://listen.grooveshark.com/songWidget.swf", 'player-' + options.clip, "100%", "40", "9.0.0", "../flash/expressInstall.swf", {
+               
+                   hostname: 'cowbell.grooveshark.com',
+                   songIDs: options.clip,
+                   style: 'metal',    bbg: '000000', bfg: '666666', bt: 'FFFFFF', bth: '000000', pbg: 'FFFFFF', pbgh: '666666', pfg: '000000', pfgh: 'FFFFFF', si: 'FFFFFF', lbg: 'FFFFFF', lbgh: '666666',    lfg: '000000', lfgh: 'FFFFFF',    sb: 'FFFFFF', sbh: '666666',
+                   p: options.autoplay
+               
+               });            
         
             }
 

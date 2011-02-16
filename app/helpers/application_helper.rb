@@ -17,15 +17,29 @@ module ApplicationHelper
   end
 
   def page
-    '/' + self.controller_name + '/' + self.action_name + '/'
+    params[:page]
   end
 
   def previous
     request.request_uri.split('/').pop().capitalize;
   end
+  
+  def user
+    params[:user]
+  end
 
   def widget
     self.action_name
+  end
+
+
+# Link Maker
+# ---------------------------------------------------------------------------
+
+  def go(options = {})
+
+      raw('<a href="/prototype/' + options[:to] + '/' + user + '">' + options[:to].capitalize + '</a>')
+  
   end
 
 

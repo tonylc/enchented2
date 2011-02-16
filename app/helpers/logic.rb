@@ -4,7 +4,7 @@ module LogicHelper
 
   def couple?
 
-    if params[:user] == 'couple' || params[:user] == 'new'
+    if params[:user] == 'couple' || params[:user] == 'trial'
       true
     else
       false
@@ -22,9 +22,9 @@ module LogicHelper
 
   end
 
-  def new?
+  def trial?
 
-    if params[:user] == 'new'
+    if params[:user] == 'trial'
       true
     else
       false
@@ -37,8 +37,8 @@ module LogicHelper
 # ---------------------------------------------------------------------------
 
   def user
-    if new?
-      'new couple'
+    if trial?
+      'trial couple'
     elsif couple?
       'couple'
     else

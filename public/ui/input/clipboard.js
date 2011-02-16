@@ -19,7 +19,7 @@
 
             var $clipboard = $(this);
             var $prompt = $clipboard.closest('div').find('.prompt');
-            var $player = $prompt.siblings('div.player');
+            var $preview = $prompt.siblings('div.preview');
 
             function focus() {
             
@@ -44,11 +44,11 @@
     
                 if (input.match('youtube')) {
 
-                    $player.play({ source: 'youtube', clip: adapter.youtube(input) });
+                    $preview.play({ source: 'youtube', clip: adapter.youtube(input) });
 
                 } else if (input.match('vimeo')) {
 
-                    $player.play({ source: 'vimeo', clip: adapter.vimeo(input) });
+                    $preview.play({ source: 'vimeo', clip: adapter.vimeo(input) });
 
                 }
         

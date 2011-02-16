@@ -21,7 +21,7 @@ Validation is similarly available, for simple checks of required data as well as
 
 **Examples:**
 
- - [New Customer](http://eric.local/example/form/new)
+ - [New Customer Registration](http://eric.local/example/form/new)
 
 
 List

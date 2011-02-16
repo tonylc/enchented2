@@ -5,6 +5,6 @@ Prototype::Application.routes.draw do
   match "prototype/:page(/:user)", :controller => "prototype", :action => "display"
   match "ui/:action/:widget(/:view)", :controller => "example"
 
-  root :to => "prototype#start"
+  root :to => "prototype", :controller => "prototype", :page => "start", :user => "new", :action => "display"
 
 end

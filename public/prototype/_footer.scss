@@ -1,0 +1,115 @@
+/* Footer
+----------------------------------------------------------------------------- */
+
+
+    div#footer {
+    
+        clear: left;
+        position: relative;
+        width: 550px;
+        overflow: hidden;
+        margin: 0 auto;
+        padding: 0 0 67px 0;
+    
+    }
+
+    div#footer h5 {
+    
+        float: left;
+        margin: 0 0 10px 20px;
+        padding: 0;
+
+    }
+
+
+/* Temporary Logo */
+
+
+    div#footer > a {
+    
+        display: block;
+        width: 70px;
+        margin: 0 auto;
+        padding: 5px;
+        background: $color;
+        color: $background;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+    
+    }
+    
+    div#footer > a:hover {
+    
+        background-color: $color-emphasized;
+        color: $background;
+    
+    }
+    
+    div#footer > a span {
+    
+        display: block;
+        font-family: 'Arial', sans-serif;
+        font-size: 9px;
+        letter-spacing: 3px;
+    
+    }
+    
+    div#footer > a strong {
+    
+        display: block;
+        font-family: 'Arial', sans-serif;
+        font-size: 18px;
+        line-height: 18px;
+    
+    }
+
+
+/* Links */
+
+
+    div#footer ul {
+    
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 335px;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        font: $footer-font;
+        text-transform: uppercase;
+    
+    }    
+
+    div#footer li {
+    
+        float: right;
+        margin-left: 10px;
+    
+    }
+
+    div#footer li > a {
+    
+        color: $footer-color;
+        text-decoration: none;
+    
+    }
+    
+
+/* Links - Right */
+
+
+    div#footer ul:last-child {
+    
+        left: 325px;
+        right: 0;
+    
+    }
+    
+    div#footer ul:last-child li {
+    
+        float: left;
+        margin-right: 10px;
+    
+    }

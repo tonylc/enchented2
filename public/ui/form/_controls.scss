@@ -1,0 +1,191 @@
+/* Form Controls
+----------------------------------------------------------------------------- */
+
+
+    div.form {
+
+        @include widget;
+        background-color: $widget-background;
+    
+    }
+
+    div.form label {
+    
+        display: block;
+        width: 100%;
+        float: left;
+        margin: 10px 0;
+        border: 0;
+        padding: 0;
+    
+    }
+    
+    div.form label + br, div.form fieldset + br {
+    
+        clear: left;
+    
+    }
+
+
+/* Headings */
+
+
+    div.form h4 {
+    
+        margin: 10px 0 0 0;
+        border-top: $form-rule;
+        padding: 20px 0 10px 30%;
+        color: $widget-color-emphasized;
+        font: $widget-font-emphasized;
+    
+    }
+    
+    div.form h4 + p {
+    
+        margin: 0 0 10px 30%;
+        color: $widget-color;
+        font: $widget-font;
+
+    }
+
+
+/* Labels */
+
+
+    div.form label em {
+
+        display: block;
+        width: 28%;
+        float: left;
+        margin-right: 2%;
+        color: $form-color-label;
+        font: $font;
+        line-height: 32px; /* not for style - aligns with adjacent controls */
+        text-align: right;
+    
+    }
+    
+    div.form label.disabled em, div.form fieldset label.alternate em {
+    
+        color: $form-color-label;
+    
+    }
+
+    div.form fieldset {
+
+        width: 70%;
+        margin-left: 30%;
+
+    }
+
+    div.form fieldset label em {
+    
+        width: auto;
+        float: left;
+        margin-left: 8px;
+        margin-right: 0;
+        color: $form-color-label;
+        text-align: left;
+        white-space: nowrap;
+        
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    
+    }
+
+
+/* Controls - Checkboxes */
+
+
+    div.form fieldset {
+
+        display: block;
+        float: left;
+        border: 0;
+        padding: 0;
+    
+    }
+
+    div.form fieldset label {
+    
+        margin-top: 0;
+    
+    }
+
+    div.form fieldset label input[type=checkbox] {
+    
+        width: 14px;
+        height: 14px;
+        margin: 8px 0;
+        padding: 0;
+        float: left;
+    
+    }
+
+
+/* Controls - Dropdowns */
+
+
+    div.form label select {
+
+        float: left;
+        margin: 0;
+        border: $form-border-dropdown;
+        border-radius: $form-corner;
+        outline: none;
+        padding: 4px 30px 4px 5px;
+        background: $form-background-dropdown url(/ui/form/images/bg-dropdown.png) no-repeat right 9px;
+        color: $form-color-dropdown;
+        font: $form-font;
+    
+        -moz-appearance: none;
+        -moz-border-radius: $form-corner;
+        -webkit-border-radius: $form-corner;
+        -webkit-appearance: none;
+    
+    }
+
+    div.form label select:focus {
+    
+        color: $form-color-dropdown;
+        box-shadow: $form-shadow;
+    
+        -webkit-box-shadow: $form-shadow;
+        -moz-box-shadow: $form-shadow;
+    
+    }
+
+
+/* Controls - Text Fields */
+
+
+    div.form label input[type=text] {
+    
+        float: left;
+        margin: 0;
+        border: $form-border-field;
+        border-radius: $form-corner;
+        outline: none;
+        padding: 5px;
+        background-color: $form-background-field;
+        font: $form-font;
+    
+        -webkit-border-radius: $form-corner;
+        -moz-border-radius: $form-corner;
+    
+    }
+    
+    div.form label input[type=text]:focus {
+    
+        box-shadow: $form-shadow;
+    
+        -webkit-box-shadow: $form-shadow;
+        -moz-box-shadow: $form-shadow;
+    
+    }
+    
+    div.form label.error input[type=text] {
+
+        border-color: $form-color-error;
+    
+    }

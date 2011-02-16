@@ -1,0 +1,44 @@
+/* Formatting Toolbar
+----------------------------------------------------------------------------- */
+
+
+    div.toolbar a {
+    
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+    }
+
+
+/* Image Replacement */
+
+
+    div.toolbar a.bold {
+    
+    background-image: url(images/bold.png);
+    
+    }
+
+    div.toolbar a.italic {
+    
+    background-image: url(images/italic.png);
+    
+    }
+
+    div.toolbar a.list {
+    
+    background-image: url(images/list.png);
+    
+    }
+
+    div.toolbar a.left {
+    
+    background-image: url(images/left.png);
+    
+    }
+
+    div.toolbar a.center {
+    
+    background-image: url(images/center.png);
+    
+    }

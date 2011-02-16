@@ -1,0 +1,40 @@
+<% @action = @options[:action] ? @options[:action] : request.fullpath %>
+<%= form_tag do %>
+<div class="widget prompt <%= options %>">
+
+    <h3>Add a <%= @options[:for].capitalize %></h3>
+    <div class="player"></div>
+
+    <% if @options[:input] == "clipboard" %>
+
+        <h4 class="prompt">Paste embed code or a link to a video <small>(Supported: YouTube, Vimeo)</small></h4>
+        <label><textarea cols="80" rows="2"></textarea></label>
+
+    <% elsif @options[:input] == "search" %>
+
+        <label><input type="text" placeholder="Search for Music" /></label>
+
+        <ul class="results">
+
+            <%= render '/ui/prompt/results-songs' %>
+        
+        </ul>
+
+    <% end %>
+
+    <ul class="buttons">
+
+        <% if @options[:input] == "search" %>
+            <li class="submit"><input type="submit" value="Search" /></li>
+        <% else %>
+            <li class="submit"><input type="submit" value="Add <%= @options[:for].capitalize %>" /></li>
+        <% end %>
+
+    </ul>
+
+</div>
+<% end %>
+
+<%- libraries '/libraries/jquery-1.4.4.js', '/libraries/swfobject-2.2.js' -%>
+<%- scripts '/ui/form/buttons', '/ui/input/clipboard', '/ui/input/search', '/ui/player/player' -%>
+<%- adapters '/adapters/youtube', '/adapters/vimeo', '/adapters/grooveshark' -%>

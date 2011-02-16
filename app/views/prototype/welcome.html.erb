@@ -1,0 +1,42 @@
+<div id="content">
+
+    <% if new? %>
+     
+        <%= guide :to => "welcome" %>
+        <%= editor :edit => "text", :view => "inline", :placeholder => "Your Welcome Message Goes Here" %>
+        <%= prompt :for => "video", :view => "add" %>
+        <%= prompt :for => "song", :view => "add" %>
+
+    <% else %>
+    
+        <%= player :play => "video", :view => "inline", :clip => "ZW9O04xJuI8", :source => "youtube" %>
+        <%= player :play => "song", :view => "inline", :clip => "28589605", :source => "grooveshark" %>
+        <%= editor :edit => "text", :view => "inline", :placeholder => "Welcome to my wedding website!" %>
+    
+    <% end %>
+
+</div>
+
+    <% unless guest? %>
+    <div id="widgets">
+    
+        <ul>
+
+            <% unless new? %>
+
+                <li><a href="#text">Text</a></li>
+                <li><a href="#video">Video</a></li>
+                <li><a href="#song">Song</a></li>
+
+            <% end %>
+
+                <li><a href="#photo">Photo</a></li>
+                <li><a href="#album">Album</a></li>
+
+        </ul>
+    
+    </div>
+    <% end %>
+
+<%- libraries '/libraries/jquery-1.4.4.js', '/libraries/jquery_ui-1.8.9.js' -%>
+<%- scripts '/prototype/header', '/prototype/pages/welcome' -%>

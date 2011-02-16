@@ -1,0 +1,32 @@
+/* Compile a Sassy Bundle
+----------------------------------------------------------------------------- */
+
+
+    @import "../themes/prototype";
+    @import "../ui/mixins";
+
+
+/* Prototype */
+
+
+    @import "header";
+    @import "navigation";
+    @import "layout";
+    @import "widgets";
+    @import "footer";
+
+
+/* Widgets */
+
+
+    @import "../ui/buttons/styles";
+    @import "../ui/editor/styles";
+    @import "../ui/form/styles";
+    @import "../ui/guide/styles";
+    @import "../ui/input/styles";
+    @import "../ui/list/styles";
+    @import "../ui/options/styles";
+    @import "../ui/player/styles";
+    @import "../ui/prompt/styles";
+    @import "../ui/tabs/styles";
+    @import "../ui/text/styles";

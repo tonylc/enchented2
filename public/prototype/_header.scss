@@ -1,0 +1,71 @@
+/* Header
+----------------------------------------------------------------------------- */
+
+
+    div#wedding h2 {
+    
+        margin: 0 auto;
+    
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        
+    }
+    
+    div#wedding h2, div#wedding h5 a {
+
+        display: block;
+        clear: left;
+        float: left;
+        color: $header-color-emphasized;
+        font: $font-emphasized;
+        text-align: center;
+        text-decoration: none;
+
+    }
+
+
+/* Movable Names */
+
+
+    div#wedding h2 strong {
+    
+        display: block;
+        float: left;
+    
+    }
+
+    body.new div#wedding h2 strong, body.couple div#wedding h2 strong {
+
+          cursor: move;
+    
+    }
+
+
+/* Ampersand */
+
+
+    div#wedding h2 em {
+    
+        display: block;
+        float: left;
+        margin: 0 5px;
+        font-family: Baskerville, Georgia, Times New Roman;
+        font-size: 26px;
+        font-weight: normal;
+        color: #efefef;
+    
+    }
+
+
+/* Date */
+
+
+    div#wedding h5 a {
+    
+        width: 100%;
+        color: $header-color;
+        font: $header-font;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+    }

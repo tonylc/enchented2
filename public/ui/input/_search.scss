@@ -1,0 +1,29 @@
+/* Search Input
+----------------------------------------------------------------------------- */
+
+
+    div.search input[type=text] {
+
+        width: 98%;
+        border: $form-border-field;
+        outline: none;
+        margin: 0 0 0 -2px;
+        border-radius: $form-corner;
+        padding: 5px 1%;
+        background-color: $form-background-field;
+        font: $form-font;
+    
+        -moz-border-radius: $form-corner;
+        -webkit-border-radius: $form-corner;
+    
+    }
+
+    div.search input[type=text]:focus {
+
+        opacity: 1;
+        box-shadow: $form-shadow;
+    
+        -moz-box-shadow: $form-shadow;
+        -webkit-box-shadow: $form-shadow;
+    
+    }

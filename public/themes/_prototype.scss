@@ -1,0 +1,105 @@
+/* Prototype Theme
+----------------------------------------------------------------------------- */
+
+
+    $background: #bfbfbf;
+    $color: #8f8f8f;
+    $color-emphasized: #fff;
+    $font: normal 14px/21px 'Arial', sans-serif;
+    $font-emphasized: bold 24px/30px 'Helvetica', 'Arial', sans-serif;
+    $font-ampersand: normal 24px/30px 'Baskerville', 'Georgia', serif;
+
+
+/* Buttons */
+
+
+    $button-background: #000;
+    $button-background-emphasized: #000;
+    $button-color: #fff;
+    $button-corner: 10px;
+    $button-corner-emphasized: 12px;
+    $button-font: bold 12px/21px 'Arial', sans-serif;
+    $button-font-emphasized: bold 20px/30px Helvetica, Arial, sans-serif;
+
+
+/* Footer */
+
+
+    $footer-font: normal 10px/40px 'Arial', sans-serif;
+    $footer-color: #8f8f8f;
+
+
+/* Forms */
+
+
+    $form-border-calendar: 2px solid #000;
+    $form-border-field: 2px solid #bfbfbf;
+    $form-border-dropdown: 2px solid #bfbfbf;
+    $form-background-calendar: #fff;
+    $form-background-field: #fff;
+    $form-background-dropdown: #bfbfbf;
+    $form-corner: 5px;
+    $form-color-calendar: #aaa;
+    $form-color-field: #bfbfbf;
+    $form-color-dropdown: #fff;
+    $form-color-label: #8f8f8f;
+    $form-color-advice: #8f8f8f;
+    $form-color-error: #cc3333;
+    $form-color-emphasized: #000;
+    $form-font: normal 14px/16px 'Arial', sans-serif;
+    $form-rule: 1px dashed #bfbfbf;
+    $form-shadow: #d5d5d5 0px 0px 5px;
+    $form-shadow-emphasized: #bfbfbf 0px 0px 5px;
+
+
+/* Header */
+
+
+    $header-font: normal 10px/30px 'Arial', sans-serif;
+    $header-font-emphasized: bold 24px/30px 'Helvetica', 'Arial', sans-serif;
+    $header-color: #8f8f8f;
+    $header-color-emphasized: #fff;
+
+
+/* Navigation */
+
+
+    $navigation-background: #8f8f8f;
+    $navigation-background-selected: #efefef;
+    $navigation-corner: 10px;
+    $navigation-color: #bfbfbf;
+    $navigation-color-selected: #8f8f8f;
+    $navigation-font: bold 12px/38px 'Arial', sans-serif;
+
+
+/* Toolbar */
+
+
+    $toolbar-background: #000;
+    $toolbar-corner: 10px;
+    $toolbar-tool-corner: 8px;
+
+
+/* Widgets */
+
+
+    $widget-background: #fff;
+    $widget-background-emphasized: #000;
+    $widget-background-minimized: #8f8f8f;
+    $widget-background-player: #8f8f8f;
+    $widget-corner: 15px;
+    $widget-corner-minimized: 5px;
+    $widget-shadow: #8f8f8f 0px 0px 20px;
+    $widget-shadow-dragging: #8f8f8f 0px 0px 50px;
+    $widget-shadow-minimized: #8f8f8f 0px 0px 5px;
+    $widget-color: #8f8f8f;
+    $widget-color-emphasized: #000;
+    $widget-color-accent1: #ffc757;
+    $widget-color-accent2: #4ecad0;
+    $widget-color-accent3: #a7e65f;
+    $widget-color-accent4: #aa8d84;
+    $widget-color-accent5: #be7a95;
+    $widget-font: normal 14px/21px 'Arial', sans-serif;
+    $widget-font-emphasized: bold 16px/21px 'Helvetica', 'Arial', sans-serif;
+    $widget-font-minimized: bold 13px/40px 'Helvetica', 'Arial', sans-serif;
+    $widget-rule: 1px solid #bfbfbf;

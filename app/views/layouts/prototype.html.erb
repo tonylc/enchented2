@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <!-- PAGE TITLE -->
+    <title><% if @title %><%= @title %> &middot; <% end %>Love for Design</title>
+
+    <!-- STYLES -->
+    <%= stylesheet_link_tag('/stylesheets/prototype/master.css') %>
+
+</head>
+<body class="prototype <%= user %>">
+
+    <div id="page">
+
+        <% if new? %>
+            <%= form_tag do %>
+            <div id="wedding">
+            
+                <h2><strong class="bride"><%= wedding[:bride] %></strong> <em>&amp;</em> <strong class="groom"><%= wedding[:groom] %></strong></h2>
+                <h5><a href="#"><%= wedding[:date] %></a></h5>
+                <input type="hidden" name="wedding-order" value="tomoko-billy" />
+    
+            </div>
+            <% end %>
+        <% end %>
+
+        <%= yield %>
+
+    </div>
+
+    <!-- NAVIGATION -->
+    <ul id="navigation">
+
+        <li><strong><a href="/welcome">Welcome</a></strong></li>
+        <li><a href="/wedding">The Wedding</a></li>
+        <li><a href="/photos">Photos</a></li>
+        <li><a href="/videos">Videos</a></li>
+        <li><a href="/music">Music</a></li>
+
+    </ul>
+
+    <!-- FOOTER -->
+    <div id="footer"><%= render "/prototype/footer" %></div>
+
+    <!-- SCRIPTS -->
+    <% if @libraries %><%= javascript_include_tag(*@libraries) %><% end %>
+    <% if @adapters %><%= javascript_include_tag(*@adapters) %><% end %>
+    <%= javascript_include_tag('/ui/utilities/center', '/prototype/layout') %>
+    <% if @scripts %><%= javascript_include_tag(*@scripts) %><% end %>
+
+</body>
+</html>

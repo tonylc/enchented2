@@ -1,0 +1,244 @@
+/* Formatting Toolbar
+----------------------------------------------------------------------------- */
+
+
+    div.toolbar {
+    
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-bottom-left-radius: $toolbar-corner;
+        border-bottom-right-radius: $toolbar-corner;
+        padding: 0 32px 2px 2px;
+        background-color: $toolbar-background;
+    
+        -moz-border-radius-bottomleft: $toolbar-corner;
+        -moz-border-radius-bottomright: $toolbar-corner;
+        -webkit-border-bottom-left-radius: $toolbar-corner;
+        -webkit-border-bottom-right-radius: $toolbar-corner;
+    
+    }
+
+    div.toolbar ul, div.toolbar li {
+    
+        float: left;
+        margin: 0;
+        padding: 0;
+    
+    }
+
+    div.toolbar li {
+    
+        display: block;
+        width: 30px;
+        height: 20px;
+        margin-right: 2px;
+        background-color: $toolbar-background;
+
+    }
+    
+    div.toolbar ul:first-child li:first-child {
+
+        border-bottom-left-radius: $toolbar-tool-corner;
+    
+        -moz-border-radius-bottomleft: $toolbar-tool-corner;
+        -webkit-border-bottom-left-radius: $toolbar-tool-corner;
+    
+    }
+
+    div.toolbar ul:last-child li:last-child {
+
+        border-bottom-right-radius: $toolbar-tool-corner;
+
+        -moz-border-radius-bottomright: $toolbar-tool-corner;
+        -webkit-border-bottom-right-radius: $toolbar-tool-corner;
+     
+    }
+
+
+/* Color Palette */
+
+
+    div.toolbar ul.color {
+        
+        width: 30px;
+        height: 20px;
+        position: absolute;
+        bottom: 2px;
+        right: 2px;
+    
+    }
+    
+    div.toolbar ul.color li {
+    
+        background: none;
+    
+    }
+
+    div.toolbar ul.color > li a {
+
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-bottom-right-radius: $toolbar-tool-corner;
+        background-color: $toolbar-background;
+        opacity: 1;
+    
+        -moz-border-radius-bottomright: $toolbar-tool-corner;
+        -webkit-border-bottom-right-radius: $toolbar-tool-corner;
+
+    }
+    
+    div.toolbar ul.color > ul.palette {
+    
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 0;
+        border-top-left-radius: $toolbar-tool-corner;
+        border-top-right-radius: $toolbar-tool-corner;
+        padding: 0;
+        overflow: hidden;
+        bottom: 20px;
+        right: 0;
+        background: rgba(0, 0, 0, .70);
+    
+        -moz-border-radius-topleft: $toolbar-tool-corner;
+        -moz-border-radius-topright: $toolbar-tool-corner;
+        -webkit-border-top-left-radius: $toolbar-tool-corner;
+        -webkit-border-top-right-radius: $toolbar-tool-corner;
+        
+    }
+
+    div.toolbar ul.color > ul.palette > li {
+    
+        clear: left;
+    
+    }
+    
+    div.toolbar ul.color > ul.palette > li:first-child {
+
+        padding-top: 5px;
+
+    }
+
+    div.toolbar ul.color > ul.palette > li:last-child {
+
+        padding-bottom: 5px;
+
+    }
+
+    div.toolbar ul.palette li em {
+    
+        display: block;
+        width: 12px;
+        height: 12px;
+        margin: 5px 9px;
+        background-color: $color;
+        text-indent: -5000px;
+    
+        -moz-border-radius: $toolbar-corner;
+        -webkit-border-radius: $toolbar-corner;
+
+    }
+    
+    div.toolbar ul.palette li a {
+    
+        opacity: 1;
+    
+    }
+
+    div.toolbar ul.color > li.body a, div.toolbar ul.palette li.body em {
+    
+        background-color: $toolbar-background;
+    
+    }
+    
+    div.toolbar ul.color > li.one a, div.toolbar ul.palette li.one em {
+
+        background-color: $widget-color-accent1;
+    
+    }
+
+    div.toolbar ul.color > li.two a, div.toolbar ul.palette li.two em {
+
+        background-color: $widget-color-accent2;
+    
+    }
+
+    div.toolbar ul.color > li.three a, div.toolbar ul.palette li.three em {
+
+        background-color: $widget-color-accent3;
+    
+    }
+
+    div.toolbar ul.color > li.four a, div.toolbar ul.palette li.four em {
+
+        background-color: $widget-color-accent4;
+    
+    }
+
+    div.toolbar ul.color > li.five a, div.toolbar ul.palette li.five em {
+
+        background-color: $widget-color-accent5;
+    
+    }
+
+
+/* Formatting Icons */
+
+
+    div.toolbar li a {
+    
+        display: block;
+        width: 30px;
+        height: 20px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        text-indent: -5000px;
+        
+    }
+    
+    div.toolbar.selected a {
+    
+        opacity: 0.5;
+    
+    }
+    
+    div.toolbar li.selected a {
+    
+        opacity: 1;
+    
+    }
+
+    div.toolbar li.bold a {
+    
+        background-image: url(/ui/editor/images/bold.png);
+    
+    }
+
+    div.toolbar li.italic a {
+    
+        background-image: url(/ui/editor/images/italic.png);
+    
+    }
+
+    div.toolbar li.list a {
+    
+        background-image: url(/ui/editor/images/list.png);
+    
+    }
+
+    div.toolbar li.justifyleft a {
+    
+        background-image: url(/ui/editor/images/justifyleft.png);
+    
+    }
+
+    div.toolbar li.justifycenter a {
+    
+        background-image: url(/ui/editor/images/justifycenter.png);
+    
+    }

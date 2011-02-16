@@ -1,0 +1,68 @@
+/* Page Layout
+----------------------------------------------------------------------------- */
+
+
+    body {
+    
+        min-width: 900px;
+        margin: 0;
+        padding: 0;
+        background-color: $background;
+    
+    }
+
+    div#page {
+
+        width: 550px;
+        margin: 40px auto;
+
+    }
+
+    .center {
+    
+        margin-left: auto !important;
+        margin-right: auto !important;
+        visibility: hidden;
+    
+    }
+
+
+/* Headings
+----------------------------------------------------------------------------- */
+
+
+    div#page > h2 {
+    
+        display: block;
+        float: left;
+        width: 100%;
+        margin: 20px 0;
+        padding: 0;
+        color: $color-emphasized;
+        font: $font-emphasized;
+    
+    }
+
+
+/* Columns
+----------------------------------------------------------------------------- */
+
+
+    div#content {
+    
+        clear: left;
+        float: left;
+        width: 540px;
+        margin: 20px 0;
+
+    }
+    
+    div#sidebar {
+    
+        display: none;
+        width: 240px;
+        position: absolute;
+        top: 40px;
+        right: 20px;
+    
+    }

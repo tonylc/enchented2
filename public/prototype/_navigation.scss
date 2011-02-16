@@ -1,0 +1,45 @@
+/* Navigation
+----------------------------------------------------------------------------- */
+
+
+    ul#navigation {
+    
+        position: fixed;
+        width: auto;
+        top: 110px;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        text-align: left;
+    
+    }
+    
+    ul#navigation li {
+    
+        margin-bottom: 5px;
+    
+    }
+    
+    ul#navigation li a {
+    
+        display: block;
+        padding: 0 20px 0 10px;
+        background-color: $navigation-background;
+        color: $navigation-color;
+        font: $navigation-font;
+        text-decoration: none;
+
+        -moz-border-radius-topleft: $navigation-corner;
+        -moz-border-radius-bottomleft: $navigation-corner;
+        -webkit-border-top-left-radius: $navigation-corner;
+        -webkit-border-bottom-left-radius: $navigation-corner;
+    
+    }
+
+    ul#navigation li strong a {
+    
+        background-color: $navigation-background-selected;
+        color: $navigation-color-selected;
+    
+    }

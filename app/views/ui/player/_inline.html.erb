@@ -1,0 +1,22 @@
+<div id="<%= @options[:clip] %>" class="widget player <%= options %>">
+
+         <div></div>
+
+    <% if @options[:play] == "video" %>
+
+        <h4></h4>
+        <em></em>
+    
+    <% end %>
+
+</div>
+
+<%- libraries '/libraries/jquery-1.4.4.js', '/libraries/swfobject-2.2.js' -%>
+
+<% if @options[:play] == "video" %>
+    <%- adapters '/adapters/youtube', '/adapters/vimeo' -%>
+<% else %>
+    <%- adapters '/adapters/grooveshark' -%>
+<% end %>
+
+<%- scripts '/ui/player/player.js' -%>

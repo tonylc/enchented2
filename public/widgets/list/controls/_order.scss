@@ -1,0 +1,69 @@
+/* Order Control
+----------------------------------------------------------------------------- */
+
+
+    label.order {
+    
+    display: none;
+    width: 18px;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+    margin: 0;
+    
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    
+    }
+    
+    label.order em {
+    
+    display: block !important;
+    width: 18px;
+    height: 16px;
+    background-image: url(/widgets/list/images/order.png);
+    text-indent: -5000px;
+    
+    }
+    
+    label.order input {
+    
+    display: none;
+    
+    }
+    
+    .order > li:hover > label.order {
+    
+    display: block;
+    
+    }
+    
+    .order > li.ui-sortable-helper a, .order > li.ui-sortable-helper em {
+    
+    cursor: move;
+    
+    }
+
+    .order > li.ui-sortable-helper {
+    
+    -webkit-box-shadow: rgba(0, 0, 0, .25) 0px 0px 20px;
+    
+    }
+
+
+/* Positioning Exceptions */
+
+
+    .photos label.order, .videos label.order {
+    
+    top: 220px;
+    right: 38px;
+    
+    }
+
+    .albums label.order {
+    
+    top: 220px;
+    right: 12px;
+    
+    }

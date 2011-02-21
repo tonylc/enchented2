@@ -1,0 +1,501 @@
+/* Compile a Sassy Bundle
+----------------------------------------------------------------------------- */
+/* Prototype Theme
+----------------------------------------------------------------------------- */
+/* Buttons */
+/* Footer */
+/* Forms */
+/* Header */
+/* Navigation */
+/* Toolbar */
+/* Widgets */
+/* Prototype */
+/* Header
+----------------------------------------------------------------------------- */
+div#wedding h2 { margin: 0 auto; -webkit-user-select: none; -moz-user-select: none; }
+
+div#wedding h2, div#wedding h5 a { display: block; clear: left; float: left; color: white; font: bold 24px/30px "Helvetica", "Arial", sans-serif; text-align: center; text-decoration: none; }
+
+/* Movable Names */
+div#wedding h2 strong { display: block; float: left; }
+
+body.trial div#wedding h2 strong, body.couple div#wedding h2 strong { cursor: move; }
+
+/* Ampersand */
+div#wedding h2 em { display: block; float: left; margin: 0 5px; font-family: Baskerville, Georgia, Times New Roman; font-size: 26px; font-weight: normal; color: #efefef; }
+
+/* Date */
+div#wedding h5 a { width: 100%; color: #8f8f8f; font: normal 10px/30px "Arial", sans-serif; text-transform: uppercase; letter-spacing: 2px; }
+
+/* Navigation
+----------------------------------------------------------------------------- */
+ul#navigation { position: fixed; width: auto; top: 110px; right: 0; margin: 0; padding: 0; list-style-type: none; text-align: left; }
+
+ul#navigation li { margin-bottom: 5px; }
+
+ul#navigation li a { display: block; padding: 0 20px 0 10px; background-color: #8f8f8f; color: #bfbfbf; font: bold 12px/38px "Arial", sans-serif; text-decoration: none; -moz-border-radius-topleft: 10px; -moz-border-radius-bottomleft: 10px; -webkit-border-top-left-radius: 10px; -webkit-border-bottom-left-radius: 10px; }
+
+ul#navigation li strong a { background-color: #efefef; color: #8f8f8f; }
+
+/* Page Layout
+----------------------------------------------------------------------------- */
+body { min-width: 900px; margin: 0; padding: 0; background-color: #bfbfbf; }
+
+div#page { width: 550px; margin: 40px auto; }
+
+.center { margin-left: auto !important; margin-right: auto !important; visibility: hidden; }
+
+/* Headings
+----------------------------------------------------------------------------- */
+div#page > h2 { display: block; float: left; width: 100%; margin: 20px 0; padding: 0; color: white; font: bold 24px/30px "Helvetica", "Arial", sans-serif; }
+
+/* Columns
+----------------------------------------------------------------------------- */
+div#content { clear: left; float: left; width: 540px; margin: 20px 0; }
+
+div#sidebar { display: none; width: 240px; position: absolute; top: 40px; right: 20px; }
+
+/* Footer
+----------------------------------------------------------------------------- */
+div#footer { clear: left; position: relative; width: 550px; overflow: hidden; margin: 0 auto; padding: 0 0 67px 0; z-index: 1; }
+
+div#footer h5 { float: left; margin: 0 0 10px 20px; padding: 0; }
+
+/* Temporary Logo */
+div#footer > a { display: block; width: 70px; margin: 0 auto; padding: 5px; background: #8f8f8f; color: #bfbfbf; text-align: center; text-decoration: none; text-transform: uppercase; }
+
+div#footer > a:hover { background-color: white; color: #bfbfbf; }
+
+div#footer > a span { display: block; font-family: 'Arial', sans-serif; font-size: 9px; letter-spacing: 3px; }
+
+div#footer > a strong { display: block; font-family: 'Arial', sans-serif; font-size: 18px; line-height: 18px; }
+
+/* Links */
+div#footer ul { display: block; position: absolute; top: 0; right: 335px; margin: 0; padding: 0; list-style-type: none; font: normal 10px/40px "Arial", sans-serif; text-transform: uppercase; }
+
+div#footer li { float: right; margin-left: 10px; }
+
+div#footer li > a { color: #8f8f8f; text-decoration: none; }
+
+/* Links - Right */
+div#footer ul:last-child { left: 325px; right: 0; }
+
+div#footer ul:last-child li { float: left; margin-right: 10px; }
+
+/* Text Formatting
+----------------------------------------------------------------------------- */
+@import url(../../themes/prototype.css);
+body { margin: 0 !important; padding: 0 !important; }
+
+a { color: #000; }
+
+img { background-color: #eee; }
+
+p { display: block; clear: left; margin: 0 0 10px 0; font: normal 14px/21px "Arial", sans-serif; }
+
+ul { width: 100%; margin: 20px 0; padding: 0; font: normal 14px/21px "Arial", sans-serif; list-style-type: none; text-align: center; }
+
+ul a { color: #8f8f8f; }
+
+/* Controls */
+/* Action Controls
+----------------------------------------------------------------------------- */
+ul.actions { width: auto; clear: left; margin: 10px 0 0 0; border: 0; padding: 0; float: left; background: none; list-style-type: none; }
+
+ul.actions li { width: auto; height: auto; float: left; margin: 0; }
+
+ul.actions li + li { margin-left: 10px; }
+
+ul.actions li a { display: block; border-radius: 10px; padding: 0 10px; background-color: black; color: white; font: bold 12px/21px "Arial", sans-serif; text-decoration: none; white-space: nowrap; -moz-border-radius: 10px; -moz-user-select: none; -webkit-border-radius: 10px; -webkit-user-select: none; }
+
+ul.actions input.hidden { float: left; width: 1px; height: 1px; margin: 0; border: 0; padding: 0; }
+
+/* Color Coding */
+ul.actions li.play a { background-color: black; }
+
+ul.actions li.submit a { border-radius: 10px; background-color: black; -moz-border-radius: 10px; -webkit-border-radius: 10px; }
+
+/* Emphasized */
+ul.actions.emphasized { width: 100%; height: 40px; float: left; margin: 20px 0 0 0; padding: 0; list-style-type: none; }
+
+ul.actions.emphasized li { width: 100%; float: left; }
+
+ul.actions.emphasized a { display: block; width: 100%; padding: 5px 0; border-radius: 12px; background-color: black; color: white; font: bold 20px/30px Helvetica, Arial, sans-serif; text-align: center; text-decoration: none; cursor: pointer; -moz-border-radius: 12px; -webkit-border-radius: 12px; }
+
+/* Clipboard Control
+----------------------------------------------------------------------------- */
+div.clipboard textarea { width: 1px; height: 1px; overflow: hidden; margin: 0; border: 0; box-shadow: 0; opacity: 0; outline: none; padding: 0; resize: none; -moz-box-shadow: 0; -webkit-box-shadow: 0; }
+
+/* Prompt */
+div.clipboard h4.prompt { clear: left; display: block; width: 100%; margin: 10px 0; border: 1px solid 2px solid #bfbfbf; border-radius: 5px; padding: 50px 0; background: white; box-shadow: #d5d5d5 0px 0px 5px; color: #bfbfbf; font: normal 14px/21px "Arial", sans-serif; cursor: pointer; text-align: center; -moz-border-radius: 5px; -moz-box-shadow: #d5d5d5 0px 0px 5px; -moz-user-select: none; -webkit-border-radius: 5px; -webkit-box-shadow: #d5d5d5 0px 0px 5px; -webkit-user-select: none; }
+
+div.clipboard h4.focused { opacity: 1; box-shadow: #bfbfbf 0px 0px 5px; color: black; -webkit-box-shadow: #bfbfbf 0px 0px 5px; -moz-box-shadow: #bfbfbf 0px 0px 5px; }
+
+/* Close Buttons
+----------------------------------------------------------------------------- */
+/* Search Control
+----------------------------------------------------------------------------- */
+div.search input[type=text] { width: 98%; border: 2px solid #bfbfbf; outline: none; margin: 0 0 0 -2px; border-radius: 5px; padding: 5px 1%; background-color: white; font: normal 14px/16px "Arial", sans-serif; -moz-border-radius: 5px; -webkit-border-radius: 5px; }
+
+div.search input[type=text]:focus { opacity: 1; box-shadow: #d5d5d5 0px 0px 5px; -moz-box-shadow: #d5d5d5 0px 0px 5px; -webkit-box-shadow: #d5d5d5 0px 0px 5px; }
+
+/* Widgets */
+/* Widgets
+----------------------------------------------------------------------------- */
+form.widget { float: left; width: 100%; }
+
+div.widget > a.close { display: none; width: 24px; height: 24px; border-radius: 12px; position: absolute; background: black url(/controls/images/close.png) no-repeat center center; text-indent: -5000px; -moz-border-radius: 12px; -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px; -webkit-border-radius: 12px; -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px; display: none; top: -12px; right: -12px; }
+
+div.widget:hover > a.close { display: block; }
+
+/* Draggable Headings */
+body.couple div.widget h3, body.trial div.widget h3 { display: block; width: 100%; float: left; clear: left; position: relative; z-index: 100; cursor: move; -moz-user-select: text; -webkit-user-select: text; }
+
+/* Widget Bin
+----------------------------------------------------------------------------- */
+div#widgets { width: 516px; float: left; clear: left; margin-bottom: 60px; border: 2px solid #efefef; padding: 10px; -webkit-border-radius: 10px; }
+
+div#widgets > form { display: none; }
+
+div#widgets > ul { float: left; margin: 0; padding: 0; }
+div#widgets > ul li { width: 18.6%; float: left; margin: 0 2% 0 0; }
+div#widgets > ul li:last-child { margin-right: 0; }
+div#widgets > ul li a { display: block; border-radius: 5px; background: white; color: #bfbfbf; font: bold 13px/40px "Helvetica", "Arial", sans-serif; text-align: center; text-decoration: none; -webkit-border-radius: 5px; -webkit-user-select: none; -moz-border-radius: 5px; -moz-box-shadow: #8f8f8f 0px 0px 20px; -moz-user-select: none; }
+div#widgets > ul li a:hover { background: black; }
+
+/* Sassy Panels
+----------------------------------------------------------------------------- */
+/* Text Editor Widget
+----------------------------------------------------------------------------- */
+@import url(../text/formatting.css);
+/* Widget Styles */
+/* Text Editor
+----------------------------------------------------------------------------- */
+/* Prototype Theme
+----------------------------------------------------------------------------- */
+/* Buttons */
+/* Footer */
+/* Forms */
+/* Header */
+/* Navigation */
+/* Toolbar */
+/* Widgets */
+/* Buttons */
+div.editor.text a.close { top: 0; right: 0; }
+
+/* TinyMCE Editor */
+div.editor.text { float: left; clear: left; width: 100%; position: relative; margin-bottom: 10px; }
+
+div.editor.text.editing { margin-bottom: 20px; padding-bottom: 22px; }
+
+div.editor.text > span.mceEditor { display: block; background-color: white; -moz-border-radius-topleft: 15px; -moz-border-radius-topright: 15px; -moz-border-radius-bottomright: 15px; -moz-box-shadow: #8f8f8f 0px 0px 20px; -webkit-border-top-left-radius: 15px; -webkit-border-top-right-radius: 15px; -webkit-border-bottom-right-radius: 15px; -webkit-box-shadow: #8f8f8f 0px 0px 20px; }
+
+div.editor.text > textarea, div.editor.text > span.mceEditor > div { display: none !important; }
+
+div.editor.text iframe { width: 96% !important; margin: 0; border: 0 !important; padding: 2%; background: none; }
+
+/* TinyMCE Editor - Autogrow Resize Plugin (requires a wrapping table) */
+div.editor.text table { width: 100% !important; height: auto !important; }
+
+body.mceContentBody, div.editor.text table, div.editor.text td { margin: 0; border: 0 !important; padding: 0; background: transparent !important; vertical-align: top; }
+
+/* Formatting Toolbar
+----------------------------------------------------------------------------- */
+div.toolbar { display: block; position: absolute; bottom: 0; left: 0; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; padding: 0 32px 2px 2px; background-color: black; -moz-border-radius-bottomleft: 10px; -moz-border-radius-bottomright: 10px; -webkit-border-bottom-left-radius: 10px; -webkit-border-bottom-right-radius: 10px; }
+
+div.toolbar ul, div.toolbar li { float: left; margin: 0; padding: 0; }
+
+div.toolbar li { display: block; width: 30px; height: 20px; margin-right: 2px; background-color: black; }
+
+div.toolbar ul:first-child li:first-child { border-bottom-left-radius: 8px; -moz-border-radius-bottomleft: 8px; -webkit-border-bottom-left-radius: 8px; }
+
+div.toolbar ul:last-child li:last-child { border-bottom-right-radius: 8px; -moz-border-radius-bottomright: 8px; -webkit-border-bottom-right-radius: 8px; }
+
+/* Color Palette */
+div.toolbar ul.color { width: 30px; height: 20px; position: absolute; bottom: 2px; right: 2px; }
+
+div.toolbar ul.color li { background: none; }
+
+div.toolbar ul.color > li a { display: block; position: absolute; bottom: 0; right: 0; border-bottom-right-radius: 8px; background-color: black; opacity: 1; -moz-border-radius-bottomright: 8px; -webkit-border-bottom-right-radius: 8px; }
+
+div.toolbar ul.color > ul.palette { display: block; position: absolute; width: 30px; height: 0; border-top-left-radius: 8px; border-top-right-radius: 8px; padding: 0; overflow: hidden; bottom: 20px; right: 0; background: rgba(0, 0, 0, 0.7); -moz-border-radius-topleft: 8px; -moz-border-radius-topright: 8px; -webkit-border-top-left-radius: 8px; -webkit-border-top-right-radius: 8px; }
+
+div.toolbar ul.color > ul.palette > li { clear: left; }
+
+div.toolbar ul.color > ul.palette > li:first-child { padding-top: 5px; }
+
+div.toolbar ul.color > ul.palette > li:last-child { padding-bottom: 5px; }
+
+div.toolbar ul.palette li em { display: block; width: 12px; height: 12px; margin: 5px 9px; background-color: #8f8f8f; text-indent: -5000px; -moz-border-radius: 10px; -webkit-border-radius: 10px; }
+
+div.toolbar ul.palette li a { opacity: 1; }
+
+div.toolbar ul.color > li.body a, div.toolbar ul.palette li.body em { background-color: black; }
+
+div.toolbar ul.color > li.one a, div.toolbar ul.palette li.one em { background-color: #ffc757; }
+
+div.toolbar ul.color > li.two a, div.toolbar ul.palette li.two em { background-color: #4ecad0; }
+
+div.toolbar ul.color > li.three a, div.toolbar ul.palette li.three em { background-color: #a7e65f; }
+
+div.toolbar ul.color > li.four a, div.toolbar ul.palette li.four em { background-color: #aa8d84; }
+
+div.toolbar ul.color > li.five a, div.toolbar ul.palette li.five em { background-color: #be7a95; }
+
+/* Formatting Icons */
+div.toolbar li a { display: block; width: 30px; height: 20px; background-position: center center; background-repeat: no-repeat; text-indent: -5000px; }
+
+div.toolbar.selected a { opacity: 0.5; }
+
+div.toolbar li.selected a { opacity: 1; }
+
+div.toolbar li.bold a { background-image: url(/widgets/editor/images/bold.png); }
+
+div.toolbar li.italic a { background-image: url(/widgets/editor/images/italic.png); }
+
+div.toolbar li.list a { background-image: url(/widgets/editor/images/list.png); }
+
+div.toolbar li.justifyleft a { background-image: url(/widgets/editor/images/justifyleft.png); }
+
+div.toolbar li.justifycenter a { background-image: url(/widgets/editor/images/justifycenter.png); }
+
+/* Form Widget
+----------------------------------------------------------------------------- */
+/* Form Controls
+----------------------------------------------------------------------------- */
+div.form { clear: left; float: left; width: 94%; margin-bottom: 20px; border-radius: 15px; box-shadow: #8f8f8f 0px 0px 20px; padding: 3%; -moz-border-radius: 15px; -moz-box-shadow: #8f8f8f 0px 0px 20px; -webkit-border-radius: 15px; -webkit-box-shadow: #8f8f8f 0px 0px 20px; background-color: white; }
+div.form.ui-sortable-helper { padding: 16px; box-shadow: #8f8f8f 0px 0px 50px; -moz-box-shadow: #8f8f8f 0px 0px 50px; -webkit-box-shadow: #8f8f8f 0px 0px 50px; }
+
+div.form label { display: block; width: 100%; float: left; margin: 10px 0; border: 0; padding: 0; }
+
+div.form label + br, div.form fieldset + br { clear: left; }
+
+/* Headings */
+div.form h4 { margin: 10px 0 0 0; border-top: 1px dashed #bfbfbf; padding: 20px 0 10px 30%; color: black; font: bold 16px/21px "Helvetica", "Arial", sans-serif; }
+
+div.form h4 + p { margin: 0 0 10px 30%; color: #8f8f8f; font: normal 14px/21px "Arial", sans-serif; }
+
+/* Labels */
+div.form label em { display: block; width: 28%; float: left; margin-right: 2%; color: #8f8f8f; font: normal 14px/21px "Arial", sans-serif; line-height: 32px; /* not for style - aligns with adjacent controls */ text-align: right; }
+
+div.form label.disabled em, div.form fieldset label.alternate em { color: #8f8f8f; }
+
+div.form fieldset { width: 70%; margin-left: 30%; }
+
+div.form fieldset label em { width: auto; float: left; margin-left: 8px; margin-right: 0; color: #8f8f8f; text-align: left; white-space: nowrap; -moz-user-select: none; -webkit-user-select: none; }
+
+/* Controls - Checkboxes */
+div.form fieldset { display: block; float: left; border: 0; padding: 0; }
+
+div.form fieldset label { margin-top: 0; }
+
+div.form fieldset label input[type=checkbox] { width: 14px; height: 14px; margin: 8px 0; padding: 0; float: left; }
+
+/* Controls - Dropdowns */
+div.form label select { float: left; margin: 0; border: 2px solid #bfbfbf; border-radius: 5px; outline: none; padding: 4px 30px 4px 5px; background: #bfbfbf url(/widgets/form/images/bg-dropdown.png) no-repeat right 9px; color: white; font: normal 14px/16px "Arial", sans-serif; -moz-appearance: none; -moz-border-radius: 5px; -webkit-border-radius: 5px; -webkit-appearance: none; }
+
+div.form label select:focus { color: white; box-shadow: #d5d5d5 0px 0px 5px; -webkit-box-shadow: #d5d5d5 0px 0px 5px; -moz-box-shadow: #d5d5d5 0px 0px 5px; }
+
+/* Controls - Text Fields */
+div.form label input[type=text] { float: left; margin: 0; border: 2px solid #bfbfbf; border-radius: 5px; outline: none; padding: 5px; background-color: white; font: normal 14px/16px "Arial", sans-serif; -webkit-border-radius: 5px; -moz-border-radius: 5px; }
+
+div.form label input[type=text]:focus { box-shadow: #d5d5d5 0px 0px 5px; -webkit-box-shadow: #d5d5d5 0px 0px 5px; -moz-box-shadow: #d5d5d5 0px 0px 5px; }
+
+div.form label.error input[type=text] { border-color: #cc3333; }
+
+/* Date Picker
+----------------------------------------------------------------------------- */
+div.form label.date input { background: url(/widgets/form/images/bg-picker-date.png) no-repeat 5px 5px; padding-left: 26px; padding-right: 0; cursor: pointer; -moz-user-select: none; -webkit-user-select: none; }
+
+div.form label.date input.set { background-image: url(/widgets/form/images/bg-picker-date-set.png); }
+
+div.form label.date input[disabled] { background-image: url(/widgets/form/images/bg-picker-date.png); color: 2px solid #bfbfbf; }
+
+div.form label.date button { display: none; }
+
+/* Panel */
+div.ui-datepicker { display: none; position: relative; margin-top: 5px; border: 2px solid black; border-radius: 5px; background-color: white; font: normal 14px/16px "Arial", sans-serif; -moz-border-radius: 5px; -moz-user-select: none; -webkit-border-radius: 5px; -webkit-user-select: none; }
+
+/* Header */
+div.ui-datepicker-header { margin-top: -2px; border-top-left-radius: 5px; border-top-right-radius: 5px; padding: 6px 8px 4px 8px; background-color: black; cursor: default; -webkit-border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px; -webkit-user-select: none; -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px; -moz-user-select: none; }
+
+div.ui-datepicker-header select { margin: 0; border: 0; outline: none; padding: 0 0 2px 0; background: none; color: #aaaaaa; font: normal 14px/16px "Arial", sans-serif; cursor: pointer; -webkit-border-radius: 5px; -webkit-appearance: none; -moz-border-radius: 5px; -moz-appearance: none; }
+
+div.ui-datepicker-header select.ui-datepicker-year { width: 35px; float: right; color: white; text-align: right; }
+
+a.ui-datepicker-prev, a.ui-datepicker-next { display: none; }
+
+/* Calendar */
+div.ui-datepicker thead th { width: 30px; height: 20px; color: #aaaaaa; text-transform: lowercase; }
+
+div.ui-datepicker tbody td { margin: 0; padding: 0; color: #aaaaaa; text-align: center; vertical-align: center; }
+
+div.ui-datepicker tbody > tr > td a { display: block; width: 30px; height: 20px; font-weight: bold; line-height: 20px; text-decoration: none; }
+
+div.ui-datepicker tbody > tr > td a:hover { display: block; width: 30px; height: 20px; border-radius: 8px; background-color: black; color: white; -webkit-border-radius: 8px; -moz-border-radius: 8px; }
+
+/* Guide Widget
+----------------------------------------------------------------------------- */
+/* Guide Widget
+----------------------------------------------------------------------------- */
+div.guide { clear: left; float: left; width: 94%; margin-bottom: 20px; border-radius: 15px; box-shadow: #8f8f8f 0px 0px 20px; padding: 3%; -moz-border-radius: 15px; -moz-box-shadow: #8f8f8f 0px 0px 20px; -webkit-border-radius: 15px; -webkit-box-shadow: #8f8f8f 0px 0px 20px; position: relative; background-color: black; text-align: center; }
+div.guide.ui-sortable-helper { padding: 16px; box-shadow: #8f8f8f 0px 0px 50px; -moz-box-shadow: #8f8f8f 0px 0px 50px; -webkit-box-shadow: #8f8f8f 0px 0px 50px; }
+
+div.guide h3 { margin: 0; border: 0; color: #bfbfbf; font: bold 16px/21px "Helvetica", "Arial", sans-serif; }
+
+div.guide p { margin: 0; color: white; font: normal 14px/21px "Arial", sans-serif; }
+
+div.guide > a.close { display: none; width: 24px; height: 24px; border-radius: 12px; position: absolute; background: black url(/controls/images/close.png) no-repeat center center; text-indent: -5000px; -moz-border-radius: 12px; -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px; -webkit-border-radius: 12px; -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px; top: -13px; right: -13px; }
+
+/* Example - Lists
+----------------------------------------------------------------------------- */
+/* Album View
+----------------------------------------------------------------------------- */
+.albums { width: 660px; margin: -10px 0 0 -10px; padding: 0; list-style-type: none; }
+
+.albums > li { display: block; width: 200px; position: relative; float: left; margin: 0 0 20px 0; padding: 10px; background: #fff; -moz-border-radius: 15px; -moz-user-select: none; -webkit-border-radius: 15px; -webkit-user-select: none; }
+
+.albums h4 { display: block; clear: left; margin: 0; padding-top: 10px; font: normal 14px/21px "Arial", sans-serif; cursor: default; }
+
+.albums h4 a, .albums em a { color: black; }
+
+.albums em { display: block; color: #8f8f8f; }
+
+.albums ul.actions { clear: left; margin: 10px 0 0 0; }
+
+/* Thumbnail Preview */
+.albums > li > ul { display: block; float: left; width: 180px; border: 4px solid #eee; padding: 5px; background: #eee; list-style-type: none; -webkit-border-radius: 10px; -webkit-user-select: none; -moz-user-select: none; }
+
+.albums > li li { display: block; float: left; width: 80px; height: 80px; margin: 5px; overflow: hidden; }
+
+.albums > li li img { width: 80px; height: auto; min-height: 80px; }
+
+/* Thumbnail View
+----------------------------------------------------------------------------- */
+.thumbnails { width: 660px; margin: -10px 0 0 -10px; padding: 0; list-style-type: none; }
+
+.thumbnails > li { display: block; width: 200px; position: relative; float: left; margin: 0 0 10px 0; padding: 10px; -moz-border-radius: 15px; -moz-user-select: none; -webkit-border-radius: 15px; -webkit-user-select: none; }
+
+.thumbnails > li > a { display: block; width: 200px; height: 200px; overflow: hidden; }
+
+.thumbnails img { width: auto; height: 200px; }
+
+.thumbnails h4 { display: block; clear: left; margin: 0; padding-top: 10px; cursor: default; }
+
+.thumbnails h4 a { background: none; padding: 0; }
+
+/* Playlist View
+----------------------------------------------------------------------------- */
+.playlist { margin: 20px 0; padding: 0; list-style-type: none; }
+
+.playlist > li { display: block; width: 100%; clear: left; float: left; margin-bottom: 10px; border-bottom: 1px solid #bfbfbf; padding-bottom: 10px; }
+
+.playlist > li:last-child { border-bottom: 0; }
+
+.prompt > .playlist > li { border-bottom-color: 1px solid #bfbfbf; }
+
+.playlist img { width: 50px; height: 50px; float: left; margin-right: 10px; }
+
+/* Details */
+.playlist div { float: left; }
+
+.playlist div > h4 { float: left; margin: 0 7px 2px 0; color: black; font: bold 16px/21px "Helvetica", "Arial", sans-serif; }
+
+.playlist div > em { float: left; color: #8f8f8f; font: normal 14px/21px "Arial", sans-serif; }
+
+.playlist div > ul.actions { clear: left; float: left; }
+
+/* Controls */
+@import url(../buttons/buttons.css);
+/* Favorite Control
+----------------------------------------------------------------------------- */
+label.favorite { display: block; width: 18px; height: 15px; overflow: hidden; position: absolute; margin: 0; cursor: pointer; -moz-user-select: none; -webkit-user-select: none; }
+
+label.favorite em { display: block; width: 18px; height: 15px; background-image: url(/widgets/list/images/favorite.png); text-indent: -5000px; }
+
+label.favorited em { background-image: url(/widgets/list/images/favorited.png); }
+
+label.favorite input { margin-left: -18px; }
+
+/* Positioning Exceptions */
+.photos label.favorite, .videos label.favorite { top: 220px; right: 10px; }
+
+.songs label.favorite { position: static; float: left; margin-left: 7px; }
+
+/* Order Control
+----------------------------------------------------------------------------- */
+label.order { display: none; width: 18px; height: 16px; overflow: hidden; position: absolute; margin: 0; -moz-user-select: none; -webkit-user-select: none; }
+
+label.order em { display: block !important; width: 18px; height: 16px; background-image: url(/widgets/list/images/order.png); text-indent: -5000px; }
+
+label.order input { display: none; }
+
+.order > li:hover > label.order { display: block; }
+
+.order > li.ui-sortable-helper a, .order > li.ui-sortable-helper em { cursor: move; }
+
+.order > li.ui-sortable-helper { -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 20px; }
+
+/* Positioning Exceptions */
+.photos label.order, .videos label.order { top: 220px; right: 38px; }
+
+.albums label.order { top: 220px; right: 12px; }
+
+/* Select Control
+----------------------------------------------------------------------------- */
+.select label.select { display: none; }
+
+.select > li > ul:first-child { opacity: 0.5; }
+
+.select > li:hover > ul:first-child { border-color: #aaa; opacity: 1; }
+
+.select > li.added > ul:first-child { border-color: #000; opacity: 1; }
+
+/* Player Widget
+----------------------------------------------------------------------------- */
+/* Song Player (Grooveshark)
+----------------------------------------------------------------------------- */
+div.player.song { display: none; width: 20%; height: 40px; border: 0; position: fixed; z-index: 100; left: 1%; bottom: 10px; background: #8f8f8f; -moz-box-shadow: #8f8f8f 0px 0px 20px; -moz-user-select: none; -webkit-box-shadow: #8f8f8f 0px 0px 20px; -webkit-user-select: none; }
+
+div.player.song a.close { display: none; width: 24px; height: 24px; border-radius: 12px; position: absolute; background: black url(/controls/images/close.png) no-repeat center center; text-indent: -5000px; -moz-border-radius: 12px; -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px; -webkit-border-radius: 12px; -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px; display: none; z-index: 100; top: -12px; right: -11px; }
+
+div.player.song:hover a.close { display: block; }
+
+/* Video Player (YouTube, Vimeo)
+----------------------------------------------------------------------------- */
+div.player.video { clear: left; float: left; width: 94%; margin-bottom: 20px; border-radius: 15px; box-shadow: #8f8f8f 0px 0px 20px; padding: 3%; -moz-border-radius: 15px; -moz-box-shadow: #8f8f8f 0px 0px 20px; -webkit-border-radius: 15px; -webkit-box-shadow: #8f8f8f 0px 0px 20px; background: #8f8f8f; -webkit-user-select: none; -moz-user-select: none; }
+div.player.video.ui-sortable-helper { padding: 16px; box-shadow: #8f8f8f 0px 0px 50px; -moz-box-shadow: #8f8f8f 0px 0px 50px; -webkit-box-shadow: #8f8f8f 0px 0px 50px; }
+
+div.player.video div, div.player.video iframe { width: 100% !important; height: 360px; border: 0; }
+
+div.player.video h4 { display: block; clear: left; margin: 0; padding-top: 10px; color: black; font: bold 16px/21px "Helvetica", "Arial", sans-serif; cursor: default; }
+
+/* Prompt Widget
+----------------------------------------------------------------------------- */
+@import url(../actions/buttons.css);
+@import url(../input/clipboard.css);
+@import url(../input/search.css);
+/* Video Player (YouTube, Vimeo)
+----------------------------------------------------------------------------- */
+div.player.video { clear: left; float: left; width: 94%; margin-bottom: 20px; border-radius: 15px; box-shadow: #8f8f8f 0px 0px 20px; padding: 3%; -moz-border-radius: 15px; -moz-box-shadow: #8f8f8f 0px 0px 20px; -webkit-border-radius: 15px; -webkit-box-shadow: #8f8f8f 0px 0px 20px; background: #8f8f8f; -webkit-user-select: none; -moz-user-select: none; }
+div.player.video.ui-sortable-helper { padding: 16px; box-shadow: #8f8f8f 0px 0px 50px; -moz-box-shadow: #8f8f8f 0px 0px 50px; -webkit-box-shadow: #8f8f8f 0px 0px 50px; }
+
+div.player.video div, div.player.video iframe { width: 100% !important; height: 360px; border: 0; }
+
+div.player.video h4 { display: block; clear: left; margin: 0; padding-top: 10px; color: black; font: bold 16px/21px "Helvetica", "Arial", sans-serif; cursor: default; }
+
+/* Widget Styles */
+/* Prompt Widget
+----------------------------------------------------------------------------- */
+div.prompt { clear: left; float: left; width: 94%; margin-bottom: 20px; border-radius: 15px; box-shadow: #8f8f8f 0px 0px 20px; padding: 3%; -moz-border-radius: 15px; -moz-box-shadow: #8f8f8f 0px 0px 20px; -webkit-border-radius: 15px; -webkit-box-shadow: #8f8f8f 0px 0px 20px; position: relative; background-color: white; }
+div.prompt.ui-sortable-helper { padding: 16px; box-shadow: #8f8f8f 0px 0px 50px; -moz-box-shadow: #8f8f8f 0px 0px 50px; -webkit-box-shadow: #8f8f8f 0px 0px 50px; }
+
+div.prompt div.preview { clear: left; margin-bottom: 20px; }
+
+div.prompt div.preview div, div.prompt div.preview iframe { width: 100% !important; height: 360px; border: 0; }
+
+div.prompt h3 { margin: 0 0 2% 0; font: bold 16px/21px "Helvetica", "Arial", sans-serif; }
+
+div.prompt h3 span { font-weight: normal; }
+
+div.prompt ul.buttons li.play a { background-color: black; }

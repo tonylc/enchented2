@@ -1,0 +1,38 @@
+<% @action = @options[:action] ? @options[:action] : request.fullpath %>
+<%= form_tag @action do %>
+<div class="widget form <%= options %>">
+
+    <div class="controls">
+      
+        <label class="required"><em>Bride's name</em><input name="name-bride" type="text" /></label><br />
+        <label class="required"><em>Groom's name</em><input name="name-groom" type="text" /></label><br />
+        
+        <h4>When is your wedding?</h4>
+        
+        <label class="date"><em>The Big Day</em><input name="date-wedding" type="text" /></label>
+        <fieldset><label class="alternate"><input type="checkbox" /><em>Not sure yet</em></label></fieldset><br />
+        <label class="season"><em>Know the season?</em><select><%= render '/widgets/form/common/seasons' %><option>Not sure either</option></select></label><br />
+        
+        <div class="location">
+        
+            <h4>Where will the ceremony take place?</h4>
+            <p>You can change this later easily</p>
+            
+            <label class="required city"><em>City</em><input type="text" /></label><br />
+            <label class="required state"><em>State</em><select><%= render '/widgets/form/common/states' %></select></label><br />
+
+        </div>
+
+        <ul class="actions emphasized">
+
+            <li><input type="submit" value="Get Started" /></li>
+
+        </ul>
+
+    </div>
+
+</div>
+<% end %>
+
+<%- libraries '/libraries/jquery-1.4.4.js', '/libraries/jquery_ui-1.8.9.js' -%>
+<%- scripts '/widgets/form/buttons','/widgets/form/date', '/widgets/form/location', '/widgets/form/validate' -%>

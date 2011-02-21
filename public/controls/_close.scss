@@ -1,0 +1,20 @@
+/* Close Buttons
+----------------------------------------------------------------------------- */
+
+
+    @mixin close {
+    
+        display: none;
+        width: 24px;
+        height: 24px;
+        border-radius: $button-corner-emphasized;
+        position: absolute;
+        background: $button-background url(/controls/images/close.png) no-repeat center center;
+        text-indent: -5000px;
+        
+        -moz-border-radius: $button-corner-emphasized;
+        -moz-box-shadow: rgba(0, 0, 0, .50) 0px 0px 5px;
+        -webkit-border-radius: $button-corner-emphasized;
+        -webkit-box-shadow: rgba(0, 0, 0, .50) 0px 0px 5px;
+    
+    }

@@ -1,0 +1,33 @@
+<div id="content">
+
+    <%= player :play => "song", :view => "inline", :clip => "27953894", :source => "grooveshark" %>
+
+</div>
+
+    <% unless guest? %>
+    <div id="widgets">
+    
+        <ul>
+
+            <% if trial? %>
+
+                <li class="text"><a href="#text">Text</a></li>
+                <li class="video"><a href="#video">Video</a></li>
+                <li class="song"><a href="#song">Song</a></li>
+
+            <% end %>
+
+                <li class="photo"><a href="#photo">Photo</a></li>
+                <li class="album"><a href="#album">Album</a></li>
+
+        </ul>
+
+        <%= editor :edit => "text", :view => "inline", :placeholder => "Your Welcome Message Goes Here" %>
+        <%= prompt :for => "video", :view => "add" %>
+        <%= prompt :for => "song", :view => "add" %>
+    
+    </div>
+    <% end %>
+
+<%- libraries '/libraries/jquery-1.4.4.js', '/libraries/jquery_ui-1.8.9.js' -%>
+<%- scripts '/prototype/header' -%>

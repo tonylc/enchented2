@@ -1,0 +1,36 @@
+<% @action = @options[:action] ? @options[:action] : request.fullpath %>
+<%= form_tag(@action, { :class => "widget prompt " + @options[:for] }) do %>
+<div class="widget prompt <%= options %>">
+
+    <%= heading :verb => "Add a", :content => @options[:for].capitalize %>
+
+    <div class="preview"></div>
+
+    <% if @options[:input] == "clipboard" %>
+
+        <h4 class="prompt">Paste embed code or a link to a video <small>(Supported: YouTube, Vimeo)</small></h4>
+        <label><textarea cols="80" rows="2"></textarea></label>
+
+    <% elsif @options[:input] == "search" %>
+
+        <label><input type="text" placeholder="Search for Music" /></label>
+        <ul class="results playlist"></ul>
+
+    <% end %>
+
+    <ul class="actions">
+
+        <% if @options[:input] == "search" %>
+            <li class="submit"><input type="submit" value="Search" /></li>
+        <% else %>
+            <li class="submit"><input type="submit" value="Add <%= @options[:for].capitalize %>" /></li>
+        <% end %>
+
+    </ul>
+
+</div>
+<% end %>
+
+<%- libraries '/libraries/jquery-1.4.4.js', '/libraries/jquery-javascriptmvc', '/libraries/json2', '/libraries/swfobject-2.2.js' -%>
+<%- scripts '/widgets/form/buttons', '/controls/clipboard', '/controls/search', '/widgets/player/play' -%>
+<%- adapters '/adapters/youtube', '/adapters/vimeo', '/adapters/grooveshark' -%>

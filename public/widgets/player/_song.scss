@@ -1,0 +1,39 @@
+/* Song Player (Grooveshark)
+----------------------------------------------------------------------------- */
+
+
+    div.player.song {
+    
+        display: none;
+        width: 20%;
+        height: 40px;
+        border: 0;
+        position: fixed;
+        z-index: 100;
+        left: 1%;
+        bottom: 10px;
+        background: $widget-background-player;
+    
+        -moz-box-shadow: $widget-shadow;
+        -moz-user-select: none;
+        -webkit-box-shadow: $widget-shadow;
+        -webkit-user-select: none;
+    
+    }
+    
+    div.player.song a.close {
+    
+        @include close;
+        
+        display: none;
+        z-index: 100;
+        top: -12px;
+        right: -11px;
+    
+    }
+    
+    div.player.song:hover a.close {
+    
+        display: block;
+    
+    }

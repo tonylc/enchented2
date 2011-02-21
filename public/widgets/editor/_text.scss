@@ -1,0 +1,90 @@
+/* Text Editor
+----------------------------------------------------------------------------- */
+
+
+    @import "../../themes/prototype";
+
+
+/* Buttons */
+
+
+    div.editor.text a.close {
+    
+        top: 0;
+        right: 0;
+    
+    }
+
+
+/* TinyMCE Editor */
+
+
+    div.editor.text {
+
+        float: left;
+        clear: left;
+        width: 100%;
+        position: relative;
+        margin-bottom: 10px;
+    
+    }
+
+    div.editor.text.editing {
+
+        margin-bottom: 20px;
+        padding-bottom: 22px;
+    
+    }
+    
+    div.editor.text > span.mceEditor {
+    
+        display: block;
+        background-color: $widget-background;
+    
+        -moz-border-radius-topleft: $widget-corner;
+        -moz-border-radius-topright: $widget-corner;
+        -moz-border-radius-bottomright: $widget-corner;
+        -moz-box-shadow: $widget-shadow;
+        -webkit-border-top-left-radius: $widget-corner;
+        -webkit-border-top-right-radius: $widget-corner;
+        -webkit-border-bottom-right-radius: $widget-corner;
+        -webkit-box-shadow: $widget-shadow;
+    
+    }
+    
+    div.editor.text > textarea, div.editor.text > span.mceEditor > div {
+    
+        display: none !important;
+    
+    }
+
+    div.editor.text iframe {
+    
+        width: 96% !important;
+        margin: 0;
+        border: 0 !important;
+        padding: 2%;
+        background: none;
+    
+    }
+    
+
+/* TinyMCE Editor - Autogrow Resize Plugin (requires a wrapping table) */
+
+
+    div.editor.text table {
+
+        width: 100% !important;
+        height: auto !important;
+    
+    }
+
+    body.mceContentBody, div.editor.text table, div.editor.text td {
+    
+        margin: 0;
+        border: 0 !important;
+        padding: 0;
+        background: transparent !important;
+        vertical-align: top;
+    
+    }

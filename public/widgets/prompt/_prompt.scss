@@ -1,0 +1,43 @@
+/* Prompt Widget
+----------------------------------------------------------------------------- */
+
+
+    div.prompt {
+
+        @include panel;
+        position: relative;
+        background-color: $widget-background;
+
+    }
+    
+    div.prompt div.preview {
+    
+        clear: left;
+        margin-bottom: 20px;
+    
+    }
+
+    div.prompt div.preview div, div.prompt div.preview iframe {
+    
+        @include video;
+    
+    }
+
+    div.prompt h3 {
+    
+        margin: 0 0 2% 0;
+        font: $widget-font-emphasized;
+    
+    }
+    
+    div.prompt h3 span {
+    
+        font-weight: normal;
+    
+    }
+
+    div.prompt ul.buttons li.play a {
+
+        background-color: $button-background;
+    
+    }

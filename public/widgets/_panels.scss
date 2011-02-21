@@ -1,0 +1,38 @@
+/* Sassy Panels
+----------------------------------------------------------------------------- */
+    
+    
+    @mixin panel {
+    
+        clear: left;
+        float: left;
+        width: 94%;
+        margin-bottom: 20px;
+        border-radius: $widget-corner;
+        box-shadow: $widget-shadow;
+        padding: 3%;
+        
+        &.ui-sortable-helper {
+        
+            padding: 16px;
+            
+            box-shadow: $widget-shadow-dragging;
+            -moz-box-shadow: $widget-shadow-dragging;
+            -webkit-box-shadow: $widget-shadow-dragging;
+        
+        }
+        
+        -moz-border-radius: $widget-corner;
+        -moz-box-shadow: $widget-shadow;
+        -webkit-border-radius: $widget-corner;
+        -webkit-box-shadow: $widget-shadow;
+    
+    }
+    
+    @mixin video {
+    
+        width: 100% !important;
+        height: 360px;
+        border: 0;
+    
+    }

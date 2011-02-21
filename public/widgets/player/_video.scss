@@ -1,0 +1,31 @@
+/* Video Player (YouTube, Vimeo)
+----------------------------------------------------------------------------- */
+
+
+    div.player.video {
+
+        @include panel;    
+        background: $widget-background-player;
+    
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        
+    }
+    
+    div.player.video div, div.player.video iframe {
+    
+        @include video;
+    
+    }
+    
+    div.player.video h4 {
+    
+        display: block;
+        clear: left;
+        margin: 0;
+        padding-top: 10px;
+        color: $widget-color-emphasized;
+        font: $widget-font-emphasized;
+        cursor: default;
+    
+    }

@@ -1,0 +1,46 @@
+<ul class="playlist <%= @context %> <%= options %>">
+
+    <% content(:items => 5).each do |item| %>
+
+        <li id="<%= item[:id] %>" class="<%= item[:source] %>">
+        
+            <% if item[:thumbnail] %>
+                <a href="#"><img src="/content/<%= @context %>/thumbnails/<%= item[:thumbnail] %>" alt="<%= item[:name] %>" /></a>
+            <% end %>
+
+            <div>
+
+                <h4><%= item[:name] %></h4>
+                <em><%= item[:tagline] %></em>
+
+                <% if @options[:favorite] == true %>
+                    <label class="favorite"><em>Favorite</em><input type="checkbox" /></label>
+                <% end %>
+                <% if @options[:order] == true %>
+                    <label class="order"><em>Order</em><input type="text" /></label>
+                <% end %>
+    
+                <% if @options[:remove] || @options[:play] %>
+                <ul class="actions">
+                
+                    <% if @options[:play] == true && item[:source] == "grooveshark" %>
+                        <li class="play"><a href="#">Listen</a></li>
+                    <% elsif @options[:play] == true %>
+                        <li class="play"><a href="#">Watch</a></li>
+                    <% end %>
+
+                    <% if @options[:remove] == true %><li class="remove"><a href="#">Remove</a></li><% end %>
+                
+                </ul>
+                <% end %>
+
+            </div>
+    
+        </li>
+
+    <% end %>
+
+</ul>
+
+<%- libraries '/libraries/jquery-1.4.4.js', '/libraries/jquery_ui-1.8.9.js' -%>
+<%- scripts '/widgets/list/controls/favorite', '/widgets/list/controls/order', '/widgets/list/controls/remove', '/utilities/truncator' -%>

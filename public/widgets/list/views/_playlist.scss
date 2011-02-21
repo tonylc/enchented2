@@ -1,0 +1,78 @@
+/* Playlist View
+----------------------------------------------------------------------------- */
+
+
+    .playlist {
+    
+        margin: 20px 0;
+        padding: 0;
+        list-style-type: none;
+    
+    }
+
+    .playlist > li {
+    
+        display: block;
+        width: 100%;
+        clear: left;
+        float: left;
+        margin-bottom: 10px;
+        border-bottom: $widget-rule;
+        padding-bottom: 10px;
+    
+    }
+    
+    .playlist > li:last-child {
+    
+        border-bottom: 0;
+    
+    }
+    
+    .prompt > .playlist > li {
+    
+        border-bottom-color: $widget-rule;
+    
+    }
+
+    .playlist img {
+    
+        width: 50px;
+        height: 50px;
+        float: left;
+        margin-right: 10px;
+    
+    }
+
+
+/* Details */
+
+
+    .playlist div {
+    
+        float: left;
+    
+    }
+
+    .playlist div > h4 {
+    
+        float: left;
+        margin: 0 7px 2px 0;
+        color: $widget-color-emphasized;
+        font: $widget-font-emphasized;
+    
+    }
+
+    .playlist div > em {
+    
+        float: left;
+        color: $widget-color;
+        font: $widget-font;
+    
+    }
+
+    .playlist div > ul.actions {
+    
+        clear: left;
+        float: left;
+    
+    }

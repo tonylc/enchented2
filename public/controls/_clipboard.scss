@@ -1,0 +1,61 @@
+/* Clipboard Control
+----------------------------------------------------------------------------- */
+
+
+    div.clipboard textarea {
+    
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        margin: 0;
+        border: 0;
+        box-shadow: 0;
+        opacity: 0;
+        outline: none;
+        padding: 0;
+        resize: none;
+        
+        -moz-box-shadow: 0;
+        -webkit-box-shadow: 0;
+    
+    }
+
+
+/* Prompt */
+
+
+    div.clipboard h4.prompt {
+
+        clear: left;    
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+        border: 1px solid $form-border-field;
+        border-radius: $form-corner;
+        padding: 50px 0;
+        background: $form-background-field;
+        box-shadow: $form-shadow;
+        color: $form-color-field;
+        font: $widget-font;
+        cursor: pointer;
+        text-align: center;
+    
+        -moz-border-radius: $form-corner;
+        -moz-box-shadow: $form-shadow;
+        -moz-user-select: none;
+        -webkit-border-radius: $form-corner;
+        -webkit-box-shadow: $form-shadow;
+        -webkit-user-select: none;
+
+    }
+    
+    div.clipboard h4.focused {
+    
+        opacity: 1;
+        box-shadow: $form-shadow-emphasized;
+        color: $form-color-emphasized;
+    
+        -webkit-box-shadow: $form-shadow-emphasized;
+        -moz-box-shadow: $form-shadow-emphasized;
+    
+    }

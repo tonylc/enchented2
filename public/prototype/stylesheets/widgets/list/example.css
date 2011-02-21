@@ -1,0 +1,121 @@
+/* Example - Lists
+----------------------------------------------------------------------------- */
+/* Prototype Theme
+----------------------------------------------------------------------------- */
+/* Buttons */
+/* Footer */
+/* Forms */
+/* Header */
+/* Navigation */
+/* Toolbar */
+/* Widgets */
+/* Examples of Widgets
+----------------------------------------------------------------------------- */
+body { background-color: #bfbfbf; }
+
+div#example { float: left; width: 100%; padding: 40px 0; }
+
+@import url(../widgets.css);
+/* Example - Lists
+----------------------------------------------------------------------------- */
+/* Album View
+----------------------------------------------------------------------------- */
+.albums { width: 660px; margin: -10px 0 0 -10px; padding: 0; list-style-type: none; }
+
+.albums > li { display: block; width: 200px; position: relative; float: left; margin: 0 0 20px 0; padding: 10px; background: #fff; -moz-border-radius: 15px; -moz-user-select: none; -webkit-border-radius: 15px; -webkit-user-select: none; }
+
+.albums h4 { display: block; clear: left; margin: 0; padding-top: 10px; font: normal 14px/21px "Arial", sans-serif; cursor: default; }
+
+.albums h4 a, .albums em a { color: black; }
+
+.albums em { display: block; color: #8f8f8f; }
+
+.albums ul.actions { clear: left; margin: 10px 0 0 0; }
+
+/* Thumbnail Preview */
+.albums > li > ul { display: block; float: left; width: 180px; border: 4px solid #eee; padding: 5px; background: #eee; list-style-type: none; -webkit-border-radius: 10px; -webkit-user-select: none; -moz-user-select: none; }
+
+.albums > li li { display: block; float: left; width: 80px; height: 80px; margin: 5px; overflow: hidden; }
+
+.albums > li li img { width: 80px; height: auto; min-height: 80px; }
+
+/* Thumbnail View
+----------------------------------------------------------------------------- */
+.thumbnails { width: 660px; margin: -10px 0 0 -10px; padding: 0; list-style-type: none; }
+
+.thumbnails > li { display: block; width: 200px; position: relative; float: left; margin: 0 0 10px 0; padding: 10px; -moz-border-radius: 15px; -moz-user-select: none; -webkit-border-radius: 15px; -webkit-user-select: none; }
+
+.thumbnails > li > a { display: block; width: 200px; height: 200px; overflow: hidden; }
+
+.thumbnails img { width: auto; height: 200px; }
+
+.thumbnails h4 { display: block; clear: left; margin: 0; padding-top: 10px; cursor: default; }
+
+.thumbnails h4 a { background: none; padding: 0; }
+
+/* Playlist View
+----------------------------------------------------------------------------- */
+.playlist { margin: 20px 0; padding: 0; list-style-type: none; }
+
+.playlist > li { display: block; width: 100%; clear: left; float: left; margin-bottom: 10px; border-bottom: 1px solid #bfbfbf; padding-bottom: 10px; }
+
+.playlist > li:last-child { border-bottom: 0; }
+
+.prompt > .playlist > li { border-bottom-color: 1px solid #bfbfbf; }
+
+.playlist img { width: 50px; height: 50px; float: left; margin-right: 10px; }
+
+/* Details */
+.playlist div { float: left; }
+
+.playlist div > h4 { float: left; margin: 0 7px 2px 0; color: black; font: bold 16px/21px "Helvetica", "Arial", sans-serif; }
+
+.playlist div > em { float: left; color: #8f8f8f; font: normal 14px/21px "Arial", sans-serif; }
+
+.playlist div > ul.actions { clear: left; float: left; }
+
+/* Controls */
+@import url(../buttons/buttons.css);
+/* Favorite Control
+----------------------------------------------------------------------------- */
+label.favorite { display: block; width: 18px; height: 15px; overflow: hidden; position: absolute; margin: 0; cursor: pointer; -moz-user-select: none; -webkit-user-select: none; }
+
+label.favorite em { display: block; width: 18px; height: 15px; background-image: url(/widgets/list/images/favorite.png); text-indent: -5000px; }
+
+label.favorited em { background-image: url(/widgets/list/images/favorited.png); }
+
+label.favorite input { margin-left: -18px; }
+
+/* Positioning Exceptions */
+.photos label.favorite, .videos label.favorite { top: 220px; right: 10px; }
+
+.songs label.favorite { position: static; float: left; margin-left: 7px; }
+
+/* Order Control
+----------------------------------------------------------------------------- */
+label.order { display: none; width: 18px; height: 16px; overflow: hidden; position: absolute; margin: 0; -moz-user-select: none; -webkit-user-select: none; }
+
+label.order em { display: block !important; width: 18px; height: 16px; background-image: url(/widgets/list/images/order.png); text-indent: -5000px; }
+
+label.order input { display: none; }
+
+.order > li:hover > label.order { display: block; }
+
+.order > li.ui-sortable-helper a, .order > li.ui-sortable-helper em { cursor: move; }
+
+.order > li.ui-sortable-helper { -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 20px; }
+
+/* Positioning Exceptions */
+.photos label.order, .videos label.order { top: 220px; right: 38px; }
+
+.albums label.order { top: 220px; right: 12px; }
+
+/* Select Control
+----------------------------------------------------------------------------- */
+.select label.select { display: none; }
+
+.select > li > ul:first-child { opacity: 0.5; }
+
+.select > li:hover > ul:first-child { border-color: #aaa; opacity: 1; }
+
+.select > li.added > ul:first-child { border-color: #000; opacity: 1; }

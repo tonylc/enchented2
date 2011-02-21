@@ -33,13 +33,24 @@ module ApplicationHelper
   end
 
 
+# Heading Maker
+# ---------------------------------------------------------------------------
+
+  def heading(options={})
+
+    if couple? || trial?
+      raw('<h3 class="handle">' + options[:verb] + ' ' + options[:content] + '</h3>')    
+    else
+      raw('<h3>' + options[:verb] + ' ' + options[:content] + '</h3>')    
+    end
+  end
+
+
 # Link Maker
 # ---------------------------------------------------------------------------
 
   def go(options = {})
-
-      raw('<a href="/prototype/' + options[:to] + '/' + user + '">' + options[:to].capitalize + '</a>')
-  
+    raw('<a href="/prototype/' + options[:to] + '/' + user + '">' + options[:to].capitalize + '</a>')
   end
 
 

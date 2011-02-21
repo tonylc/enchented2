@@ -5,7 +5,7 @@ class ExampleController < ApplicationController
 
   def widget
 
-    render 'ui/' + params[:widget] + '/_' + params[:view], :layout => false
+    render 'widgets/' + params[:widget] + '/_' + params[:view], :layout => false
 
   end
 

@@ -6,9 +6,10 @@
 
     <!-- PAGE TITLE -->
     <title>Example of a <%- if params[:context] -%><%= params[:context].capitalize %> <%- end -%><%= self.action_name.capitalize %></title>
+    <link rel="shortcut icon" href="/prototype/bookmark.ico" />
     
     <!-- STYLES -->
-    <%= stylesheet_link_tag('/stylesheets/ui/' + self.action_name + '/example.css') %>
+    <%= stylesheet_link_tag('/prototype/stylesheets/widgets/' + self.action_name + '/example.css') %>
 
 </head>
 <body class="example <%= params[:user] %>">
@@ -20,7 +21,7 @@
     <% if @libraries %><%= javascript_include_tag(*@libraries) %><% end %>
     <% if @adapters %><%= javascript_include_tag(*@adapters) %><% end %>
     <% if @scripts %><%= javascript_include_tag(*@scripts) %><% end %>
-    <%= javascript_include_tag('/ui/' + self.action_name + '/example.js') %>
+    <%= javascript_include_tag('/widgets/' + self.action_name + '/example.js') %>
 
 </body>
 </html>

@@ -6,9 +6,10 @@
 
     <!-- PAGE TITLE -->
     <title><% if @title %><%= @title %> &middot; <% end %>Love for Design</title>
+    <link rel="shortcut icon" href="/prototype/bookmark.ico" />
 
     <!-- STYLES -->
-    <%= stylesheet_link_tag('/stylesheets/prototype/master.css') %>
+    <%= stylesheet_link_tag('/prototype/stylesheets/prototype/master.css') %>
 
 </head>
 <body class="prototype <%= user %>">
@@ -30,9 +31,6 @@
         <!-- <%= page.upcase + ' PAGE' %> -->
         <%= yield %>
 
-        <!-- AUDIO PLAYER -->
-        <div class="player"></div>
-
     </div>
 
     <!-- NAVIGATION -->
@@ -50,7 +48,16 @@
     <!-- SCRIPTS -->
     <% if @libraries %><%= javascript_include_tag(*@libraries) %><% end %>
     <% if @adapters %><%= javascript_include_tag(*@adapters) %><% end %>
-    <%= javascript_include_tag('/ui/utilities/center', '/prototype/logic', '/prototype/layout') %>
+
+    <%= javascript_include_tag('/utilities/logic', '/utilities/initializer', '/utilities/measurer') %>
+    <%= javascript_include_tag('/prototype/initialize') %>
+
+    <% if couple? || trial? %>
+    
+        <%= javascript_include_tag('/controls/close', '/widgets/_bin') %>
+    
+    <% end %>
+
     <% if @scripts %><%= javascript_include_tag(*@scripts) %><% end %>
 
 </body>

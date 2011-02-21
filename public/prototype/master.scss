@@ -3,7 +3,6 @@
 
 
     @import "../themes/prototype";
-    @import "../ui/mixins";
 
 
 /* Prototype */
@@ -12,21 +11,28 @@
     @import "header";
     @import "navigation";
     @import "layout";
-    @import "widgets";
     @import "footer";
+    @import "text";
+
+
+/* Controls */
+
+
+    @import "../controls/actions";
+    @import "../controls/clipboard";
+    @import "../controls/close";
+    @import "../controls/search";
 
 
 /* Widgets */
 
 
-    @import "../ui/buttons/styles";
-    @import "../ui/editor/styles";
-    @import "../ui/form/styles";
-    @import "../ui/guide/styles";
-    @import "../ui/input/styles";
-    @import "../ui/list/styles";
-    @import "../ui/options/styles";
-    @import "../ui/player/styles";
-    @import "../ui/prompt/styles";
-    @import "../ui/tabs/styles";
-    @import "../ui/text/styles";
+    @import "../widgets/bin";
+    @import "../widgets/panels";
+
+    @import "../widgets/editor/styles";
+    @import "../widgets/form/styles";
+    @import "../widgets/guide/styles";
+    @import "../widgets/list/styles";
+    @import "../widgets/player/styles";
+    @import "../widgets/prompt/styles";

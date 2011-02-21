@@ -7,9 +7,9 @@ module WidgetHelper
   def render_widget
     
       if self.controller_name == 'example'
-        render 'ui/' + caller[0][/`([^']*)'/, 1] + '/_' + @options[:view]
+        render 'widgets/' + caller[0][/`([^']*)'/, 1] + '/_' + @options[:view]
       else
-        render 'ui/' + caller[0][/`([^']*)'/, 1] + '/' + @options[:view]
+        render 'widgets/' + caller[0][/`([^']*)'/, 1] + '/' + @options[:view]
       end  
   
   end

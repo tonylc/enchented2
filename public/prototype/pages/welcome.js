@@ -15,18 +15,7 @@
 
     $(window).load(function() {
 
-        // to-do: the following markup isn't always present, needs to fail silently
-
-        if (couple || trial) {
-            $('div.editor.text').edit();
-        }
-        
-        if (trial) {
-            $('div.clipboard textarea').clipboard();
-            $('div.prompt.search').search();
-            $('ul.buttons li input').buttons();
-        }
-
+        $('ul.buttons li input').buttons();
         $('div.player.video.youtube').play({ source: 'youtube' });
         $('div.player.video.vimeo').play({ source: 'vimeo' });
         $('div.player.song.grooveshark').play({ source: 'grooveshark' });

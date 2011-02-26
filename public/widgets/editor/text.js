@@ -23,7 +23,7 @@
                 $text.append('<div>' + $content + '</div>');
             }
             
-            $text.click(function() {
+            $text.children('div').click(function() {
             
                 if (!$(this).hasClass('editing')) {
                     $text.edit('text');
@@ -183,16 +183,11 @@
                 
                 });
                 
-                /*
-                
-                $('div#page').click(function() {
+                $('div.widget').not($this).click(function() {
                 
                     $this.edit('save');
-                    $('div#page').unbind('click');
         
                 });
-                
-                */
 
             });
 

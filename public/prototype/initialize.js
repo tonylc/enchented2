@@ -16,7 +16,7 @@
 
     $(window).load(function() {
 
-        $('ul.buttons li input').buttons();
+        $('ul.actions li input').buttons();
         $('div.guide').guide(function() {
 
             $('div.player').initialize('players');

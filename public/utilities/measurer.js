@@ -8,7 +8,11 @@
     
         return this.each(function(index) {
 
-            $(this).css('width', $(this).width() + 'px').css('float', 'none').css('visibility','visible');
+            var $this = $(this);
+
+            setTimeout(function() {
+                $this.css('width', $this.width() + 'px').css('float', 'none').hide().css('visibility','visible').fadeIn();
+            }, 500);
 
         });
 

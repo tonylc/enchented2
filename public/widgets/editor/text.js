@@ -15,8 +15,8 @@
 
         return this.each(function() {
 
-            var $text = $(this);
-            var $editor = $text.children('textarea');
+            var $text = $(this).children('div.text');
+            var $editor = $text.find('textarea');
             var $content = $editor.html().replace(new RegExp('&lt;', 'g'), '<').replace(new RegExp('&gt;', 'g'), '>');
             
             if ($text.children('div').length == 0) {
@@ -26,7 +26,7 @@
             $text.click(function() {
             
                 if (!$(this).hasClass('editing')) {
-                    $(this).edit('text');
+                    $text.edit('text');
                 }
             
             });
@@ -108,10 +108,10 @@
             $text.tinymce({
             
                 script_url: '/libraries/tinymce-3.3.9.2/tiny_mce.js',
-                content_css: '/prototype/text.css',
+                content_css: '/prototype/stylesheets/widgets/editor/formatting.css',
                 plugins: 'autoresize',
                 theme: 'advanced',
-                skin: '',
+                skin: 'default',
                 element_format: 'html',
                 visual: false,
                 visual_table_class: 'developer',
@@ -183,12 +183,16 @@
                 
                 });
                 
+                /*
+                
                 $('div#page').click(function() {
                 
-                    $('div.editor.text.editing').edit('save');
+                    $this.edit('save');
                     $('div#page').unbind('click');
         
                 });
+                
+                */
 
             });
 
@@ -216,7 +220,7 @@
             if ($(this).hasClass('editing')) {
 
                 var $contents = $($(this).find('iframe')[0].contentDocument).find('body').html();
-                var    contents = $contents.replace(new RegExp('<', 'g'), '&lt;').replace(new RegExp('>', 'g'), '&gt;');
+                var contents = $contents.replace(new RegExp('<', 'g'), '&lt;').replace(new RegExp('>', 'g'), '&gt;');
 
                 $(this).children('textarea:tinymce').tinymce().remove();
                 $(this).removeClass('editing').children('div.toolbar').remove();

@@ -1,0 +1,24 @@
+/* Text Formatting
+----------------------------------------------------------------------------- */
+/* Prototype Theme
+----------------------------------------------------------------------------- */
+/* Buttons */
+/* Footer */
+/* Forms */
+/* Header */
+/* Navigation */
+/* Toolbar */
+/* Widgets */
+/* Text Formatting
+----------------------------------------------------------------------------- */
+body { margin: 0 !important; padding: 0 !important; }
+
+a { color: #000; }
+
+img { background-color: #eee; }
+
+p { display: block; clear: left; margin: 0 0 10px 0; font: normal 14px/21px "Arial", sans-serif; }
+
+ul { width: 100%; margin: 20px 0; padding: 0; font: normal 14px/21px "Arial", sans-serif; list-style-type: none; text-align: center; }
+
+ul a { color: #8f8f8f; }

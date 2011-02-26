@@ -4,7 +4,7 @@
 
 (function($) {
 
-    $.fn.guide = function(options) {
+    $.fn.guide = function(callback) {
 
         return this.each(function(index) {
 
@@ -29,6 +29,10 @@
                     
                     });
                 }, 1000);
+                
+                if ($.isFunction(callback)) {
+                    callback.call(this);
+                }
                 
             });
 

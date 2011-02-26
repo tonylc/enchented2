@@ -62,9 +62,21 @@
 
                 return false;
             
-            });            
+            });
         
         });
+    
+    },
+    
+    text: function() {
+    
+        return this.each(function() {
+
+            var $widget = $(this);
+
+            $widget.edit();
+        
+        });    
     
     }
 

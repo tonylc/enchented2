@@ -5,6 +5,7 @@
     $(document).ready(function() {
     
         $('div#wedding h2').measure();
+        $('div.guide').hide();
     
     });
 
@@ -15,6 +16,11 @@
 
     $(window).load(function() {
 
-        $('div.player').initialize('players');
+        $('ul.buttons li input').buttons();
+        $('div.guide').guide(function() {
+
+            $('div.player').initialize('players');
+        
+        });
  
     });

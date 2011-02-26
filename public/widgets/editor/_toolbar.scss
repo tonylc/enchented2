@@ -95,10 +95,13 @@
     
         display: block;
         position: absolute;
-        width: 30px;
+        width: 32px;
         height: 0;
         border-top-left-radius: $toolbar-tool-corner;
         border-top-right-radius: $toolbar-tool-corner;
+        border-top: 2px solid $toolbar-foreground;
+        border-left: 2px solid $toolbar-foreground;
+        border-right: 2px solid $toolbar-foreground;
         padding: 0;
         overflow: hidden;
         bottom: 20px;
@@ -152,7 +155,7 @@
 
     div.toolbar ul.color > li.body a, div.toolbar ul.palette li.body em {
     
-        background-color: $toolbar-background;
+        background-color: $toolbar-foreground;
     
     }
     

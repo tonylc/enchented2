@@ -1,4 +1,5 @@
-<form method="post" action="<%= @action %>">
+<% @action = @options[:action] ? @options[:action] : request.fullpath %>
+<%= form_tag(@action, { :class => "widget editor text" }) do %>
 <div class="widget editor <%= options %>">
 
     <textarea id="instance-<%= rand(10) %>" cols="80" rows="10">
@@ -24,7 +25,7 @@
     </textarea>
 
 </div>
-</form>
+<% end %>
 
 <%- libraries '/libraries/jquery-1.4.4.js', '/libraries/jquery-tinymce.js', '/libraries/jquery-hoverintent.js' -%>
 <%- scripts '/widgets/editor/text' -%>

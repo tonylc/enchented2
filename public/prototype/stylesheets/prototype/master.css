@@ -12,7 +12,7 @@
 /* Prototype */
 /* Header
 ----------------------------------------------------------------------------- */
-div#wedding h2 { margin: 0 auto; -webkit-user-select: none; -moz-user-select: none; }
+div#wedding h2 { margin: 0 auto; visibility: hidden; -webkit-user-select: none; -moz-user-select: none; }
 
 div#wedding h2, div#wedding h5 a { display: block; clear: left; float: left; color: white; font: bold 24px/30px "Helvetica", "Arial", sans-serif; text-align: center; text-decoration: none; }
 
@@ -84,7 +84,6 @@ div#footer ul:last-child li { float: left; margin-right: 10px; }
 
 /* Text Formatting
 ----------------------------------------------------------------------------- */
-@import url(../../themes/prototype.css);
 body { margin: 0 !important; padding: 0 !important; }
 
 a { color: #000; }
@@ -167,8 +166,6 @@ div#widgets > ul li a:hover { background: black; }
 ----------------------------------------------------------------------------- */
 /* Text Editor Widget
 ----------------------------------------------------------------------------- */
-@import url(../text/formatting.css);
-/* Widget Styles */
 /* Text Editor
 ----------------------------------------------------------------------------- */
 /* Prototype Theme
@@ -182,6 +179,8 @@ div#widgets > ul li a:hover { background: black; }
 /* Widgets */
 /* Buttons */
 div.editor.text a.close { top: 0; right: 0; }
+
+div.editor.text.editing a.close { top: -13px; right: -13px; }
 
 /* TinyMCE Editor */
 div.editor.text { float: left; clear: left; width: 100%; position: relative; margin-bottom: 10px; }
@@ -218,7 +217,7 @@ div.toolbar ul.color li { background: none; }
 
 div.toolbar ul.color > li a { display: block; position: absolute; bottom: 0; right: 0; border-bottom-right-radius: 8px; background-color: black; opacity: 1; -moz-border-radius-bottomright: 8px; -webkit-border-bottom-right-radius: 8px; }
 
-div.toolbar ul.color > ul.palette { display: block; position: absolute; width: 30px; height: 0; border-top-left-radius: 8px; border-top-right-radius: 8px; padding: 0; overflow: hidden; bottom: 20px; right: 0; background: rgba(0, 0, 0, 0.7); -moz-border-radius-topleft: 8px; -moz-border-radius-topright: 8px; -webkit-border-top-left-radius: 8px; -webkit-border-top-right-radius: 8px; }
+div.toolbar ul.color > ul.palette { display: block; position: absolute; width: 32px; height: 0; border-top-left-radius: 8px; border-top-right-radius: 8px; border-top: 2px solid white; border-left: 2px solid white; border-right: 2px solid white; padding: 0; overflow: hidden; bottom: 20px; right: 0; background: rgba(0, 0, 0, 0.7); -moz-border-radius-topleft: 8px; -moz-border-radius-topright: 8px; -webkit-border-top-left-radius: 8px; -webkit-border-top-right-radius: 8px; }
 
 div.toolbar ul.color > ul.palette > li { clear: left; }
 
@@ -230,7 +229,7 @@ div.toolbar ul.palette li em { display: block; width: 12px; height: 12px; margin
 
 div.toolbar ul.palette li a { opacity: 1; }
 
-div.toolbar ul.color > li.body a, div.toolbar ul.palette li.body em { background-color: black; }
+div.toolbar ul.color > li.body a, div.toolbar ul.palette li.body em { background-color: white; }
 
 div.toolbar ul.color > li.one a, div.toolbar ul.palette li.one em { background-color: #ffc757; }
 

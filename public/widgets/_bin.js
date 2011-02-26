@@ -9,9 +9,14 @@
         
         $widgets.click(function() {
         
-            var $widget = $bin.children('.' + $(this).parent().attr('class'));
+            var widget = $(this).parent().attr('class');
+            var $widget = $bin.children('.' + widget);
             
-            $widget.clone().appendTo('#content').initialize();
+            if (widget == 'text') {
+                $widget.find('textarea').attr('id', 'instance-' + Math.floor(Math.random()*50));
+            }
+            
+            $widget.clone().appendTo('#content').initialize(widget);
             return false;
         
         });

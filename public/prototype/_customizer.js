@@ -1,5 +1,7 @@
-/* Widgets
+/* Customizer
 ----------------------------------------------------------------------------- */
+
+
 
 
     $(window).load(function() {
@@ -16,12 +18,7 @@
                 $widget.find('textarea').attr('id', 'instance-' + Math.floor(Math.random()*50));
             }
             
-            if (widget == 'song' || widget == 'video') {
-                $widget.clone().appendTo('#content').initialize('prompt');
-            } else {
-                $widget.clone().appendTo('#content').initialize(widget);
-            }
-            
+            $widget.clone().appendTo('#content').initialize(widget);
             return false;
         
         });

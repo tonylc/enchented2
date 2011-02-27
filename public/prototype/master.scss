@@ -24,12 +24,16 @@
     @import "../controls/search";
 
 
+/* Customizer */
+
+
+    @import "customizer";
+
+
 /* Widgets */
 
 
-    @import "../widgets/bin";
     @import "../widgets/panels";
-
     @import "../widgets/editor/styles";
     @import "../widgets/form/styles";
     @import "../widgets/guide/styles";

@@ -5,6 +5,21 @@
 (function($) {
 
     var methods = {
+
+
+/* Widgets and other components
+----------------------------------------------------------------------------- */
+
+
+    customizer: function() {
+    
+        return this.each(function() {
+        
+            $(this).customizer('init');
+        
+        });
+    
+    },
     
     players: function() {
     

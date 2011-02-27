@@ -13,7 +13,7 @@
 
         };
         
-        if (defaults.autoplay == true) {
+        if (defaults.autoplay == true && !window.location.search.match('mute')) {
             defaults.autoplay = 1;
         } else {
             defaults.autoplay = 0;

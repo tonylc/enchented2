@@ -20,6 +20,7 @@
         $('div.guide').guide(function() {
 
             $('div.player').initialize('players');
+            $('div#customizer').initialize('customizer');
         
         });
  

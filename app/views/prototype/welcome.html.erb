@@ -3,11 +3,13 @@
     <% if trial? %>
      
         <%= guide :to => "welcome" %>
+        <%= editor :edit => "text", :view => "inline", :placeholder => "Welcome to my wedding website!" %>
         <%= player :play => "song", :view => "inline", :clip => "27953894", :source => "grooveshark" %>
   
     <% else %>
     
         <%= player :play => "video", :view => "inline", :clip => "18606520", :source => "youtube" %>
+        <%= player :play => "song", :view => "inline", :clip => "27953894", :source => "grooveshark" %>
         <%= editor :edit => "text", :view => "inline", :placeholder => "Welcome to my wedding website!" %>
     
     <% end %>
@@ -15,27 +17,26 @@
 </div>
 
     <% unless guest? %>
-    <div id="widgets">
-    
-        <ul>
+    <div id="customizer">
 
-            <% if trial? %>
+        <ul class="widgets">
 
-                <li class="text"><a href="#text">Text</a></li>
-                <li class="video"><a href="#video">Video</a></li>
-                <li class="song"><a href="#song">Song</a></li>
-
-            <% end %>
-
-                <li class="photo"><a href="#photo">Photo</a></li>
-                <li class="album"><a href="#album">Album</a></li>
+            <li class="text"><a href="#text">Text</a></li>
+            <li class="video"><a href="#video">Video</a></li>
+            <li class="song"><a href="#song">Song</a></li>
+            <li class="photo"><a href="#photo">Photo</a></li>
+            <li class="album"><a href="#album">Album</a></li>
 
         </ul>
 
-        <%= editor :edit => "text", :view => "inline", :placeholder => "Your Welcome Message Goes Here" %>
-        <%= prompt :for => "video", :view => "add" %>
-        <%= prompt :for => "song", :view => "add" %>
+        <div class="widgets">
     
+            <%= editor :edit => "text", :view => "inline", :placeholder => "Your Welcome Message Goes Here" %>
+            <%= prompt :for => "video", :view => "add" %>
+            <%= prompt :for => "song", :view => "add" %>
+        
+        </div>
+
     </div>
     <% end %>
 

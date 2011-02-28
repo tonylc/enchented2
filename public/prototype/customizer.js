@@ -19,9 +19,17 @@
 
             $(this).find('ul.widgets a').click(function() {
 
-                var widget = $(this).parent().attr('class');
+                var name = $(this).parent().attr('class');
+                var template;
 
-                $widgets.customizer('add', { widget: widget, widgets: $widgets });
+                if (name.match(/\s/)) {
+                    template = '.' + name.replace(/\s/, '.');
+                    name = name.split(/\s/).shift();
+                } else {
+                    template = '.' + name;
+                }
+
+                $widgets.customizer('add', { name: name, widget: $widgets.children(template) });
             
             });
 
@@ -50,7 +58,7 @@
     
     },
 
-/* Add method
+/* Add method: injects widgets into page
 ----------------------------------------------------------------------------- */
         
 
@@ -66,11 +74,13 @@
 
         return this.each(function() {
 
-            if (options.widget == 'text') {
-                $(options.widgets).find('div.editor.text textarea').attr('id', 'instance-' + Math.floor(Math.random()*50));
+            var $widget = options.widget;
+            
+            if ($widget.hasClass('text')) {
+                $widget.find('textarea').attr('id', 'instance-' + Math.floor(Math.random()*50));
             }
             
-            $(options.widgets).children('.' + options.widget).clone().appendTo(options.target).initialize(options.widget);
+            $widget.clone().appendTo(options.target).initialize(options.name);
 
         });
     

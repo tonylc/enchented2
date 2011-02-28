@@ -5,7 +5,7 @@
     $(document).ready(function() {
     
         $('div#wedding h2').measure();
-        $('div.guide').hide();
+        $('div#content').children('*').hide();
     
     });
 
@@ -17,11 +17,28 @@
     $(window).load(function() {
 
         $('ul.actions li input').buttons();
-        $('div.guide').guide(function() {
 
-            $('div.player').initialize('players');
-            $('div#customizer').initialize('customizer');
+        function initialize() {
+
+            $('div#content').children('.widget').each(function() {
+            
+                var widget = $(this).attr('class').split(/\s/);
+                    widget = widget[1];
+                    
+                $(this).initialize(widget);
+            
+            });
         
-        });
+            $('div#customizer').customizer('init');
+     
+        }
+
+    // When guides are displayed a callback is used to pace widget initialization
+
+        if ($('div.guide').length > 0) {
+            $('div.guide').guide(initialize);
+        } else {
+            initialize();
+        }
  
     });

@@ -11,17 +11,19 @@
 ----------------------------------------------------------------------------- */
 
 
-    customizer: function() {
+    editor: function() {
     
         return this.each(function() {
+
+            var $widget = $(this);
+            
+            $widget.edit();
         
-            $(this).customizer('init');
-        
-        });
+        });    
     
     },
-    
-    players: function() {
+  
+    player: function() {
     
         return this.each(function() {
         
@@ -80,18 +82,6 @@
             });
         
         });
-    
-    },
-    
-    text: function() {
-    
-        return this.each(function() {
-
-            var $widget = $(this);
-
-            $widget.edit();
-        
-        });    
     
     }
 

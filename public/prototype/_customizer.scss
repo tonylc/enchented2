@@ -1,4 +1,4 @@
-/* Widgets
+/* Customizer
 ----------------------------------------------------------------------------- */
 
 
@@ -26,7 +26,7 @@
     }
 
 
-/* Draggable Headings */
+/* Widget Ordering */
 
 
     body.couple div.widget h3, body.trial div.widget h3 {
@@ -45,40 +45,45 @@
     }
 
 
-/* Widget Bin
+/* Shelf
 ----------------------------------------------------------------------------- */
 
 
-    div#widgets {
+    div#customizer {
 
-        width: 516px;
-        float: left;
-        clear: left;
-        margin-bottom: 60px;    
-        border: 2px solid #efefef;
-        padding: 10px;
-        
-        -webkit-border-radius: 10px;
+        width: 100%;
+        padding: 20px 0;
+        box-shadow: $shelf-shadow;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
+
+        background-image: -webkit-gradient(linear, left center, left bottom, from(rgba(191, 191, 191, 0.5)), to(rgba(191, 191, 191, 1)));
+
+        -moz-box-shadow: $shelf-shadow;
+        -webkit-box-shadow: $shelf-shadow;
     
     }
 
-    div#widgets > form {
+    div#customizer > div.widgets {
     
         display: none;
     
     }
     
-    div#widgets > ul {
+    div#customizer > ul.widgets {
 
-        float: left;
-        margin: 0;
+        width: 550px;
+        margin: 0 auto;
         padding: 0;
     
         li {
     
-            width: 18.6%;
+            width: 18.4%;
             float: left;
             margin: 0 2% 0 0;
+            padding: 0;
     
         }
 

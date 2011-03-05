@@ -7,6 +7,7 @@
 /* Forms */
 /* Header */
 /* Navigation */
+/* Shelf */
 /* Toolbar */
 /* Widgets */
 /* Prototype */
@@ -51,13 +52,13 @@ div#page > h2 { display: block; float: left; width: 100%; margin: 20px 0; paddin
 
 /* Columns
 ----------------------------------------------------------------------------- */
-div#content { clear: left; float: left; width: 540px; margin: 20px 0; }
+div#content { clear: left; float: left; margin: 20px 0; }
 
 div#sidebar { display: none; width: 240px; position: absolute; top: 40px; right: 20px; }
 
 /* Footer
 ----------------------------------------------------------------------------- */
-div#footer { clear: left; position: relative; width: 550px; overflow: hidden; margin: 0 auto; padding: 0 0 67px 0; z-index: 1; }
+div#footer { clear: left; position: relative; width: 550px; overflow: hidden; margin: 0 auto; padding: 0 0 120px 0; z-index: 1; }
 
 div#footer h5 { float: left; margin: 0 0 10px 20px; padding: 0; }
 
@@ -138,8 +139,8 @@ div.search input[type=text] { width: 98%; border: 2px solid #bfbfbf; outline: no
 
 div.search input[type=text]:focus { opacity: 1; box-shadow: #d5d5d5 0px 0px 5px; -moz-box-shadow: #d5d5d5 0px 0px 5px; -webkit-box-shadow: #d5d5d5 0px 0px 5px; }
 
-/* Widgets */
-/* Widgets
+/* Customizer */
+/* Customizer
 ----------------------------------------------------------------------------- */
 form.widget { float: left; width: 100%; }
 
@@ -147,21 +148,22 @@ div.widget > a.close { display: none; width: 24px; height: 24px; border-radius: 
 
 div.widget:hover > a.close { display: block; }
 
-/* Draggable Headings */
+/* Widget Ordering */
 body.couple div.widget h3, body.trial div.widget h3 { display: block; width: 100%; float: left; clear: left; position: relative; z-index: 100; cursor: move; -moz-user-select: text; -webkit-user-select: text; }
 
-/* Widget Bin
+/* Shelf
 ----------------------------------------------------------------------------- */
-div#widgets { width: 516px; float: left; clear: left; margin-bottom: 60px; border: 2px solid #efefef; padding: 10px; -webkit-border-radius: 10px; }
+div#customizer { width: 100%; padding: 20px 0; box-shadow: #cfcfcf 0px 0px 10px; position: fixed; bottom: 0; left: 0; z-index: 100; background-image: -webkit-gradient(linear, left center, left bottom, from(rgba(191, 191, 191, 0.5)), to(#bfbfbf)); -moz-box-shadow: #cfcfcf 0px 0px 10px; -webkit-box-shadow: #cfcfcf 0px 0px 10px; }
 
-div#widgets > form { display: none; }
+div#customizer > div.widgets { display: none; }
 
-div#widgets > ul { float: left; margin: 0; padding: 0; }
-div#widgets > ul li { width: 18.6%; float: left; margin: 0 2% 0 0; }
-div#widgets > ul li:last-child { margin-right: 0; }
-div#widgets > ul li a { display: block; border-radius: 5px; background: white; color: #bfbfbf; font: bold 13px/40px "Helvetica", "Arial", sans-serif; text-align: center; text-decoration: none; -webkit-border-radius: 5px; -webkit-user-select: none; -moz-border-radius: 5px; -moz-box-shadow: #8f8f8f 0px 0px 20px; -moz-user-select: none; }
-div#widgets > ul li a:hover { background: black; }
+div#customizer > ul.widgets { width: 550px; margin: 0 auto; padding: 0; }
+div#customizer > ul.widgets li { width: 18.4%; float: left; margin: 0 2% 0 0; padding: 0; }
+div#customizer > ul.widgets li:last-child { margin-right: 0; }
+div#customizer > ul.widgets li a { display: block; border-radius: 5px; background: white; color: #bfbfbf; font: bold 13px/40px "Helvetica", "Arial", sans-serif; text-align: center; text-decoration: none; -webkit-border-radius: 5px; -webkit-user-select: none; -moz-border-radius: 5px; -moz-box-shadow: #8f8f8f 0px 0px 20px; -moz-user-select: none; }
+div#customizer > ul.widgets li a:hover { background: black; }
 
+/* Widgets */
 /* Sassy Panels
 ----------------------------------------------------------------------------- */
 /* Text Editor Widget
@@ -175,6 +177,7 @@ div#widgets > ul li a:hover { background: black; }
 /* Forms */
 /* Header */
 /* Navigation */
+/* Shelf */
 /* Toolbar */
 /* Widgets */
 /* Buttons */
@@ -262,7 +265,7 @@ div.toolbar li.justifycenter a { background-image: url(/widgets/editor/images/ju
 ----------------------------------------------------------------------------- */
 /* Form Controls
 ----------------------------------------------------------------------------- */
-div.form { clear: left; float: left; width: 94%; margin-bottom: 20px; border-radius: 15px; box-shadow: #8f8f8f 0px 0px 20px; padding: 3%; -moz-border-radius: 15px; -moz-box-shadow: #8f8f8f 0px 0px 20px; -webkit-border-radius: 15px; -webkit-box-shadow: #8f8f8f 0px 0px 20px; background-color: white; }
+div.form { clear: left; float: left; width: 94%; position: relative; margin-bottom: 20px; border-radius: 15px; box-shadow: #8f8f8f 0px 0px 20px; padding: 3%; -moz-border-radius: 15px; -moz-box-shadow: #8f8f8f 0px 0px 20px; -webkit-border-radius: 15px; -webkit-box-shadow: #8f8f8f 0px 0px 20px; background-color: white; }
 div.form.ui-sortable-helper { padding: 16px; box-shadow: #8f8f8f 0px 0px 50px; -moz-box-shadow: #8f8f8f 0px 0px 50px; -webkit-box-shadow: #8f8f8f 0px 0px 50px; }
 
 div.form label { display: block; width: 100%; float: left; margin: 10px 0; border: 0; padding: 0; }
@@ -337,7 +340,7 @@ div.ui-datepicker tbody > tr > td a:hover { display: block; width: 30px; height:
 ----------------------------------------------------------------------------- */
 /* Guide Widget
 ----------------------------------------------------------------------------- */
-div.guide { clear: left; float: left; width: 94%; margin-bottom: 20px; border-radius: 15px; box-shadow: #8f8f8f 0px 0px 20px; padding: 3%; -moz-border-radius: 15px; -moz-box-shadow: #8f8f8f 0px 0px 20px; -webkit-border-radius: 15px; -webkit-box-shadow: #8f8f8f 0px 0px 20px; position: relative; background-color: black; text-align: center; }
+div.guide { clear: left; float: left; width: 94%; position: relative; margin-bottom: 20px; border-radius: 15px; box-shadow: #8f8f8f 0px 0px 20px; padding: 3%; -moz-border-radius: 15px; -moz-box-shadow: #8f8f8f 0px 0px 20px; -webkit-border-radius: 15px; -webkit-box-shadow: #8f8f8f 0px 0px 20px; position: relative; background-color: black; text-align: center; }
 div.guide.ui-sortable-helper { padding: 16px; box-shadow: #8f8f8f 0px 0px 50px; -moz-box-shadow: #8f8f8f 0px 0px 50px; -webkit-box-shadow: #8f8f8f 0px 0px 50px; }
 
 div.guide h3 { margin: 0; border: 0; color: #bfbfbf; font: bold 16px/21px "Helvetica", "Arial", sans-serif; }
@@ -462,7 +465,7 @@ div.player.song:hover a.close { display: block; }
 
 /* Video Player (YouTube, Vimeo)
 ----------------------------------------------------------------------------- */
-div.player.video { clear: left; float: left; width: 94%; margin-bottom: 20px; border-radius: 15px; box-shadow: #8f8f8f 0px 0px 20px; padding: 3%; -moz-border-radius: 15px; -moz-box-shadow: #8f8f8f 0px 0px 20px; -webkit-border-radius: 15px; -webkit-box-shadow: #8f8f8f 0px 0px 20px; background: #8f8f8f; -webkit-user-select: none; -moz-user-select: none; }
+div.player.video { clear: left; float: left; width: 94%; position: relative; margin-bottom: 20px; border-radius: 15px; box-shadow: #8f8f8f 0px 0px 20px; padding: 3%; -moz-border-radius: 15px; -moz-box-shadow: #8f8f8f 0px 0px 20px; -webkit-border-radius: 15px; -webkit-box-shadow: #8f8f8f 0px 0px 20px; background: #8f8f8f; -webkit-user-select: none; -moz-user-select: none; }
 div.player.video.ui-sortable-helper { padding: 16px; box-shadow: #8f8f8f 0px 0px 50px; -moz-box-shadow: #8f8f8f 0px 0px 50px; -webkit-box-shadow: #8f8f8f 0px 0px 50px; }
 
 div.player.video div, div.player.video iframe { width: 100% !important; height: 360px; border: 0; }
@@ -476,7 +479,7 @@ div.player.video h4 { display: block; clear: left; margin: 0; padding-top: 10px;
 @import url(../input/search.css);
 /* Video Player (YouTube, Vimeo)
 ----------------------------------------------------------------------------- */
-div.player.video { clear: left; float: left; width: 94%; margin-bottom: 20px; border-radius: 15px; box-shadow: #8f8f8f 0px 0px 20px; padding: 3%; -moz-border-radius: 15px; -moz-box-shadow: #8f8f8f 0px 0px 20px; -webkit-border-radius: 15px; -webkit-box-shadow: #8f8f8f 0px 0px 20px; background: #8f8f8f; -webkit-user-select: none; -moz-user-select: none; }
+div.player.video { clear: left; float: left; width: 94%; position: relative; margin-bottom: 20px; border-radius: 15px; box-shadow: #8f8f8f 0px 0px 20px; padding: 3%; -moz-border-radius: 15px; -moz-box-shadow: #8f8f8f 0px 0px 20px; -webkit-border-radius: 15px; -webkit-box-shadow: #8f8f8f 0px 0px 20px; background: #8f8f8f; -webkit-user-select: none; -moz-user-select: none; }
 div.player.video.ui-sortable-helper { padding: 16px; box-shadow: #8f8f8f 0px 0px 50px; -moz-box-shadow: #8f8f8f 0px 0px 50px; -webkit-box-shadow: #8f8f8f 0px 0px 50px; }
 
 div.player.video div, div.player.video iframe { width: 100% !important; height: 360px; border: 0; }
@@ -486,7 +489,7 @@ div.player.video h4 { display: block; clear: left; margin: 0; padding-top: 10px;
 /* Widget Styles */
 /* Prompt Widget
 ----------------------------------------------------------------------------- */
-div.prompt { clear: left; float: left; width: 94%; margin-bottom: 20px; border-radius: 15px; box-shadow: #8f8f8f 0px 0px 20px; padding: 3%; -moz-border-radius: 15px; -moz-box-shadow: #8f8f8f 0px 0px 20px; -webkit-border-radius: 15px; -webkit-box-shadow: #8f8f8f 0px 0px 20px; position: relative; background-color: white; }
+div.prompt { clear: left; float: left; width: 94%; position: relative; margin-bottom: 20px; border-radius: 15px; box-shadow: #8f8f8f 0px 0px 20px; padding: 3%; -moz-border-radius: 15px; -moz-box-shadow: #8f8f8f 0px 0px 20px; -webkit-border-radius: 15px; -webkit-box-shadow: #8f8f8f 0px 0px 20px; position: relative; background-color: white; }
 div.prompt.ui-sortable-helper { padding: 16px; box-shadow: #8f8f8f 0px 0px 50px; -moz-box-shadow: #8f8f8f 0px 0px 50px; -webkit-box-shadow: #8f8f8f 0px 0px 50px; }
 
 div.prompt div.preview { clear: left; margin-bottom: 20px; }

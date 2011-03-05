@@ -31,6 +31,8 @@
             
             });
 
+            $(this).fadeIn();
+
         });
     
     },
@@ -107,7 +109,7 @@
             $this.addClass('editing').css('visibility','hidden').children('div').hide();
             $text.tinymce({
             
-                script_url: '/libraries/tinymce-3.3.9.2/tiny_mce.js',
+                script_url: '/libraries/tinymce/3.3.9.2/tiny_mce.js',
                 content_css: '/prototype/stylesheets/widgets/editor/formatting.css',
                 plugins: 'autoresize',
                 theme: 'advanced',

@@ -5,8 +5,25 @@
 (function($) {
 
     var methods = {
+
+
+/* Widgets and other components
+----------------------------------------------------------------------------- */
+
+
+    editor: function() {
     
-    players: function() {
+        return this.each(function() {
+
+            var $widget = $(this);
+            
+            $widget.edit();
+        
+        });    
+    
+    },
+  
+    player: function() {
     
         return this.each(function() {
         
@@ -65,18 +82,6 @@
             });
         
         });
-    
-    },
-    
-    text: function() {
-    
-        return this.each(function() {
-
-            var $widget = $(this);
-
-            $widget.edit();
-        
-        });    
     
     }
 

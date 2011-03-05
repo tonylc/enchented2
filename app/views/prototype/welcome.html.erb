@@ -3,11 +3,12 @@
     <% if trial? %>
      
         <%= guide :to => "welcome" %>
-        <%= player :play => "song", :view => "inline", :clip => "27953894", :source => "grooveshark" %>
+        <%= editor :edit => "text", :view => "inline", :placeholder => "Your Welcome Message Goes Here" %>
+        <%= prompt :for => "video", :view => "add" %>
   
     <% else %>
     
-        <%= player :play => "video", :view => "inline", :clip => "18606520", :source => "youtube" %>
+        <%= player :play => "video", :view => "inline", :clip => "qz1nU2szUVw", :source => "youtube" %>
         <%= editor :edit => "text", :view => "inline", :placeholder => "Welcome to my wedding website!" %>
     
     <% end %>
@@ -15,29 +16,28 @@
 </div>
 
     <% unless guest? %>
-    <div id="widgets">
-    
-        <ul>
+    <div id="customizer">
 
-            <% if trial? %>
+        <ul class="widgets">
 
-                <li class="text"><a href="#text">Text</a></li>
-                <li class="video"><a href="#video">Video</a></li>
-                <li class="song"><a href="#song">Song</a></li>
-
-            <% end %>
-
-                <li class="photo"><a href="#photo">Photo</a></li>
-                <li class="album"><a href="#album">Album</a></li>
+            <li class="editor text"><a href="#text">Text</a></li>
+            <li class="prompt video"><a href="#video">Video</a></li>
+            <li class="prompt song"><a href="#song">Song</a></li>
+            <li class="prompt photo"><a href="#photo">Photo</a></li>
+            <li class="album"><a href="#album">Album</a></li>
 
         </ul>
 
-        <%= editor :edit => "text", :view => "inline", :placeholder => "Your Welcome Message Goes Here" %>
-        <%= prompt :for => "video", :view => "add" %>
-        <%= prompt :for => "song", :view => "add" %>
+        <div class="widgets">
     
+            <%= editor :edit => "text", :view => "inline", :placeholder => "Your Welcome Message Goes Here" %>
+            <%= prompt :for => "video", :view => "add" %>
+            <%= prompt :for => "song", :view => "add" %>
+        
+        </div>
+
     </div>
     <% end %>
 
-<%- libraries '/libraries/jquery-1.4.4.js', '/libraries/jquery_ui-1.8.9.js' -%>
+<%- libraries '/libraries/jquery/1.5/jquery-1.5.1.min.js', '/libraries/jquery/1.5/plugins/jquery-ui-1.8.10.min.js' -%>
 <%- scripts '/prototype/header' -%>

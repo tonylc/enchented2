@@ -48,15 +48,15 @@
     <!-- SCRIPTS -->
     <% if @libraries %><%= javascript_include_tag(*@libraries) %><% end %>
     <% if @adapters %><%= javascript_include_tag(*@adapters) %><% end %>
-
     <%= javascript_include_tag('/utilities/logic', '/utilities/initializer', '/utilities/measurer') %>
-    <%= javascript_include_tag('/prototype/initialize') %>
 
     <% if couple? || trial? %>
     
-        <%= javascript_include_tag('/controls/close', '/widgets/_bin') %>
+        <%= javascript_include_tag('/controls/close', '/prototype/customizer') %>
     
     <% end %>
+
+    <%= javascript_include_tag('/prototype/initialize') %>
 
     <% if @scripts %><%= javascript_include_tag(*@scripts) %><% end %>
 

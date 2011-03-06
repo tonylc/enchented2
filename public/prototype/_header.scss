@@ -2,8 +2,18 @@
 ----------------------------------------------------------------------------- */
 
 
+    div#wedding {
+    
+        float: left;
+        width: 100%;
+        height: 75px;
+        padding-top: 25px;
+    
+    }
+
     div#wedding h2 {
     
+        float: left;
         margin: 0 auto;
         visibility: hidden;
     
@@ -37,7 +47,7 @@
 
     body.trial div#wedding h2 strong, body.couple div#wedding h2 strong {
 
-          cursor: move;
+        cursor: move;
     
     }
 
@@ -60,6 +70,12 @@
 
 /* Date */
 
+
+    div#wedding h5 {
+    
+        margin: 0;
+    
+    }
 
     div#wedding h5 a {
     

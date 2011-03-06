@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
 
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -37,7 +37,9 @@
     <% if (page != 'start') %>
     <ul id="navigation">
 
-        <li><strong><%= go :to => "welcome" %></strong></li>
+        <li><%= go :to => "welcome" %></li>
+        <li><%= go :to => "wedding" %></li>
+        <li class="customize"><a href="#customizer">Customize</a></li>
 
     </ul>
     <% end %>

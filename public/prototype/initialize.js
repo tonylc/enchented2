@@ -4,7 +4,6 @@
 
     $(document).ready(function() {
     
-        $('div#wedding h2').measure();
         $('div#content').children('*').hide();
     
     });
@@ -29,7 +28,7 @@
             
             });
         
-            $('div#customizer').customizer('init');
+            $('div#customizer').customize('init');
      
         }
 

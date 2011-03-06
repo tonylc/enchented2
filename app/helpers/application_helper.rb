@@ -50,7 +50,13 @@ module ApplicationHelper
 # ---------------------------------------------------------------------------
 
   def go(options = {})
-    raw('<a href="/prototype/' + options[:to] + '/' + user + '">' + options[:to].capitalize + '</a>')
+
+    @link = '<a href="/prototype/' + options[:to] + '/' + user + '">' + options[:to].capitalize + '</a>'
+    if options[:to] == page
+      raw('<strong>' + @link + '</strong>')
+    else
+      raw(@link)
+    end
   end
 
 

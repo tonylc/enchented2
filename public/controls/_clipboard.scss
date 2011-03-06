@@ -49,6 +49,12 @@
 
     }
     
+    div.clipboard h4.prompt small {
+    
+        display: block;
+    
+    }
+    
     div.clipboard h4.focused {
     
         opacity: 1;
@@ -57,5 +63,11 @@
     
         -webkit-box-shadow: $form-shadow-emphasized;
         -moz-box-shadow: $form-shadow-emphasized;
+    
+    }
+    
+    div.clipboard h4.prompt.focused small {
+    
+        color: $form-color-advice;
     
     }

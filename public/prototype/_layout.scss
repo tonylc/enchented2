@@ -10,12 +10,19 @@
         background-color: $background;
     
     }
-
+    
     div#page {
 
-        width: 550px;
-        margin: 40px auto;
+        float: left;
+        width: 100%;
 
+    }
+    
+    div#content {
+
+        width: 550px;
+        margin: 0 auto;    
+    
     }
 
     .center {
@@ -36,32 +43,9 @@
         display: block;
         float: left;
         width: 100%;
-        margin: 20px 0;
+        margin: 0;
         padding: 0;
         color: $color-emphasized;
         font: $font-emphasized;
-    
-    }
-
-
-/* Columns
------------------------------------------------------------------------------ */
-
-
-    div#content {
-    
-        clear: left;
-        float: left;
-        margin: 20px 0;
-
-    }
-    
-    div#sidebar {
-    
-        display: none;
-        width: 240px;
-        position: absolute;
-        top: 40px;
-        right: 20px;
     
     }

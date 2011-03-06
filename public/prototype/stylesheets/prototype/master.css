@@ -13,7 +13,9 @@
 /* Prototype */
 /* Header
 ----------------------------------------------------------------------------- */
-div#wedding h2 { margin: 0 auto; visibility: hidden; -webkit-user-select: none; -moz-user-select: none; }
+div#wedding { float: left; width: 100%; height: 75px; padding-top: 25px; }
+
+div#wedding h2 { float: left; margin: 0 auto; visibility: hidden; -webkit-user-select: none; -moz-user-select: none; }
 
 div#wedding h2, div#wedding h5 a { display: block; clear: left; float: left; color: white; font: bold 24px/30px "Helvetica", "Arial", sans-serif; text-align: center; text-decoration: none; }
 
@@ -26,11 +28,13 @@ body.trial div#wedding h2 strong, body.couple div#wedding h2 strong { cursor: mo
 div#wedding h2 em { display: block; float: left; margin: 0 5px; font-family: Baskerville, Georgia, Times New Roman; font-size: 26px; font-weight: normal; color: #efefef; }
 
 /* Date */
+div#wedding h5 { margin: 0; }
+
 div#wedding h5 a { width: 100%; color: #8f8f8f; font: normal 10px/30px "Arial", sans-serif; text-transform: uppercase; letter-spacing: 2px; }
 
 /* Navigation
 ----------------------------------------------------------------------------- */
-ul#navigation { position: fixed; width: auto; top: 110px; right: 0; margin: 0; padding: 0; list-style-type: none; text-align: left; }
+ul#navigation { position: fixed; width: auto; top: 100px; right: 0; margin: 0; padding: 0; list-style-type: none; text-align: left; }
 
 ul#navigation li { margin-bottom: 5px; }
 
@@ -42,19 +46,15 @@ ul#navigation li strong a { background-color: #efefef; color: #8f8f8f; }
 ----------------------------------------------------------------------------- */
 body { min-width: 900px; margin: 0; padding: 0; background-color: #bfbfbf; }
 
-div#page { width: 550px; margin: 40px auto; }
+div#page { float: left; width: 100%; }
+
+div#content { width: 550px; margin: 0 auto; }
 
 .center { margin-left: auto !important; margin-right: auto !important; visibility: hidden; }
 
 /* Headings
 ----------------------------------------------------------------------------- */
-div#page > h2 { display: block; float: left; width: 100%; margin: 20px 0; padding: 0; color: white; font: bold 24px/30px "Helvetica", "Arial", sans-serif; }
-
-/* Columns
------------------------------------------------------------------------------ */
-div#content { clear: left; float: left; margin: 20px 0; }
-
-div#sidebar { display: none; width: 240px; position: absolute; top: 40px; right: 20px; }
+div#page > h2 { display: block; float: left; width: 100%; margin: 0; padding: 0; color: white; font: bold 24px/30px "Helvetica", "Arial", sans-serif; }
 
 /* Footer
 ----------------------------------------------------------------------------- */
@@ -129,7 +129,11 @@ div.clipboard textarea { width: 1px; height: 1px; overflow: hidden; margin: 0; b
 /* Prompt */
 div.clipboard h4.prompt { clear: left; display: block; width: 100%; margin: 10px 0; border: 1px solid 2px solid #bfbfbf; border-radius: 5px; padding: 50px 0; background: white; box-shadow: #d5d5d5 0px 0px 5px; color: #bfbfbf; font: normal 14px/21px "Arial", sans-serif; cursor: pointer; text-align: center; -moz-border-radius: 5px; -moz-box-shadow: #d5d5d5 0px 0px 5px; -moz-user-select: none; -webkit-border-radius: 5px; -webkit-box-shadow: #d5d5d5 0px 0px 5px; -webkit-user-select: none; }
 
+div.clipboard h4.prompt small { display: block; }
+
 div.clipboard h4.focused { opacity: 1; box-shadow: #bfbfbf 0px 0px 5px; color: black; -webkit-box-shadow: #bfbfbf 0px 0px 5px; -moz-box-shadow: #bfbfbf 0px 0px 5px; }
+
+div.clipboard h4.prompt.focused small { color: #8f8f8f; }
 
 /* Close Buttons
 ----------------------------------------------------------------------------- */
@@ -153,7 +157,9 @@ body.couple div.widget h3, body.trial div.widget h3 { display: block; width: 100
 
 /* Shelf
 ----------------------------------------------------------------------------- */
-div#customizer { width: 100%; padding: 20px 0; box-shadow: #cfcfcf 0px 0px 10px; position: fixed; bottom: 0; left: 0; z-index: 100; background-image: -webkit-gradient(linear, left center, left bottom, from(rgba(191, 191, 191, 0.5)), to(#bfbfbf)); -moz-box-shadow: #cfcfcf 0px 0px 10px; -webkit-box-shadow: #cfcfcf 0px 0px 10px; }
+div#customizer { width: 100%; padding: 20px 0; box-shadow: #cfcfcf 0px 0px 10px; position: fixed; bottom: -80px; left: 0; z-index: 100; background-image: -webkit-gradient(linear, left center, left bottom, from(rgba(191, 191, 191, 0.5)), to(#bfbfbf)); -moz-box-shadow: #cfcfcf 0px 0px 10px; -webkit-box-shadow: #cfcfcf 0px 0px 10px; }
+
+ul#navigation li.customize { position: fixed; bottom: 20px; right: 0; margin: 0; z-index: 100; }
 
 div#customizer > div.widgets { display: none; }
 

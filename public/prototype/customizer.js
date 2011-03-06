@@ -29,7 +29,7 @@
                     template = '.' + name;
                 }
 
-                $widgets.customizer('add', { name: name, widget: $widgets.children(template) });
+                $widgets.customize('add', { name: name, widget: $widgets.children(template) });
             
             });
 
@@ -53,10 +53,28 @@
     open: function() {    
 
         return this.each(function() {
+        
+            $(this).animate({ bottom: '0px' }, 500);
 
         });
     
     },
+
+
+/* Close method
+----------------------------------------------------------------------------- */
+        
+
+    close: function() {    
+
+        return this.each(function() {
+        
+            $(this).animate({ bottom: '-80px' }, 500);
+
+        });
+    
+    },
+
 
 /* Add method: injects widgets into page
 ----------------------------------------------------------------------------- */
@@ -102,7 +120,7 @@
 
     };
 
-    $.fn.customizer = function(method) {
+    $.fn.customize = function(method) {
 
         if (methods[method]) {
             return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));

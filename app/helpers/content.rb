@@ -9,7 +9,6 @@ module ContentHelper
 
   end
 
-
 # Dummy Content
 # ---------------------------------------------------------------------------
 
@@ -95,6 +94,5 @@ module ContentHelper
 
     @content
   end
-
 
 end

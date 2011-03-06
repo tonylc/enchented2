@@ -37,7 +37,6 @@ module WidgetHelper
     @classes.chop
   end
 
-
 # Editor Widget
 # ---------------------------------------------------------------------------
 
@@ -51,7 +50,6 @@ module WidgetHelper
   
     render_widget
   end
-
 
 # Form Widget
 # ---------------------------------------------------------------------------
@@ -68,7 +66,6 @@ module WidgetHelper
     
     render_widget  
   end
-
 
 # Guide Widget
 # ---------------------------------------------------------------------------
@@ -94,7 +91,6 @@ module WidgetHelper
     render_widget
   end
 
-
 # List Widget
 # ---------------------------------------------------------------------------
 
@@ -112,7 +108,6 @@ module WidgetHelper
     render_widget
   end
 
-
 # Player Widget
 # ---------------------------------------------------------------------------
 
@@ -128,7 +123,6 @@ module WidgetHelper
     
     render_widget
   end
-
 
 # Prompt Widget
 # ---------------------------------------------------------------------------
@@ -150,6 +144,5 @@ module WidgetHelper
     
     render_widget 
   end
-
 
 end

@@ -8,7 +8,6 @@ module ApplicationHelper
   include LogicHelper
   include WidgetHelper
 
-
 # Details
 # ---------------------------------------------------------------------------
 
@@ -32,7 +31,6 @@ module ApplicationHelper
     self.action_name
   end
 
-
 # Heading Maker
 # ---------------------------------------------------------------------------
 
@@ -45,20 +43,25 @@ module ApplicationHelper
     end
   end
 
-
 # Link Maker
 # ---------------------------------------------------------------------------
 
   def go(options = {})
 
-    @link = '<a href="/prototype/' + options[:to] + '/' + user + '">' + options[:to].capitalize + '</a>'
-    if options[:to] == page
+    if options[:to].match(/\s/)
+      @page = options[:to].downcase.split(/\s/).pop()
+    else
+      @page = options[:to].downcase
+    end
+
+    @link = '<a href="/prototype/' + @page + '/' + user + '">' + options[:to] + '</a>'
+
+    if @page == page
       raw('<strong>' + @link + '</strong>')
     else
       raw(@link)
     end
   end
-
 
 # Gathers libraries specified in views, filters out duplicates
 # ---------------------------------------------------------------------------
@@ -77,6 +80,5 @@ module ApplicationHelper
     @scripts ||= []
     @scripts |= js
   end
-
 
 end

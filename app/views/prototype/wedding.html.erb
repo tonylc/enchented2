@@ -1,0 +1,27 @@
+<div id="content">
+
+
+</div>
+
+    <% unless guest? %>
+    <div id="customizer">
+
+        <ul class="widgets">
+
+            <li class="editor text"><a href="#text">Text</a></li>
+            <li class="prompt song"><a href="#song">Song</a></li>
+
+        </ul>
+
+        <div class="widgets">
+    
+            <%= editor :edit => "text", :view => "inline", :placeholder => "Your Text Goes Here" %>
+            <%= prompt :for => "song", :view => "add" %>
+        
+        </div>
+
+    </div>
+    <% end %>
+
+<%- libraries '/libraries/jquery/1.5/jquery-1.5.1.min.js', '/libraries/jquery/1.5/plugins/jquery-ui-1.8.10.min.js' -%>
+<%- scripts '/prototype/header', '/prototype/navigation' -%>

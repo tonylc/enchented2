@@ -32,7 +32,6 @@ module LogicHelper
 
   end
 
-
 # Extension of common logic to <body> classes for use in CSS
 # ---------------------------------------------------------------------------
 
@@ -45,6 +44,5 @@ module LogicHelper
       'guest'
     end
   end
-
 
 end

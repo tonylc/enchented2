@@ -4,10 +4,11 @@
 	</div>
 	<ul>
 	<% links.each do |nav, tab, link| %>
+		<% cycle_class = cycle('odd', '')%>
 		<% if nav == selected %>
-		<li class="selected dotted-box"><%= tab %>
+		<li class="selected <%= cycle_class %>"><%= tab %>
 		<% else %>
-		<li class="dotted-box"><%= link_to tab, link %>
+		<li class="<%= cycle_class %>"><%= link_to tab, link %>
 		<% end %>
 	<% end %>
 	</ul>

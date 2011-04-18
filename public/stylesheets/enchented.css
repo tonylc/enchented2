@@ -1,18 +1,19 @@
-a, a:visited { color: #0084cd; text-decoration: none; }
+body { background: url('/images/bg.jpeg'); }
+a, a:visited { color: #4c280f; text-decoration: none; }
 a:hover { color: #0099ff; text-decoration: underline; }
 ul { padding-left: 0; list-style: none; }
 
-#canvas { width: 972px; margin: 0 auto; }
+#canvas { width: 972px; margin: 0 auto; font-family: didot, georgia; }
 #t-c-logo { height: 65px; margin-left: 45px; font-size: 30px; line-height: 2em; }
 #column-nav { float: left; width: 157px; }
 #column-nav ul { padding-left: 20px; }
-#column-nav li.selected:hover { border: 1px dashed; }
-#column-nav li:hover { border: 1px dashed #0099ff; }
+#column-nav li { font-size: 12pt; width: 110px; text-align: center; margin-bottom: 15px; padding: 12px 10px; border: 2px dashed #95c474; }
+#column-nav li.odd { border: 2px dashed #fcb1bf; }
+#column-nav li:hover { border: 2px dashed #56aa1c; }
+#column-nav li.odd:hover { border: 2px dashed #fc758e; }
+#column-nav li.selected,
+#column-nav li.selected:hover { border: 2px dashed #ededed; }
+#column-nav li a { color: white; }
 #column-nav li:hover a:hover { color: #0084cd; text-decoration: none; }
 
 #content-wrap { border: 1px solid; position: relative; width: 800px; float: right; top: 66px; margin-bottom: 100px; max-height: 487px; min-height: 300px; }
-
-#call-to-action { margin-left: 200px; }
-.call { float: left; margin-left: 20px; }
-
-.dotted-box { padding: 10px 10px 5px 10px; margin-bottom: 15px; border: 1px dashed; width: 105px; text-align: center; }

@@ -1,0 +1,6 @@
+development:
+  adapter: mysql
+  database: enchented_development
+  username: root
+  password:
+  host: localhost

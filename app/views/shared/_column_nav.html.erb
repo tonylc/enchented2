@@ -1,0 +1,17 @@
+<div id="column-nav">
+	<div id="t-c-logo">
+		C & T
+	</div>
+	<ul>
+	<% links.each do |nav, tab, link| %>
+		<% if nav == selected %>
+		<li class="selected dotted-box"><%= tab %>
+		<% else %>
+		<li class="dotted-box"><%= link_to tab, link %>
+		<% end %>
+	<% end %>
+	</ul>
+</div>
+<div id="content-wrap">
+<%= yield %>
+</div>

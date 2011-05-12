@@ -11,21 +11,43 @@ Wedding.destroy_all
 User.destroy_all
 Page.destroy_all
 WidgetText.destroy_all
+WidgetEvent.destroy_all
 PageWidget.destroy_all
+Rsvp.destroy_all
+RsvpQuestion.destroy_all
+RsvpOption.destroy_all
+RsvpSelection.destroy_all
 
-salt_lick = Location.create(:name => "Salt Lick BBQ/Thurman's Mansion", 
-                            :address1 => "18300 Farm to Market Road 1826", 
+texas = State.create(:name => "texas", :short_name => "TX")
+
+austin = Location.create(:name => "Austin", 
+                         :address1 => "", 
+                         :city => "Austin",
+                         :state_id => texas.id, 
+                         :postal_code => "78619",
+                         :latitude => 30.131332,
+                         :longitude => -98.01355
+                         )
+
+salt_lick = Location.create(:name => "Thurman's Mansion", 
+                            :address1 => "17900 Farm to Market Road 1826", 
                             :city => "driftwood",
-                            :state => "tx", 
+                            :state_id => texas.id, 
                             :postal_code => "78619",
                             :latitude => 30.131332,
                             :longitude => -98.01355
                             )
 
 tnc = Wedding.create(:name => "The Tawnies Wedding", 
-                     :date => DateTime.parse('2011-08-27 19:00:00'), 
-                     :location_id => salt_lick.id
+                     :date => DateTime.parse('2011-08-27 18:30:00'), 
+                     :location_id => austin.id
                      )
+
+q1 = RsvpQuestion.create(:wedding_id => tnc.id, :html_form_type => RsvpQuestion::TYPE_RADIO, :question => "Food Preference", :order => 1)
+RsvpOption.create(:rsvp_question_id => q1.id, :option => "BBQ")
+RsvpOption.create(:rsvp_question_id => q1.id, :option => "Vegetarian")
+
+q2 = RsvpQuestion.create(:wedding_id => tnc.id, :html_form_type => RsvpQuestion::TYPE_TEXT_FIELD, :question => "Have you booked a hotel yet? If so, what's the name of the hotel?", :order => 2)
 
 caroline = User.create(:first_name => "Caroline", 
                        :last_name => "Ryu", 
@@ -97,13 +119,17 @@ rachel = User.create(:first_name => "Rachel",
                    :facebook_id => 219711
                    )
 
-p1 = Page.create(:wedding_id => tnc.id, :title => "The Wedding", :order => 1)
-p2 = Page.create(:wedding_id => tnc.id, :title => "About Us", :order => 2)
-p3 = Page.create(:wedding_id => tnc.id, :title => "Wedding Party", :order => 3)
-p4 = Page.create(:wedding_id => tnc.id, :title => "Travel & Accommodations", :order => 4)
-p5 = Page.create(:wedding_id => tnc.id, :title => "Things To Do", :order => 5)
-p6 = Page.create(:wedding_id => tnc.id, :title => "Photos", :order => 6)
+p1 = Page.create(:wedding_id => tnc.id, :title => "Home", :navigation_order => 1, :is_locked => true)
 
-w1 = WidgetText.create(:name => "Hola!", :text => "Como estas?")
+w1 = WidgetText.create(:text => <<TEXT
+<p>together with their family and friends</p>
+<p><strong style="color: #da8b91; font-size: 24px;">Caroline Ryu</strong><br />and<br /><strong style="font-size: 24px;">Tony Chen</strong></p>
+<p>invite you to join the celebration<br />of their marriage and new life together</p>
+<p><strong>saturday, august 27, 2011</strong><br />at six thirty in the evening</p>
+<p><strong>thurman's mansion</strong> at the <strong>salt lick bbq</strong><br /><strong>driftwood, texas</strong></p>
+<p>dinner and dancing to follow<br /><strong style="color: #da8b91">please rsvp on this site by june 27</strong></p>
+TEXT
+)
+w2 = WidgetEvent.create(:location_id => salt_lick.id, :title => "The Wedding", 'start_time' => DateTime.parse('2011-08-27 19:00:00'), 'end_time' => DateTime.parse('2011-08-27 23:00:00'))
 
-PageWidget(:page_id => p1.id, :widget_type => "WidgetText", :widget_id => w1.id)
+PageWidget.create(:page_id => p1.id, :widget => w1, :verticle_order => 1)

@@ -4,7 +4,7 @@ class CreatePageWidgets < ActiveRecord::Migration
       t.integer :page_id
       t.string :widget_type
       t.integer :widget_id
-      t.integer :order
+      t.integer :verticle_order
     end
   end
 

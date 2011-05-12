@@ -10,14 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110508224609) do
+ActiveRecord::Schema.define(:version => 20110510064113) do
 
   create_table "locations", :force => true do |t|
     t.string   "name"
     t.string   "address1"
     t.string   "address2"
     t.string   "city"
-    t.string   "state"
+    t.string   "state_id"
     t.string   "postal_code"
     t.decimal  "latitude"
     t.decimal  "longitude"
@@ -26,18 +26,47 @@ ActiveRecord::Schema.define(:version => 20110508224609) do
   end
 
   create_table "page_widgets", :force => true do |t|
-    t.integer  "page_id"
-    t.string   "widget_type"
-    t.integer  "widget_id"
-    t.integer  "order"
+    t.integer "page_id"
+    t.string  "widget_type"
+    t.integer "widget_id"
+    t.integer "verticle_order"
+  end
+
+  create_table "pages", :force => true do |t|
+    t.integer "wedding_id"
+    t.string  "title"
+    t.integer "navigation_order"
+    t.boolean "is_locked"
+  end
+
+  create_table "rsvp_options", :force => true do |t|
+    t.integer "rsvp_question_id"
+    t.text    "option"
+  end
+
+  create_table "rsvp_questions", :force => true do |t|
+    t.integer "wedding_id"
+    t.integer "html_form_type"
+    t.string  "question"
+    t.integer "order"
+  end
+
+  create_table "rsvp_selections", :force => true do |t|
+    t.integer "rsvp_option_id"
+    t.integer "user_id"
+  end
+
+  create_table "rsvps", :force => true do |t|
+    t.integer  "user_id"
+    t.boolean  "can_attend"
+    t.text     "additional_notes"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "pages", :force => true do |t|
-    t.integer  "wedding_id"
-    t.string   "title"
-    t.integer  "order"
+  create_table "states", :force => true do |t|
+    t.string   "name"
+    t.string   "short_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -72,11 +101,18 @@ ActiveRecord::Schema.define(:version => 20110508224609) do
     t.datetime "updated_at"
   end
 
-  create_table "widget_texts", :force => true do |t|
-    t.string   "name"
-    t.text     "text"
+  create_table "widget_events", :force => true do |t|
+    t.integer  "location_id"
+    t.string   "title"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "widget_texts", :force => true do |t|
+    t.string "name"
+    t.text   "text"
   end
 
 end

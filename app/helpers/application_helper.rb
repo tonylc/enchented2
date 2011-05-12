@@ -81,4 +81,20 @@ module ApplicationHelper
     @scripts |= js
   end
 
+  def nice_date(datetime)
+    datetime.strftime("%B %d, %Y")
+  end
+
+  def nice_location(location)
+    "#{location.city.titleize}, #{location.state.name.titleize}"
+  end
+
+  def add_to_js(*js)
+    (@page_js ||= []) << js
+  end
+
+  def add_to_css(*css)
+    (@page_css ||= []) << css
+  end
+
 end

@@ -3,7 +3,8 @@ class CreatePages < ActiveRecord::Migration
     create_table :pages do |t|
       t.integer :wedding_id
       t.string :title
-      t.integer :order
+      t.integer :navigation_order
+      t.boolean :is_locked
     end
   end
 

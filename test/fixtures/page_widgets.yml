@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  widget_type: MyString
+  widget_id: 1
+  order: 1
+
+two:
+  widget_type: MyString
+  widget_id: 1
+  order: 1

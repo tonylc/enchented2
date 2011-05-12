@@ -1,0 +1,26 @@
+/* LOVE FOR DESIGN
+/* Color Stylesheet
+----------------------------------------------------------------------------- */
+
+
+    body {
+    
+        background-color: #eee;
+    
+    }
+
+    body > div {
+    
+        background-color: #fff;
+    
+    }
+    
+
+/* Links */
+
+
+    a {
+    
+        color: #000;
+    
+    }

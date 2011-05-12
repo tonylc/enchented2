@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  location_id: 1
+  title: MyString
+  start_time: 2011-05-08 18:04:08
+  end_time: 2011-05-08 18:04:08
+
+two:
+  location_id: 1
+  title: MyString
+  start_time: 2011-05-08 18:04:08
+  end_time: 2011-05-08 18:04:08

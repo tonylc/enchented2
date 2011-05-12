@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  can_attend: false
+  num_guests: 1
+  note: MyText
+
+two:
+  user_id: 1
+  can_attend: false
+  num_guests: 1
+  note: MyText

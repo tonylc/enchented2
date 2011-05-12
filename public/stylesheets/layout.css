@@ -1,0 +1,31 @@
+/* LOVE FOR DESIGN
+/* Layout Stylesheet
+----------------------------------------------------------------------------- */
+
+
+    body {
+    
+        min-width: 810px;
+        background: #c7af82 url(../images/skin/body.jpg);
+    
+    }
+
+    header {
+    
+        display: block;
+        width: 100%;
+        margin: 50px auto 30px auto;
+        text-align: center;
+    
+    }
+
+
+/* Page Layout */
+
+
+    body > div {
+    
+        width: 400px;
+        margin: 0 auto;
+ 
+    }

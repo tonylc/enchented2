@@ -1,0 +1,193 @@
+/* LOVE FOR DESIGN
+/* Widgets Stylesheet
+----------------------------------------------------------------------------- */
+
+
+    .widget {
+    
+        display: block;
+        width: 100%;
+        float: left;
+        margin: 0 0 40px 0;
+        padding: 5px;
+        background: url(../images/skin/border-top.png), url(../images/skin/border-bottom.png), url(../images/skin/border-left.png), url(../images/skin/border-right.png);
+        background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+        background-position: top left, bottom left, top left, top right;
+        list-style-type: none;
+    
+    }
+    
+    .widget > div {
+    
+        width: 90%;
+        float: left;
+        padding: 20px 5%;
+        background: url(../images/skin/widget.png) repeat, top left;
+    
+    }
+    
+    .widget > div > h2 {
+    
+        margin: 0;
+        background: url(../images/skin/thread.png) repeat-x bottom left;
+        padding: 0 0 5px 0;
+        color: #da8b91;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 40px;
+    
+    }
+    
+    .widget > div > h3 {
+    
+        float: left;
+        margin: 10px 0 0 0;
+        padding: 0;
+        color: #625a52;
+        font-size: 20px;
+        line-height: 30px;
+    
+    }
+    
+    .widget > div > h3 + time {
+    
+        margin-bottom: 20px;
+        clear: left;
+        float: left;
+    
+    }
+
+
+/* Albums */
+
+
+    ul.albums li {
+    
+        float: left;
+        margin-right: 10px;
+    
+    }
+
+    ul.albums img {
+    
+        margin-bottom: 10px;
+    
+    }
+
+
+/* Events */
+
+
+    ul.events dl {
+    
+        margin: 10px 0;
+    
+    }
+    
+    ul.events a.calendar {
+
+        display: block;
+        text-decoration: none;
+    
+    }
+
+    ul.events p {
+    
+        display: block;
+    
+    }
+
+    ul.events figure {
+    
+        display: block;
+        width: 300px;
+        height: 200px;
+        background-color: #eee;
+    
+    }
+    
+    ul.events figcaption {
+    
+        display: none;   
+    
+    }
+    
+    time a {
+    
+        display: block;
+        padding-left: 22px;
+        background: url(../images/skin/date.png) no-repeat 0 0;
+        color: #da8b91;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 20px;
+        text-decoration: none;
+    
+    }
+
+
+/* Gallery */
+
+
+    ul.gallery {
+    
+        float: left;
+        width: 600px;
+        height: 400px;
+        position: relative;
+    
+    }
+
+    ul.gallery, ul.gallery > li {
+
+        padding: 0;
+        list-style-type: none;
+    
+    }
+    
+    ul.gallery > li {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+    
+    }
+
+
+/* Text */
+
+
+    section.text div > p {
+    
+        clear: left;
+        margin: 0 0 20px 0;
+        padding: 0;
+        color: #625a52;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0.1em;
+
+    }
+    
+    section.text div > p strong {
+    
+        letter-spacing: 0;
+    
+    }
+
+    section.text div > p:first-child {
+    
+        display: block;
+        padding-top: 20px;
+        background: url(../images/skin/thread.png) repeat-x;
+    
+    }
+
+    section.text div > p:last-child {
+    
+        display: block;
+        margin-bottom: 0;
+        padding-bottom: 20px;
+        background: url(../images/skin/thread.png) repeat-x bottom left;
+
+    }

@@ -38,16 +38,17 @@ salt_lick = Location.create(:name => "Thurman's Mansion",
                             :longitude => -98.01355
                             )
 
-tnc = Wedding.create(:name => "The Tawnies Wedding", 
+tnc = Wedding.create(:name => "Caroline &amp; Tony",
+                     :name_html => "Caroline <em>&amp;</em> Tony",
                      :date => DateTime.parse('2011-08-27 18:30:00'), 
                      :location_id => austin.id
                      )
 
-q1 = RsvpQuestion.create(:wedding_id => tnc.id, :html_form_type => RsvpQuestion::TYPE_RADIO, :question => "Food Preference", :order => 1)
+q1 = RsvpQuestion.create(:wedding_id => tnc.id, :html_form_type => RsvpQuestion::TYPE_RADIO, :question => "Food Preference", :display_order => 1, :is_required => true)
 RsvpOption.create(:rsvp_question_id => q1.id, :option => "BBQ")
 RsvpOption.create(:rsvp_question_id => q1.id, :option => "Vegetarian")
 
-q2 = RsvpQuestion.create(:wedding_id => tnc.id, :html_form_type => RsvpQuestion::TYPE_TEXT_FIELD, :question => "Have you booked a hotel yet? If so, what's the name of the hotel?", :order => 2)
+q2 = RsvpQuestion.create(:wedding_id => tnc.id, :html_form_type => RsvpQuestion::TYPE_TEXT_FIELD, :question => "Have you booked a hotel yet? If so, what's the name of the hotel?", :display_order => 2, :is_required => false)
 
 caroline = User.create(:first_name => "Caroline", 
                        :last_name => "Ryu", 
@@ -119,7 +120,9 @@ rachel = User.create(:first_name => "Rachel",
                    :facebook_id => 219711
                    )
 
-p1 = Page.create(:wedding_id => tnc.id, :title => "Home", :navigation_order => 1, :is_locked => true)
+p1 = Page.create(:wedding_id => tnc.id, :title => "Invitation", :navigation_order => 1, :is_locked => true)
+p2 = Page.create(:wedding_id => tnc.id, :title => "The Wedding", :navigation_order => 2, :is_locked => false)
+p3 = Page.create(:wedding_id => tnc.id, :title => "Photos", :navigation_order => 3, :is_locked => false)
 
 w1 = WidgetText.create(:text => <<TEXT
 <p>together with their family and friends</p>

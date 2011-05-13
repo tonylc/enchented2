@@ -29,8 +29,8 @@
 
             $(this).parent().parent().find('input').each(function() {
 
-                var group = '#' + $(this).attr('name') + '-' + $(this).val();
-
+                var group = '#' + $(this).attr('id') + '-' + $(this).val();
+		
                 if ($(this).hasClass('toggle') && $(this).is(':checked')) {
                     $(group).slideDown('slow');
                 } else {

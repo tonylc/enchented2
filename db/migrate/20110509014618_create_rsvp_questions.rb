@@ -4,7 +4,8 @@ class CreateRsvpQuestions < ActiveRecord::Migration
       t.integer :wedding_id
       t.integer :html_form_type
       t.string :question
-      t.integer :order
+      t.boolean :is_required
+      t.integer :display_order
     end
   end
 

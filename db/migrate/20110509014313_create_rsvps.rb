@@ -1,7 +1,8 @@
 class CreateRsvps < ActiveRecord::Migration
   def self.up
     create_table :rsvps do |t|
-      t.integer :user_id
+      t.integer :wedding_id
+      t.string :name
       t.boolean :can_attend
       t.text :additional_notes
 

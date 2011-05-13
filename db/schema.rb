@@ -48,16 +48,20 @@ ActiveRecord::Schema.define(:version => 20110510064113) do
     t.integer "wedding_id"
     t.integer "html_form_type"
     t.string  "question"
-    t.integer "order"
+    t.boolean "is_required"
+    t.integer "display_order"
   end
 
   create_table "rsvp_selections", :force => true do |t|
+    t.integer "rsvp_id"
+    t.integer "rsvp_question_id"
     t.integer "rsvp_option_id"
-    t.integer "user_id"
+    t.string  "answer"
   end
 
   create_table "rsvps", :force => true do |t|
-    t.integer  "user_id"
+    t.integer  "wedding_id"
+    t.string   "name"
     t.boolean  "can_attend"
     t.text     "additional_notes"
     t.datetime "created_at"
@@ -92,6 +96,7 @@ ActiveRecord::Schema.define(:version => 20110510064113) do
 
   create_table "weddings", :force => true do |t|
     t.string   "name"
+    t.string   "name_html"
     t.datetime "date"
     t.string   "text_announcement_image_url"
     t.integer  "photo_gallery_id"

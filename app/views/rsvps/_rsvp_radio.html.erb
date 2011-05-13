@@ -4,7 +4,7 @@
 
   <% rsvp_question.rsvp_options.each do |rsvp_option| %>
   <label>
-    <input type="radio" name="<%= rsvp_question.id %>" value="<%= rsvp_option.id %>" /><em><%= rsvp_option.option %></em>
+   <input type="radio" name="rsvp_questions[<%= rsvp_question.id %>]" value="<%= rsvp_option.id %>" /><em><%= rsvp_option.option %></em>
   </label>
   <% end %>
  

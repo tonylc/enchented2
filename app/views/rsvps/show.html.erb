@@ -1,0 +1,47 @@
+<% add_to_js('rsvp') %>
+
+<% form_for @rsvp do |f| %>
+<section class="widget rsvp vevent">
+
+            <div>
+
+              <h2>RSVP</h2>
+              <h3 class="summary"><%= @wedding.bride.first_name.titleize %> &amp; <%= @wedding.groom.first_name.titleize %>'s Wedding</h3>
+              <time class="dtstart" title="<%= @wedding.date.strftime('%Y-%m-%d') %>"><a href="event.ics"><%= nice_date(@wedding.date) %></a></time>
+        
+	      <%= f.hidden_field :wedding_id %>
+
+             <fieldset>
+                
+                <legend>Will you be able to attend?</legend>
+		<label><%= f.radio_button :can_attend, true, {:class => "toggle"} %><em>Yes</em></label>
+		<label><%= f.radio_button :can_attend, false, {:checked =>"checked"} %><em>No</em></label>
+
+             </fieldset>
+
+		<label>
+                  <em>Your Name:</em>
+		  <input id="rsvp_name" name="rsvp[name]" type="text" /> 
+		</label><br />
+
+            <div id="rsvp_can_attend_true-true" class="group toggle">
+		                   
+		<% @wedding.rsvp_questions.each do |rsvp_question| %>
+		<%= render_rsvp_form_element(rsvp_question) %>
+		<% end %>
+
+		<fieldset>
+                  <legend>Additional Notes</legend>
+                  <p>Please let us know if you have any special requests</p>
+		  <%= f.text_area :additional_notes, :cols => 40, :rows => 4 %>
+               </fieldset><br />
+
+	      </div>
+    
+              <menu>
+                <li><input type="submit" value="RSVP" /></li>
+              </menu>
+        
+            </div>
+</section>
+<% end %>

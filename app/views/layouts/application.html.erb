@@ -2,7 +2,7 @@
 <html>
 <head>
 
-	<title>Caroline &amp; Tony &infin; August 27, 2011 &infin; Austin, Texas</title>
+	<title><%= raw(wedding_title(@wedding)) %></title>
 
     <!--
     /*
@@ -43,9 +43,9 @@
 
     <header>
 
-        <h1>Caroline <em>&amp;</em> Tony</h1>
-        <time datetime="2011-08-27">August 27, 2011</time>
-        <em>&mdash; Austin, Texas</em>
+        <h1><%= raw(@wedding.name_html) %></h1>
+        <time datetime="<%= @wedding.date.strftime('%Y-%m-%d') %>"><%= nice_date(@wedding.date) %></time>
+        <em>&mdash; <%= nice_location(@wedding.location) %></em>
 
     </header>
 
@@ -54,9 +54,11 @@
         <h1>Navigation</h1>
         
         <ul>
-            <li class="selected"><strong><a href="index.html">Invitation</a></strong></li>
-            <li><a href="wedding.html">The Wedding</a></li>
-            <li><a href="photos.html">Photos</a></li>
+	  <% @wedding.pages.each do |page| %>
+            <li<% if current_page?(page) %> class="selected"<% end %>><% if current_page?(page) %><strong><% end %><%= link_to page.title, page_path(page) %><% if current_page?(page) %></strong><% end %></li>
+	  <% end %>
+	    
+	    <li<% if rsvp_page? %> class="selected"<% end %>><% if rsvp_page? %><strong><% end %><%= link_to "Rsvp", rsvp_path(@wedding.id) %><% if rsvp_page? %></strong><% end %></li>
         </ul>
 
     </nav>

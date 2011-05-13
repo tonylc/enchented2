@@ -1,8 +1,10 @@
 class CreateRsvpSelections < ActiveRecord::Migration
   def self.up
     create_table :rsvp_selections do |t|
+      t.integer :rsvp_id
+      t.integer :rsvp_question_id
       t.integer :rsvp_option_id
-      t.integer :user_id
+      t.string :answer
     end
   end
 

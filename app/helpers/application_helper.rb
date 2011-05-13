@@ -81,6 +81,14 @@ module ApplicationHelper
     @scripts |= js
   end
 
+
+# 
+# ---------------------------------------------------------------------------
+
+  def wedding_title(wedding)
+    "#{wedding.name} &infin; #{nice_date(wedding.date)} &infin; #{nice_location(wedding.location)}"
+  end
+  
   def nice_date(datetime)
     datetime.strftime("%B %d, %Y")
   end
@@ -95,6 +103,14 @@ module ApplicationHelper
 
   def add_to_css(*css)
     (@page_css ||= []) << css
+  end
+
+  def current_page?(page)
+    self.controller_name == "pages" && page.id.to_s == params[:id]
+  end
+
+  def rsvp_page?
+    self.controller_name == "rsvps"
   end
 
 end

@@ -123,7 +123,7 @@ rachel = User.create(:first_name => "Rachel",
                    :facebook_id => 219711
                    )
 
-p1 = Page.create(:url_name => "invitation", :wedding_id => tnc.id, :title => "Invitation", :navigation_order => 1, :is_locked => true)
+p1 = Page.create(:url_name => "invitation", :wedding_id => tnc.id, :title => "Invitation", :navigation_order => 1, :is_locked => true, :is_home => true)
 p2 = Page.create(:url_name => "wedding", :wedding_id => tnc.id, :title => "The Wedding", :navigation_order => 2, :is_locked => false)
 p3 = Page.create(:url_name => "photos", :wedding_id => tnc.id, :title => "Photos", :navigation_order => 3, :is_locked => false)
 

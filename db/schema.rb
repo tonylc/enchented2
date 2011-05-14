@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(:version => 20110514003148) do
     t.string  "title"
     t.integer "navigation_order"
     t.boolean "is_locked"
+    t.boolean "is_home",          :default => false
   end
 
   create_table "rsvp_options", :force => true do |t|

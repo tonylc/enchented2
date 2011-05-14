@@ -44,6 +44,9 @@ tnc = Wedding.create(:name => "Caroline &amp; Tony",
                      :location_id => austin.id
                      )
 
+Domain.create(:wedding_id => tnc.id, :domain => "caroline-and-tony.com")
+Domain.create(:wedding_id => tnc.id, :domain => "www.caroline-and-tony.com")
+
 q1 = RsvpQuestion.create(:wedding_id => tnc.id, :html_form_type => RsvpQuestion::TYPE_RADIO, :question => "Food Preference", :display_order => 1, :is_required => true)
 RsvpOption.create(:rsvp_question_id => q1.id, :option => "BBQ")
 RsvpOption.create(:rsvp_question_id => q1.id, :option => "Vegetarian")
@@ -120,9 +123,9 @@ rachel = User.create(:first_name => "Rachel",
                    :facebook_id => 219711
                    )
 
-p1 = Page.create(:wedding_id => tnc.id, :title => "Invitation", :navigation_order => 1, :is_locked => true)
-p2 = Page.create(:wedding_id => tnc.id, :title => "The Wedding", :navigation_order => 2, :is_locked => false)
-p3 = Page.create(:wedding_id => tnc.id, :title => "Photos", :navigation_order => 3, :is_locked => false)
+p1 = Page.create(:url_name => "invitation", :wedding_id => tnc.id, :title => "Invitation", :navigation_order => 1, :is_locked => true)
+p2 = Page.create(:url_name => "wedding", :wedding_id => tnc.id, :title => "The Wedding", :navigation_order => 2, :is_locked => false)
+p3 = Page.create(:url_name => "photos", :wedding_id => tnc.id, :title => "Photos", :navigation_order => 3, :is_locked => false)
 
 w1 = WidgetText.create(:text => <<TEXT
 <p>together with their family and friends</p>

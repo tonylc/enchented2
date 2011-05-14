@@ -1,7 +1,11 @@
 Prototype::Application.routes.draw do
-
+  
+  #standard request urls
   resources :pages, :only => [:show]
-  resources :rsvps, :only => [:show, :create]
+  resources :rsvps, :only => [:new, :create]
+
+  #nice urls
+  match ':page_name', :controller => "pages", :action => "show", :via => :get, :as => 'readable_page'
   
   match "example/:action(/:context)(/:view)", :controller => "example"
   match "proxy", :controller => "proxy"

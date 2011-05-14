@@ -1,7 +1,8 @@
 class CreatePages < ActiveRecord::Migration
   def self.up
     create_table :pages do |t|
-      t.integer :wedding_id
+      t.string :url_name
+      t.integer :wedding_id      
       t.string :title
       t.integer :navigation_order
       t.boolean :is_locked

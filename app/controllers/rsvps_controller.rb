@@ -1,6 +1,6 @@
 class RsvpsController < ApplicationController
 
-  def show
+  def new
     @rsvp = Rsvp.new(:wedding_id => @wedding.id)
   end
 
@@ -25,12 +25,16 @@ class RsvpsController < ApplicationController
       end
       
       flash[:notice] = "Thanks, we'll see you soon!"
-      redirect_to :action => 'show', :id => @wedding
-     
+
+      if @custom_domain
+        redirect_to :action => 'new'
+      else
+        redirect_to :action => 'new', :wedding_id => @wedding
+      end
     else
 
       flash[:error] = "Please make sure you fill out all of the required fields"
-      render :action => 'show'
+      render :action => 'new'
     end
   end
 

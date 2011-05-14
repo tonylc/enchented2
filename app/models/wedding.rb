@@ -1,5 +1,6 @@
 class Wedding < ActiveRecord::Base
   has_many :pages
+  has_many :domains
   has_many :rsvp_questions, :order => "display_order ASC"
   belongs_to :location
 

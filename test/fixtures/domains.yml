@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  wedding_id: 1
+  domain: MyString
+
+two:
+  wedding_id: 1
+  domain: MyString

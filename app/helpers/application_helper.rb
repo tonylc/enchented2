@@ -113,4 +113,19 @@ module ApplicationHelper
     self.controller_name == "rsvps"
   end
 
+  def custom_new_rsvp_path
+    if @custom_domain
+      new_rsvp_path
+    else
+      url_for(:controller => 'rsvps', :action => 'new', :wedding_id => @wedding.id)
+    end
+  end
+
+  def custom_page_path(page)
+    if @custom_domain
+      readable_page_url(:page_name => page.url_name, :only_path => true)
+    else
+      page_path(page)
+    end
+  end
 end

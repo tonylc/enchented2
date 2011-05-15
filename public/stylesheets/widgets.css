@@ -9,7 +9,7 @@
         width: 100%;
         float: left;
         margin: 0 0 40px 0;
-        padding: 5px;
+        padding: 4px;
         background: url(../images/skin/border-top.png), url(../images/skin/border-bottom.png), url(../images/skin/border-left.png), url(../images/skin/border-right.png);
         background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
         background-position: top left, bottom left, top left, top right;

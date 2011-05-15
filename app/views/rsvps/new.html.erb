@@ -7,7 +7,7 @@
 
               <h2>RSVP</h2>
               <h3 class="summary"><%= @wedding.bride.first_name.titleize %> &amp; <%= @wedding.groom.first_name.titleize %>'s Wedding</h3>
-              <time class="dtstart" title="<%= @wedding.date.strftime('%Y-%m-%d') %>"><a href="event.ics"><%= nice_date(@wedding.date) %></a></time>
+              <time class="dtstart" title="<%= @wedding.date.strftime('%Y-%m-%d') %>"><a href="#"><%= nice_date(@wedding.date) %></a></time>
         
 	      <% if flash[:error] %>
 	      <div class="error">

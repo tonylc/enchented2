@@ -151,10 +151,18 @@ w3 = WidgetText.create(:text => <<TEXT
 <p><strong style="color: #da8b91; font-size: 24px;">Airport</strong></p>
 <p><b>Austin-Bergstrom International Airport (AUS)</b>
 <p>Website: <a href="http://www.ci.austin.tx.us/austinairport/default.htm">Austin-Bergstrom International Airport</a><br />Approximately 8 miles from downtown Austin</p>
+TEXT
+)
+
+w4 = WidgetText.create(:text => <<TEXT
 <p><strong style="color: #da8b91; font-size: 24px;">Accommodations</strong></p>
 <p><b>Omni Austin Downtown Hotel</b></p>
 <p>Website: <a href="http://www.omnihotels.com/FindAHotel/AustinDowntown/GuestRoomsAndSuites.aspx">Omni Austin Downtown Hotel</a></p>
 <p>Address: 700 San Jacinto at 8th Street, Austin, Texas 78701<br />Phone: (512) 476-3700<br />There is a special wedding block set up at the Omni for $139/night over the wedding weekend.  For reservations, please call and ask for the "C & T wedding block rate.”  Transportation to/from the wedding will also take place from this hotel.</p>
+TEXT
+)
+
+w5 = WidgetText.create(:text => <<TEXT
 <p><strong style="color: #da8b91; font-size: 24px;">Transportation</strong></p>
 <p><b>Austin Charter Services Shuttle Bus</b></p>
 <p>We have coordinated 45-passenger buses for guests to take to and from the wedding so everyone can have a great time and not worry about designating drivers.  Pick-up and drop-off will be from the Omni Austin Downtown Hotel.  <b>Please RSVP below by 6/27</b> if you will be taking the shuttle so we can make sure you have a ride!</p>
@@ -165,3 +173,5 @@ TEXT
 
 PageWidget.create(:page_id => p1.id, :widget => w1, :verticle_order => 1)
 PageWidget.create(:page_id => p4.id, :widget => w3, :verticle_order => 1)
+PageWidget.create(:page_id => p4.id, :widget => w4, :verticle_order => 2)
+PageWidget.create(:page_id => p4.id, :widget => w5, :verticle_order => 3)

@@ -17,6 +17,7 @@ Rsvp.destroy_all
 RsvpQuestion.destroy_all
 RsvpOption.destroy_all
 RsvpSelection.destroy_all
+Domain.destroy_all
 
 texas = State.create(:name => "texas", :short_name => "TX")
 
@@ -51,7 +52,7 @@ q1 = RsvpQuestion.create(:wedding_id => tnc.id, :html_form_type => RsvpQuestion:
 RsvpOption.create(:rsvp_question_id => q1.id, :option => "BBQ")
 RsvpOption.create(:rsvp_question_id => q1.id, :option => "Vegetarian")
 
-q2 = RsvpQuestion.create(:wedding_id => tnc.id, :html_form_type => RsvpQuestion::TYPE_TEXT_FIELD, :question => "Have you booked accommodations for your stay yet?  If so, please let us know where you'll be staying.  We will be providing transportation to/from the wedding from the Omni Hotel Downtown Austin.  There is a special wedding block set up at the Omni at $139/night.  For reservations, please call (512) 476-3700 and ask for the \"C & T wedding block rate\"", :display_order => 2, :is_required => false)
+q2 = RsvpQuestion.create(:wedding_id => tnc.id, :html_form_type => RsvpQuestion::TYPE_TEXT_FIELD, :question => "Have you booked accommodations for your stay yet?  If so, please let us know where you'll be staying.  Transportation will be provided to/from the wedding from the Omni Hotel Downtown Austin where we set up a special wedding block rate.  Please see the Guest & Travel tab for more information.", :display_order => 2, :is_required => false)
 
 caroline = User.create(:first_name => "Caroline", 
                        :last_name => "Ryu", 

@@ -52,7 +52,7 @@ q1 = RsvpQuestion.create(:wedding_id => tnc.id, :html_form_type => RsvpQuestion:
 RsvpOption.create(:rsvp_question_id => q1.id, :option => "BBQ")
 RsvpOption.create(:rsvp_question_id => q1.id, :option => "Vegetarian")
 
-q2 = RsvpQuestion.create(:wedding_id => tnc.id, :html_form_type => RsvpQuestion::TYPE_TEXT_FIELD, :question => "Have you booked accommodations for your stay yet?  If so, please let us know where you'll be staying.  Transportation will be provided to/from the wedding from the Omni Hotel Downtown Austin where we set up a special wedding block rate.  Please see the Guest & Travel tab for more information.", :display_order => 2, :is_required => false)
+q2 = RsvpQuestion.create(:wedding_id => tnc.id, :html_form_type => RsvpQuestion::TYPE_TEXT_FIELD, :question => "Have you booked accommodations for your stay yet?  If so, please let us know where you'll be staying.  Transportation will be provided from the Omni Hotel Downtown Austin.  Visit the Guest & Travel tab for more information.", :display_order => 2, :is_required => false)
 
 caroline = User.create(:first_name => "Caroline", 
                        :last_name => "Ryu", 
@@ -127,6 +127,7 @@ rachel = User.create(:first_name => "Rachel",
 p1 = Page.create(:url_name => "invitation", :wedding_id => tnc.id, :title => "Invitation", :navigation_order => 1, :is_locked => true, :is_home => true)
 p2 = Page.create(:url_name => "wedding", :wedding_id => tnc.id, :title => "The Wedding", :navigation_order => 2, :is_locked => false)
 p3 = Page.create(:url_name => "photos", :wedding_id => tnc.id, :title => "Photos", :navigation_order => 3, :is_locked => false)
+p4 = Page.create(:url_name => "guest_and_travel", :wedding_id => tnc.id, :title => "Guest & Travel Information", :navigation_order => 4, :is_locked => false)
 
 w1 = WidgetText.create(:text => <<TEXT
 <p>together with their family and friends</p>
@@ -139,4 +140,21 @@ TEXT
 )
 w2 = WidgetEvent.create(:location_id => salt_lick.id, :title => "The Wedding", 'start_time' => DateTime.parse('2011-08-27 19:00:00'), 'end_time' => DateTime.parse('2011-08-27 23:00:00'))
 
+w3 = WidgetText.create(:text => <<TEXT
+<p><strong style="color: #da8b91; font-size: 24px;">Airport</strong></p>
+<p><b>Austin-Bergstrom International Airport (AUS)</b>
+<p>Website: <a href="http://www.ci.austin.tx.us/austinairport/default.htm">Austin-Bergstrom International Airport</a><br />Approximately 8 miles from downtown Austin</p>
+<p><strong style="color: #da8b91; font-size: 24px;">Accommodations</strong></p>
+<p><b>Omni Austin Downtown Hotel</b></p>
+<p>Website: <a href="http://www.omnihotels.com/FindAHotel/AustinDowntown/GuestRoomsAndSuites.aspx">Omni Austin Downtown Hotel</a></p>
+<p>Address: 700 San Jacinto at 8th Street, Austin, Texas 78701<br />Phone: (512) 476-3700<br />There is a special wedding block set up at the Omni for $139/night over the wedding weekend.  For reservations, please call and ask for the "C & T wedding block rate.”  Transportation to/from the wedding will also take place from this hotel.</p>
+<p><strong style="color: #da8b91; font-size: 24px;">Transportation</strong></p>
+<p><b>Austin Charter Services Shuttle Bus</b></p>
+<p>We have coordinated 45-passenger buses for guests to take to and from the wedding so everyone can have a great time and not worry about designating drivers.  Pick-up and drop-off will be from the Omni Austin Downtown Hotel.  <b>Please RSVP below by 6/27</b> if you will be taking the shuttle so we can make sure you have a ride!</p>
+<p>Pick-up time: 5:45pm<br />Drop-off time: 11:00pm</p>
+TEXT
+)
+
+
 PageWidget.create(:page_id => p1.id, :widget => w1, :verticle_order => 1)
+PageWidget.create(:page_id => p4.id, :widget => w3, :verticle_order => 1)

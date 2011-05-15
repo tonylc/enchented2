@@ -41,6 +41,7 @@ salt_lick = Location.create(:name => "Thurman's Mansion",
 
 tnc = Wedding.create(:name => "Caroline &amp; Tony",
                      :name_html => "Caroline <em>&amp;</em> Tony",
+		     :rsvp_message => "Please respond for each guest individually by 6/27. Thanks!",
                      :date => DateTime.parse('2011-08-27 18:30:00'), 
                      :location_id => austin.id
                      )
@@ -48,13 +49,19 @@ tnc = Wedding.create(:name => "Caroline &amp; Tony",
 Domain.create(:wedding_id => tnc.id, :domain => "caroline-and-tony.com")
 Domain.create(:wedding_id => tnc.id, :domain => "www.caroline-and-tony.com")
 
-q1 = RsvpQuestion.create(:wedding_id => tnc.id, :html_form_type => RsvpQuestion::TYPE_RADIO, :question => "Food Preference", :display_order => 1, :is_required => true)
+q1 = RsvpQuestion.create(:wedding_id => tnc.id, :html_form_type => RsvpQuestion::TYPE_RADIO, :question => "Food Preference:", :display_order => 1, :is_required => true)
 RsvpOption.create(:rsvp_question_id => q1.id, :option => "BBQ")
 RsvpOption.create(:rsvp_question_id => q1.id, :option => "Vegetarian")
 
-q2 = RsvpQuestion.create(:wedding_id => tnc.id, :html_form_type => RsvpQuestion::TYPE_TEXT_FIELD, :question => "Have you booked accommodations for your stay yet?  If so, please let us know where you'll be staying.  Transportation will be provided from the Omni Hotel Downtown Austin.  Visit the Guest & Travel tab for more information.", :display_order => 2, :is_required => false)
+q2 = RsvpQuestion.create(:wedding_id => tnc.id, :html_form_type => RsvpQuestion::TYPE_TEXT_FIELD, :question => "Have you booked accommodations for your stay? If so, please let us know where:", :display_order => 2, :is_required => false)
 
-caroline = User.create(:first_name => "Caroline", 
+q3 = RsvpQuestion.create(:wedding_id => tnc.id, :html_form_type => RsvpQuestion::TYPE_RADIO, :question => "Transportation will be provided to & from the wedding from the Omni Hotel Downtown Austin. Please indicate if you'd like a ride:", :display_order => 3, :is_required => true)
+RsvpOption.create(:rsvp_question_id => q3.id, :option => "Yes, I will need a ride")
+RsvpOption.create(:rsvp_question_id => q3.id, :option => "No, I will not need a ride")
+
+RsvpQuestion.create(:wedding_id => tnc.id, :html_form_type => RsvpQuestion::TYPE_TEXT, :question => "For more information, visit the Guest & Travel tab.", :display_order => 4)
+
+caroline = User.create(:first_name => "Caroline",
                        :last_name => "Ryu", 
                        :wedding_id => tnc.id, 
                        :role_id => User::ROLE_BRIDE,

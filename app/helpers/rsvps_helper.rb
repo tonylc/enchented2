@@ -10,6 +10,8 @@ module RsvpsHelper
       render :partial => 'rsvp_text_field', :locals => {:rsvp_question => rsvp_question}
     when RsvpQuestion::TYPE_TEXT_AREA
       render :partial => 'rsvp_text_area', :locals => {:rsvp_question => rsvp_question}
+    when RsvpQuestion::TYPE_TEXT
+      render :partial => 'rsvp_text', :locals => {:rsvp_question => rsvp_question}
     end
   end
 

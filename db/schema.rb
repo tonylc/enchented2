@@ -106,6 +106,7 @@ ActiveRecord::Schema.define(:version => 20110514003148) do
   create_table "weddings", :force => true do |t|
     t.string   "name"
     t.string   "name_html"
+    t.string   "rsvp_message"
     t.datetime "date"
     t.string   "text_announcement_image_url"
     t.integer  "photo_gallery_id"

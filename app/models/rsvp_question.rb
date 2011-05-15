@@ -6,6 +6,7 @@ class RsvpQuestion < ActiveRecord::Base
   TYPE_SELECT = 1
   TYPE_TEXT_FIELD = 2
   TYPE_TEXT_AREA = 3
+  TYPE_TEXT = 4
   
   def has_options?
     [TYPE_RADIO, TYPE_SELECT].include?(html_form_type)

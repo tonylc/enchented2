@@ -1,4 +1,4 @@
-<fieldset>
+<fieldset<%= error_for_selection(rsvp_question) %>>
     
   <legend><%= rsvp_question.question %></legend>
 
@@ -7,5 +7,7 @@
    <input type="radio" name="rsvp_questions[<%= rsvp_question.id %>]" value="<%= rsvp_option.id %>" /><em><%= rsvp_option.option %></em>
   </label>
   <% end %>
+
+  <% if error_on_selection?(rsvp_question)  %><strong>Required</strong><% end %>
  
 </fieldset>

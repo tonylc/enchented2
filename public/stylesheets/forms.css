@@ -41,6 +41,32 @@
 
     }
     
+    label em {
+    
+        display: block;
+        float: left;
+    
+    }
+    
+    label.error em {
+    
+        color: #da8b91
+    
+    }
+    
+    .error strong {
+    
+        display: block;
+        float: left;
+        border-radius: 5px;
+        padding: 0 7px;
+        background-color: #000;
+        color: #da8b91;
+        font-size: 12px;
+        line-height: 20px;
+    
+    }
+    
     label small {
     
         font-size: 14px;
@@ -73,6 +99,15 @@
     label input[type=text] {
     
         display: block;
+        clear: left;
+        float: left;
+        margin-right: 5px;
+    
+    }
+    
+    label input[type=radio] {
+    
+        float: left;
     
     }
 
@@ -90,6 +125,35 @@
     div.group.toggle {
     
         display: none;
+    
+    }
+
+
+/* Errors */
+
+
+    div.error {
+
+        clear: left;
+        margin: 15px 0;
+        border-radius: 5px;
+        padding: 15px;
+        background: #000;
+    
+    }
+    
+    div.error h3 {
+    
+        margin: 0 0 10px 0;
+        color: #fff;
+    
+    }
+    
+    div.error p {
+    
+        margin: 0;
+        font-size: 12px;
+        color: #da8891;
     
     }
 

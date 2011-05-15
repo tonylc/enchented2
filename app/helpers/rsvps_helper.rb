@@ -13,4 +13,17 @@ module RsvpsHelper
     end
   end
 
+  def error_for(object, attribute)
+    if object.errors.on(attribute)
+      " class='error'"
+    end
+  end
+
+  def error_for_selection(question)
+    " class='error'" if !@selection_errors.blank? && @selection_errors.include?(question.id)
+  end
+
+  def error_on_selection?(question)
+    !@selection_errors.blank? && @selection_errors.include?(question.id)
+  end
 end

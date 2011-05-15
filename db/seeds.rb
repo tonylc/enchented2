@@ -145,7 +145,7 @@ w1 = WidgetText.create(:text => <<TEXT
 <p>dinner and dancing to follow<br /><strong style="color: #da8b91">please rsvp on this site by june 27</strong></p>
 TEXT
 )
-w2 = WidgetEvent.create(:location_id => salt_lick.id, :title => "The Wedding", 'start_time' => DateTime.parse('2011-08-27 19:00:00'), 'end_time' => DateTime.parse('2011-08-27 23:00:00'))
+w2 = WidgetEvent.create(:location_id => salt_lick.id, :title => "Caroline &amp; Tony's Wedding", 'start_time' => DateTime.parse('2011-08-27 19:00:00'), 'end_time' => DateTime.parse('2011-08-27 23:00:00'), :is_rsvp_event => true)
 
 w3 = WidgetText.create(:text => <<TEXT
 <p><strong style="color: #da8b91; font-size: 24px;">Airport</strong></p>
@@ -172,6 +172,7 @@ TEXT
 
 
 PageWidget.create(:page_id => p1.id, :widget => w1, :verticle_order => 1)
+PageWidget.create(:page_id => p2.id, :widget => w2, :verticle_order => 1)
 PageWidget.create(:page_id => p4.id, :widget => w3, :verticle_order => 1)
 PageWidget.create(:page_id => p4.id, :widget => w4, :verticle_order => 2)
 PageWidget.create(:page_id => p4.id, :widget => w5, :verticle_order => 3)

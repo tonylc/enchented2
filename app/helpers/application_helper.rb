@@ -97,6 +97,10 @@ module ApplicationHelper
     "#{location.city.titleize}, #{location.state.name.titleize}"
   end
 
+  def nice_city(location)
+    "#{location.city.titleize}, #{location.state.name.titleize} #{location.postal_code}"
+  end
+
   def add_to_js(*js)
     (@page_js ||= []) << js
   end

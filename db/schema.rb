@@ -121,6 +121,7 @@ ActiveRecord::Schema.define(:version => 20110514003148) do
     t.string   "title"
     t.datetime "start_time"
     t.datetime "end_time"
+    t.boolean  "is_rsvp_event", :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -150,14 +150,14 @@ w2 = WidgetEvent.create(:location_id => salt_lick.id, :title => "Caroline &amp; 
 
 w3 = WidgetText.create(:text => <<TEXT
 <p><strong style="color: #da8b91; font-size: 24px;">Airport</strong></p>
-<p><b><a href="http://www.ci.austin.tx.us/austinairport/default.htm">Austin-Bergstrom International Airport (AUS)</a></b>
+<p><b><a href="http://www.ci.austin.tx.us/austinairport/default.htm" target=_blank>Austin-Bergstrom International Airport (AUS)</a></b>
 <p>Approximately 8 miles from downtown Austin</p>
 TEXT
 )
 
 w4 = WidgetText.create(:text => <<TEXT
 <p><strong style="color: #da8b91; font-size: 24px;">Accommodations</strong></p>
-<p><b><a href="http://www.omnihotels.com/FindAHotel/AustinDowntown/GuestRoomsAndSuites.aspx">Omni Austin Downtown Hotel</a></b></p>
+<p><b><a href="http://www.omnihotels.com/FindAHotel/AustinDowntown/GuestRoomsAndSuites.aspx" target=_blank>Omni Austin Downtown Hotel</a></b></p>
 <p>Address: 700 San Jacinto at 8th Street, Austin, Texas 78701<br />Phone: (512) 476-3700<br />There is a special wedding block set up at the Omni for $139/night over the wedding weekend.  For reservations, please call and ask for the "C & T wedding block rate.”  Transportation to/from the wedding will also take place from this hotel.</p>
 TEXT
 )

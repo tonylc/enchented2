@@ -62,6 +62,7 @@
         display: block;
         margin-right: 5px;
         float: left;
+        line-height: 14px;
     
     }
     
@@ -78,8 +79,8 @@
     
         margin: 0 2px;
         padding: 0;
-        line-height: 12px;
-	    white-space: normal;
+        line-height: 14px;
+        white-space: normal;
     
     }
 

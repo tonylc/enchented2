@@ -112,17 +112,22 @@
     
     }
     
-    time a {
-    
+    .widget time, .widget time a {
+
         display: block;
-        padding-left: 22px;
-        background: url(../images/skin/date.png) no-repeat 0 0;
         color: #da8b91;
         font-weight: bold;
         font-size: 14px;
         line-height: 20px;
         text-decoration: none;
-	cursor: default;
+	    cursor: default;
+    
+    }
+    
+    .widget time a {
+        
+        padding-left: 22px;
+        background: url(../images/skin/date.png) no-repeat 0 0;
     
     }
 

@@ -52,7 +52,7 @@
 
     nav a {
 
-        display: none;
+        display: block;
         padding: 2px 40px 0 7px;
         background-color: #625a52;
         color: #c7af82;

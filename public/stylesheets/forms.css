@@ -29,6 +29,8 @@
     
     fieldset {
 
+        margin-top: 20px;
+        margin-bottom: 20px;
         border: 1px dashed #aaa;
         border-radius: 3px;
         padding: 5px;
@@ -167,7 +169,7 @@
 /* Inline Errors */
 
 
-    label.error em {
+    fieldset.error legend, label.error em {
     
         color: #da8b91
     

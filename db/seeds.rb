@@ -164,7 +164,7 @@ TEXT
 
 w5 = WidgetText.create(:text => <<TEXT
 <p><strong style="color: #da8b91; font-size: 24px;">Transportation</strong></p>
-<p>We have coordinated 45-passenger buses for guests to take to and from the wedding so everyone can have a great time and not worry about designating drivers.  Pick-up and drop-off will be from the Omni Austin Downtown Hotel.  <b>Please RSVP below by 6/27</b> if you will be taking the shuttle so we can make sure you have a ride!</p>
+<p>We have coordinated 45-passenger buses for guests to take to and from the wedding so everyone can have a great time and not worry about designating drivers.  Pick-up and drop-off will be from the Omni Austin Downtown Hotel.  <b>Please RSVP by 6/27</b> if you will be taking the shuttle so we can make sure you have a ride!</p>
 <p>Pick-up time: 5:45pm<br />Drop-off time: 11:00pm</p>
 TEXT
 )

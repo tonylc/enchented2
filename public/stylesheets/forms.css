@@ -45,7 +45,7 @@
     
     }
 
-    label em, fieldset legend {
+    label em, fieldset legend, form p {
 
         color: #625a52;
         margin: 0;
@@ -111,12 +111,6 @@
     
         float: left;
     
-    }
-
-    form p {
-
-	font-size: 14px;
-
     }
 
 

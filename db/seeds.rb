@@ -21,19 +21,19 @@ Domain.destroy_all
 
 texas = State.create(:name => "texas", :short_name => "TX")
 
-austin = Location.create(:name => "Austin", 
-                         :address1 => "", 
+austin = Location.create(:name => "Austin",
+                         :address1 => "",
                          :city => "Austin",
-                         :state_id => texas.id, 
+                         :state_id => texas.id,
                          :postal_code => "78619",
                          :latitude => 30.131332,
                          :longitude => -98.01355
                          )
 
-salt_lick = Location.create(:name => "Thurman's Mansion", 
-                            :address1 => "17900 Farm to Market Road 1826", 
+salt_lick = Location.create(:name => "Thurman's Mansion",
+                            :address1 => "17900 Farm to Market Road 1826",
                             :city => "driftwood",
-                            :state_id => texas.id, 
+                            :state_id => texas.id,
                             :postal_code => "78619",
                             :latitude => 30.131332,
                             :longitude => -98.01355
@@ -42,7 +42,7 @@ salt_lick = Location.create(:name => "Thurman's Mansion",
 tnc = Wedding.create(:name => "Caroline &amp; Tony",
                      :name_html => "Caroline <em>&amp;</em> Tony",
 		                 :rsvp_message => "Kindly reply for each guest by 6/27/11. Thanks!",
-                     :date => DateTime.parse('2011-08-27 18:30:00'), 
+                     :date => DateTime.parse('2011-08-27 18:30:00'),
                      :location_id => austin.id
                      )
 
@@ -62,71 +62,71 @@ RsvpOption.create(:rsvp_question_id => q3.id, :option => "No, I will not need a 
 RsvpQuestion.create(:wedding_id => tnc.id, :html_form_type => RsvpQuestion::TYPE_TEXT, :question => "For more information, please visit the Guest & Travel tab.", :display_order => 4)
 
 caroline = User.create(:first_name => "Caroline",
-                       :last_name => "Ryu", 
-                       :wedding_id => tnc.id, 
+                       :last_name => "Ryu",
+                       :wedding_id => tnc.id,
                        :role_id => User::ROLE_BRIDE,
                        :facebook_id => 18800629
                        )
 
-tony = User.create(:first_name => "Tony", 
-                   :last_name => "Chen", 
-                   :wedding_id => tnc.id, 
+tony = User.create(:first_name => "Tony",
+                   :last_name => "Chen",
+                   :wedding_id => tnc.id,
                    :role_id => User::ROLE_GROOM,
                    :facebook_id => 684296566
                    )
 
-lijen = User.create(:first_name => "Lijen", 
-                   :last_name => "Tan", 
-                   :wedding_id => tnc.id, 
+lijen = User.create(:first_name => "Lijen",
+                   :last_name => "Tan",
+                   :wedding_id => tnc.id,
                    :role_id => User::ROLE_BEST_MAN,
                    :facebook_id => 717411026
                    )
 
-nelly = User.create(:first_name => "Chris", 
-                   :last_name => "Nelson", 
-                   :wedding_id => tnc.id, 
+nelly = User.create(:first_name => "Chris",
+                   :last_name => "Nelson",
+                   :wedding_id => tnc.id,
                    :role_id => User::ROLE_GROOMSMAN,
                    :facebook_id => 504615468
                    )
 
-james = User.create(:first_name => "James", 
-                   :last_name => "Lee", 
-                   :wedding_id => tnc.id, 
+james = User.create(:first_name => "James",
+                   :last_name => "Lee",
+                   :wedding_id => tnc.id,
                    :role_id => User::ROLE_GROOMSMAN,
                    :facebook_id => 1218821
                    )
 
 norman = User.create(:first_name => "Norman",
-                   :last_name => "Hsieh", 
-                   :wedding_id => tnc.id, 
+                   :last_name => "Hsieh",
+                   :wedding_id => tnc.id,
                    :role_id => User::ROLE_GROOMSMAN,
                    :facebook_id => 6701208
                    )
 
 collin = User.create(:first_name => "Collin",
-                   :last_name => "Kim", 
-                   :wedding_id => tnc.id, 
+                   :last_name => "Kim",
+                   :wedding_id => tnc.id,
                    :role_id => User::ROLE_MAID_OF_HONOR,
                    :facebook_id => 7924545
                    )
 
 steph = User.create(:first_name => "Stephanie",
-                   :last_name => "Le", 
-                   :wedding_id => tnc.id, 
+                   :last_name => "Le",
+                   :wedding_id => tnc.id,
                    :role_id => User::ROLE_BRIDESMAID,
                    :facebook_id => 1204530
                    )
 
 katheryn = User.create(:first_name => "Kathryn",
-                   :last_name => "Chin", 
-                   :wedding_id => tnc.id, 
+                   :last_name => "Chin",
+                   :wedding_id => tnc.id,
                    :role_id => User::ROLE_BRIDESMAID,
                    :facebook_id => 1226209
                    )
 
 rachel = User.create(:first_name => "Rachel",
-                   :last_name => "Wei", 
-                   :wedding_id => tnc.id, 
+                   :last_name => "Wei",
+                   :wedding_id => tnc.id,
                    :role_id => User::ROLE_BRIDESMAID,
                    :facebook_id => 219711
                    )
@@ -159,14 +159,14 @@ w4 = WidgetText.create(:text => <<TEXT
 <p><strong style="color: #da8b91; font-size: 24px;">Accommodations</strong>
 <p><b><a target='_blank' href="http://www.omnihotels.com/FindAHotel/AustinDowntown/GuestRoomsAndSuites.aspx">Omni Austin Downtown Hotel</a></b>
 <br>700 San Jacinto at 8th Street, Austin, TX<br>Reservations: (512) 476-3700
-<p>There is a wedding block set up at with discounted rates for the weekend. Please call and ask for the "Ryu / Chen" wedding block rate.<br><b>Must reserve by 8/1/11.</b>
+<p>There is a wedding block set up at with discounted rates for the weekend. Please call and ask for the "Ryu / Chen" wedding block rate.<br><b>Must reserve by 8/1.</b>
 <p>Special rate: $139/night for standard guestroom with a King or two Double bed accomodations.
 TEXT
 )
 
 w5 = WidgetText.create(:text => <<TEXT
 <p><strong style="color: #da8b91; font-size: 24px;">Transportation</strong></p>
-<p>We have coordinated 45-passenger shuttles for guests to take to and from the wedding so everyone can have a great time and not worry about designating drivers.  Pick-up and drop-off will be from the Omni Austin Downtown Hotel.  <b>Please RSVP below by 6/27</b> if you will be taking the shuttle so we can make sure you have a ride!</p>
+<p>We have coordinated 45-passenger shuttles for guests to take to and from the wedding so everyone can have a great time and not worry about designating drivers.  <b>Pick-up and drop-off will be from the Omni Austin Downtown Hotel.</b> Please RSVP by 6/27 if you will be taking the shuttle so we can make sure you have a ride!</p>
 <p>Pick-up time: 5:45pm<br>Drop-off times: 10:00pm and 11:00 pm</p>
 TEXT
 )

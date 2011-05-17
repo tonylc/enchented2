@@ -1,4 +1,4 @@
 <label>
-	<em><%= rsvp_question.question.html_safe %></em>
+	<em><%= rsvp_question.question.html_safe %><% if rsvp_question.is_required? %><span class=required>*</span><% end %></em>
 	<input type="text" name="rsvp_questions[<%= rsvp_question.id %>]"/>
 </label><br>

@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 	<title><%= raw(wedding_title(@wedding)) %></title>
 
     <!--
     /*
      * MyFonts Webfont Build ID 804514, 2011-05-11T23:39:13-0400
-     * 
+     *
      * The fonts listed in this notice are subject to the End User License
-     * Agreement(s) entered into by the website owner. All other parties are 
+     * Agreement(s) entered into by the website owner. All other parties are
      * explicitly restricted from using the Licensed Webfonts(s).
-     * 
+     *
      * You may obtain a valid license at the URLs below.
-     * 
+     *
      * Webfont: Bodoni Egyptian Pro Bold
      * URL: http://new.myfonts.com/fonts/shinn/bodoni-egyptian-pro/bold/
      * Foundry: ShinnType
@@ -22,7 +21,7 @@
      * Licensed pageviews: 10,000/month
      * CSS font-family: BodoniEgyptianPro-Bold
      * CSS font-weight: normal
-     * 
+     *
      * Webfont: Bodoni Egyptian Pro Regular
      * URL: http://new.myfonts.com/fonts/shinn/bodoni-egyptian-pro/regular/
      * Foundry: ShinnType
@@ -31,7 +30,7 @@
      * Licensed pageviews: 10,000/month
      * CSS font-family: BodoniEgyptianPro-Regular
      * CSS font-weight: normal
-     * 
+     *
      * (c) 2011 Bitstream Inc
     */
     -->
@@ -40,36 +39,28 @@
 	<%= yield :head %>
 </head>
 <body class="home">
+	<header>
+		<h1><%= raw(@wedding.name_html) %></h1>
+		<time datetime="<%= @wedding.date.strftime('%Y-%m-%d') %>"><%= nice_date(@wedding.date) %></time>
+		<em>&mdash; <%= nice_location(@wedding.location) %></em>
+	</header>
 
-    <header>
+	<nav>
+		<h1>Navigation</h1>
+		<ul>
+		<% @wedding.pages.each do |page| %>
+			<li<% if current_page?(page) %> class="selected"<% end %>><% if current_page?(page) %><strong><% end %><%= link_to page.title, custom_page_path(page) %><% if current_page?(page) %></strong><% end %></li>
+		<% end %>
+			<li<% if rsvp_page? %> class="selected"<% end %>><% if rsvp_page? %><strong><% end %><%= link_to "Rsvp", custom_new_rsvp_path %><% if rsvp_page? %></strong><% end %></li>
+		</ul>
+	</nav>
 
-        <h1><%= raw(@wedding.name_html) %></h1>
-        <time datetime="<%= @wedding.date.strftime('%Y-%m-%d') %>"><%= nice_date(@wedding.date) %></time>
-        <em>&mdash; <%= nice_location(@wedding.location) %></em>
+  <div>
+    <%= yield :layout %>
+  </div>
 
-    </header>
-
-    <nav>
-
-        <h1>Navigation</h1>
-        
-        <ul>
-	  <% @wedding.pages.each do |page| %>
-            <li<% if current_page?(page) %> class="selected"<% end %>><% if current_page?(page) %><strong><% end %><%= link_to page.title, custom_page_path(page) %><% if current_page?(page) %></strong><% end %></li>
-	  <% end %>	    
-	    <li<% if rsvp_page? %> class="selected"<% end %>><% if rsvp_page? %><strong><% end %><%= link_to "Rsvp", custom_new_rsvp_path %><% if rsvp_page? %></strong><% end %></li>
-        </ul>
-
-    </nav>
-    
-    <div>
-
-      <%= yield :layout %>
-
-    </div>
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
-    <%= javascript_include_tag [@page_js].flatten.uniq.compact %>
-    <%= yield :script %>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+  <%= javascript_include_tag [@page_js].flatten.uniq.compact %>
+  <%= yield :script %>
 </body>
 </html>

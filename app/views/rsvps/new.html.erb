@@ -19,11 +19,11 @@
 	    <p class=rsvp-text><%= @wedding.rsvp_message %></p>
 
 			<fieldset>
-				<legend>Will you be able to attend?</legend>
+				<legend><span class=required>*</span> Will you be able to attend?</legend>
 				<label><%= f.radio_button :can_attend, true, {:class => "toggle"} %><em>Yes</em></label>
 				<label><%= f.radio_button :can_attend, false %><em>No</em></label>
 			</fieldset>
-			<label<%= error_for(@rsvp, :name) %>><em>Your Name:</em><% if @rsvp.errors.on(:name) %><strong>Required</strong><% end %><%= f.text_field :name,  :size => nil %></label><br>
+			<label<%= error_for(@rsvp, :name) %>><em><span class=required>*</span> Your Name:</em><span class="error<%= ' off' unless @rsvp.errors.on(:name) %>"><strong>Required</strong></span><%= f.text_field :name,  :size => nil %></label><br>
 
 			<div id="rsvp_can_attend_true-true" class="group toggle">
 
@@ -41,4 +41,14 @@
 			<li><input type="submit" value="Submit"/></li>
 		</menu>
 	</section>
+<% end %>
+
+<% content_for :script do %>
+<script>
+	$('#rsvp_name').blur(function() {
+		if ($(this).val().match(/\s*/)) {
+			$(this).closest('label').find('.error').removeClass('off');
+		}
+	});
+</script>
 <% end %>

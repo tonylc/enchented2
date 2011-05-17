@@ -111,6 +111,8 @@
 
     }
 
+.required { color: #da8b91; }
+.error.off { display: none; }
 .rsvp-text { font-weight: bold; color: #625a52; }
 .rsvp-text.highlite { color: #da8b91; }
 

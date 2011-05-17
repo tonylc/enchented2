@@ -139,8 +139,8 @@ p4 = Page.create(:url_name => "guest_and_travel", :wedding_id => tnc.id, :title 
 w1 = WidgetText.create(:text => <<TEXT
 <p>together with their family and friends</p>
 <p><strong style="color: #da8b91; font-size: 24px;">Caroline Ryu</strong><br />and<br /><strong style="font-size: 24px;">Tony Chen</strong></p>
-<p>invite you to join the celebration<br />of their marriage and new life together</p>
-<p><strong>saturday, august 27, 2011</strong><br />at six thirty in the evening</p>
+<p>invite you to join the celebration<br />of their love and new life together</p>
+<p><strong>saturday, august 27, 2011</strong><br />at six-thirty in the evening</p>
 <p><strong>thurman's mansion</strong> at the <strong>salt lick bbq</strong><br /><strong>driftwood, texas</strong></p>
 <p>dinner and dancing to follow<br /><strong style="color: #da8b91">please rsvp on this site by june 27</strong></p>
 TEXT

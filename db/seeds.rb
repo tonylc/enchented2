@@ -149,24 +149,24 @@ w2 = WidgetEvent.create(:location_id => salt_lick.id, :title => "Caroline &amp; 
 
 w3 = WidgetText.create(:text => <<TEXT
 <p><strong style="color: #da8b91; font-size: 24px;">Airport</strong></p>
-<p><b>Austin-Bergstrom International Airport (AUS)</b>
-<p>Website: <a href="http://www.ci.austin.tx.us/austinairport/default.htm">Austin-Bergstrom International Airport</a><br />Approximately 8 miles from downtown Austin</p>
+<p><b><a target='_blank' href="http://www.ci.austin.tx.us/austinairport/default.htm">Austin-Bergstrom International Airport (AUS)</a></b>
+<br>Approximately 8 miles from downtown Austin</p>
 TEXT
 )
 
 w4 = WidgetText.create(:text => <<TEXT
-<p><strong style="color: #da8b91; font-size: 24px;">Accommodations</strong></p>
-<p><b>Omni Austin Downtown Hotel</b></p>
-<p>Website: <a href="http://www.omnihotels.com/FindAHotel/AustinDowntown/GuestRoomsAndSuites.aspx">Omni Austin Downtown Hotel</a></p>
-<p>Address: 700 San Jacinto at 8th Street, Austin, Texas 78701<br />Phone: (512) 476-3700<br />There is a special wedding block set up at the Omni for $139/night over the wedding weekend.  For reservations, please call and ask for the "C & T wedding block rate.”  Transportation to/from the wedding will also take place from this hotel.</p>
+<p><strong style="color: #da8b91; font-size: 24px;">Accommodations</strong>
+<p><b><a target='_blank' href="http://www.omnihotels.com/FindAHotel/AustinDowntown/GuestRoomsAndSuites.aspx">Omni Austin Downtown Hotel</a></b>
+<br>700 San Jacinto at 8th Street, Austin, TX<br>Reservations: (512) 476-3700
+<p>There is a wedding block set up at with discounted rates for the weekend. Please call and ask for the "Caroline & Tony" wedding block rate.
+<p>Special rate: $139/night for standard guestroom with a King or two Double bed accomodations.
 TEXT
 )
 
 w5 = WidgetText.create(:text => <<TEXT
 <p><strong style="color: #da8b91; font-size: 24px;">Transportation</strong></p>
-<p><b>Austin Charter Services Shuttle Bus</b></p>
 <p>We have coordinated 45-passenger buses for guests to take to and from the wedding so everyone can have a great time and not worry about designating drivers.  Pick-up and drop-off will be from the Omni Austin Downtown Hotel.  <b>Please RSVP below by 6/27</b> if you will be taking the shuttle so we can make sure you have a ride!</p>
-<p>Pick-up time: 5:45pm<br />Drop-off time: 11:00pm</p>
+<p>Pick-up time: 5:45pm<br>Drop-off times: 10:00pm and 11:00 pm</p>
 TEXT
 )
 

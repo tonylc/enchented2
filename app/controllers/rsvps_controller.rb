@@ -6,7 +6,7 @@ class RsvpsController < ApplicationController
 
   def create
     params[:rsvp][:can_attend] =  params[:rsvp][:can_attend] == "true" ? true : false
-    
+
     @rsvp = Rsvp.new(params[:rsvp])
     @rsvp.send(:perform_validations) #so that we can get errors on rsvp if there are response errors
 
@@ -23,12 +23,10 @@ class RsvpsController < ApplicationController
           end
         end
       end
-      
-      flash[:notice] = "thanks for submitting your response."
+      flash[:notice] = "Thanks for submitting your response."
     else
-      
       p @rsvp.inspect
-      flash[:error] = "Sorry, your RSVP wasn't accepted"
+      flash[:error] = "Sorry, your RSVP wasn't accepted."
       render :action => 'new'
     end
   end
@@ -36,13 +34,13 @@ class RsvpsController < ApplicationController
   private
 
   def validate_rsvp_selections
-    
+
     if params[:rsvp][:can_attend]
       @selection_errors = []
       @wedding.rsvp_questions.each do |rsvp_question|
         @selection_errors << rsvp_question.id if rsvp_question.is_required && params[:rsvp_questions][rsvp_question.id.to_s].blank?
       end
-      
+
       return @selection_errors.blank?
     else
 

@@ -132,8 +132,8 @@ rachel = User.create(:first_name => "Rachel",
                    )
 
 p1 = Page.create(:url_name => "invitation", :wedding_id => tnc.id, :title => "Invitation", :navigation_order => 1, :is_locked => true, :is_home => true)
-p2 = Page.create(:url_name => "wedding", :wedding_id => tnc.id, :title => "The Wedding", :navigation_order => 2, :is_locked => false)
-p3 = Page.create(:url_name => "photos", :wedding_id => tnc.id, :title => "Photos", :navigation_order => 3, :is_locked => false)
+#p2 = Page.create(:url_name => "wedding", :wedding_id => tnc.id, :title => "The Wedding", :navigation_order => 2, :is_locked => false)
+#p3 = Page.create(:url_name => "photos", :wedding_id => tnc.id, :title => "Photos", :navigation_order => 3, :is_locked => false)
 p4 = Page.create(:url_name => "guest_and_travel", :wedding_id => tnc.id, :title => "Guest & Travel Information", :navigation_order => 4, :is_locked => false)
 
 w1 = WidgetText.create(:text => <<TEXT
@@ -145,11 +145,12 @@ w1 = WidgetText.create(:text => <<TEXT
 <p>dinner and dancing to follow<br /><strong style="color: #da8b91">please rsvp on this site by june 27</strong></p>
 TEXT
 )
+
 w2 = WidgetEvent.create(:location_id => salt_lick.id, :title => "Caroline &amp; Tony's Wedding", 'start_time' => DateTime.parse('2011-08-27 19:00:00'), 'end_time' => DateTime.parse('2011-08-27 23:00:00'), :is_rsvp_event => true)
 
 w3 = WidgetText.create(:text => <<TEXT
 <p><strong style="color: #da8b91; font-size: 24px;">Airport</strong></p>
-<p><b><a target='_blank' href="http://www.ci.austin.tx.us/austinairport/default.htm">Austin-Bergstrom International Airport (AUS)</a></b>
+<p><b><a target=_blank href="http://www.ci.austin.tx.us/austinairport/default.htm">Austin-Bergstrom International Airport (AUS)</a></b>
 <br>Approximately 8 miles from downtown Austin</p>
 TEXT
 )
@@ -172,7 +173,7 @@ TEXT
 
 
 PageWidget.create(:page_id => p1.id, :widget => w1, :verticle_order => 1)
-PageWidget.create(:page_id => p2.id, :widget => w2, :verticle_order => 1)
+#PageWidget.create(:page_id => p2.id, :widget => w2, :verticle_order => 1)
 PageWidget.create(:page_id => p4.id, :widget => w3, :verticle_order => 1)
 PageWidget.create(:page_id => p4.id, :widget => w4, :verticle_order => 2)
 PageWidget.create(:page_id => p4.id, :widget => w5, :verticle_order => 3)

@@ -45,7 +45,7 @@
 
     }
 
-    label em, fieldset legend {
+    label em, fieldset legend, form p {
 
         color: #625a52;
         margin: 0;
@@ -80,7 +80,6 @@
         padding: 0;
         line-height: 12pt;
 	    	white-space: normal;
-
     }
 
     fieldset p {
@@ -112,13 +111,8 @@
 
     }
 
-    form p {
-				font-size: 14px;
-    }
-
 .rsvp-text { font-weight: bold; color: #625a52; }
 .rsvp-text.highlite { color: #da8b91; }
-
 
 /* Groups */
 

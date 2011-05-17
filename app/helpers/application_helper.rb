@@ -110,7 +110,7 @@ module ApplicationHelper
   end
 
   def current_page?(page)
-    self.controller_name == "pages" && page.id.to_s == params[:id]
+    self.controller_name == "pages" && (page.id.to_s == params[:id] || page.url_name == params[:page_name])
   end
 
   def rsvp_page?

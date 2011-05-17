@@ -227,6 +227,10 @@
 
     }
 
+		menu a:hover {
+			color: #fff;
+		}
+
     menu a:active {
 
         margin: 21px 0 0 3px;

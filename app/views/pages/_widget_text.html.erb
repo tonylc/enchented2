@@ -1,5 +1,6 @@
 <section class="widget text" style="text-align: center">
   <div>
+    <% unless widget_text.title.blank? %><h2><%= widget_text.title %></h2><% end %>
     <%= raw(widget_text.text) %>
   </div>
 </section>

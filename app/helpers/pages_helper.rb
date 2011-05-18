@@ -6,6 +6,8 @@ module PagesHelper
       render :partial => 'widget_text', :object => widget
     when 'WidgetEvent'
       render :partial => 'widget_event', :object => widget
+    when 'WidgetGallery'
+      render :partial => 'widget_gallery', :object => widget
     end
   end
   

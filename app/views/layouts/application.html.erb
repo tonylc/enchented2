@@ -38,7 +38,7 @@
 	<%= stylesheet_link_tag ['master',@page_css].flatten.uniq.compact %>
 	<%= yield :head %>
 </head>
-<body class="home">
+<body class="<%= page_class_name %>">
 	<header>
 		<h1><%= raw(@wedding.name_html) %></h1>
 		<time datetime="<%= @wedding.date.strftime('%Y-%m-%d') %>"><%= nice_date(@wedding.date) %></time>

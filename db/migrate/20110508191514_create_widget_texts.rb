@@ -1,7 +1,7 @@
 class CreateWidgetTexts < ActiveRecord::Migration
   def self.up
     create_table :widget_texts do |t|
-      t.string :name
+      t.string :title
       t.text :text
     end
   end

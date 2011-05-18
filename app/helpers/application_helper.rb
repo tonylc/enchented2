@@ -132,4 +132,8 @@ module ApplicationHelper
       page_path(page)
     end
   end
+
+  def page_class_name
+    rsvp_page? ? "rsvp" : (@page.blank? ? nil : @page.class_name)
+  end
 end

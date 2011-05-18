@@ -4,8 +4,9 @@ class CreatePages < ActiveRecord::Migration
       t.string :url_name
       t.integer :wedding_id      
       t.string :title
+      t.string :class_name
       t.integer :navigation_order
-      t.boolean :is_locked
+      t.boolean :is_locked, :default => false
       t.boolean :is_home, :default => false
     end
   end

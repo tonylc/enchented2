@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110514003148) do
+ActiveRecord::Schema.define(:version => 20110518190928) do
 
   create_table "domains", :force => true do |t|
     t.integer  "wedding_id"
@@ -43,8 +43,9 @@ ActiveRecord::Schema.define(:version => 20110514003148) do
     t.string  "url_name"
     t.integer "wedding_id"
     t.string  "title"
+    t.string  "class_name"
     t.integer "navigation_order"
-    t.boolean "is_locked"
+    t.boolean "is_locked",        :default => false
     t.boolean "is_home",          :default => false
   end
 
@@ -126,8 +127,15 @@ ActiveRecord::Schema.define(:version => 20110514003148) do
     t.datetime "updated_at"
   end
 
+  create_table "widget_galleries", :force => true do |t|
+    t.string   "title"
+    t.text     "src"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "widget_texts", :force => true do |t|
-    t.string "name"
+    t.string "title"
     t.text   "text"
   end
 

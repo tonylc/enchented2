@@ -54,7 +54,9 @@
     body > div dl {
     
         float: left;
-        margin: 10px 0;
+        width: 100%;
+        margin: 0 0 20px 0;
+        line-height: 26px;
     
     }
 
@@ -68,8 +70,23 @@
     body > div dt {
     
         clear: left;
-        margin-right: 5px;
         color: #888;
+        width: 48%;
+        margin-right: 2%;
+        text-align: right;
+    
+    }
+    
+    body > div dt:after {
+    
+        content: ":";
+    
+    }
+    
+    body > div dd {
+    
+        width: 50%;
+        text-align: left;
     
     }
 
@@ -80,5 +97,17 @@
     p {
     
         clear: left;
+        margin: 0 0 20px 0;
+        padding: 0;
+        color: #625a52;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0.1em;
+
+    }
+    
+    p strong {
+    
+        letter-spacing: 0;
     
     }

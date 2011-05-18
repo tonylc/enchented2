@@ -6,7 +6,7 @@
     nav {
 
         display: block;
-        position: absolute;
+        position: fixed;
         top: 145px;
         right: 0;
     
@@ -53,10 +53,10 @@
     nav a {
 
         display: block;
-        padding: 2px 40px 0 7px;
+        padding: 2px 20px 0 7px;
         background-color: #625a52;
         color: #c7af82;
-        font-weight: normal;
+        font-weight: bold;
         text-decoration: none;
         text-transform: lowercase;
         font-size: 12px;
@@ -70,7 +70,7 @@
     
     }
 
-    nav strong a {
+    nav li.selected a {
     
         background-color: #fff;
         color: #da8b91;

@@ -28,24 +28,28 @@
     
     .widget > div > h2 {
     
-        margin: 0;
-        background: url(../images/skin/thread.png) repeat-x bottom left;
-        padding: 0 0 5px 0;
+        margin: 0 0 10px 0;
+        padding: 0;
         color: #da8b91;
         font-weight: normal;
-        font-size: 40px;
+        font-size: 30px;
         line-height: 40px;
     
     }
     
     .widget > div > h3 {
     
-        float: left;
-        margin: 10px 0 0 0;
+        margin: 0 0 20px 0;
         padding: 0;
         color: #625a52;
         font-size: 20px;
         line-height: 30px;
+    
+    }
+
+    .widget > section + section > div > h3 {
+    
+        
     
     }
     
@@ -56,21 +60,82 @@
         float: left;
     
     }
+    
+    .widget > div > hr {
+    
+        display: block;
+        width: 100%;
+        height: 7px;
+        float: left;
+        margin: 0 0 25px 0;
+        border: 0;
+        padding: 0;
+        background: url(../images/skin/thread.png) repeat-x bottom left;
+        color: transparent;
+    
+    }
 
 
 /* Albums */
 
 
-    ul.albums li {
+    .widget.albums {
     
-        float: left;
-        margin-right: 10px;
+        text-align: center;
     
     }
 
-    ul.albums img {
+    .widget.albums ul, .widget.albums li {
     
-        margin-bottom: 10px;
+        float: left;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    
+    }
+    
+    .widget.albums ul {
+    
+        width: 100%;
+    
+    }
+
+    .widget.albums li {
+
+        width: 48%;
+        margin: 0 2% 10px 0;
+    
+    }
+    
+    .widget.albums li:nth-child(2n+2) {
+    
+        margin: 0 0 10px 2%;
+    
+    }
+    
+    .widget.albums li > a {
+    
+        display: block;
+        width: 100%;
+        height: 200px;
+        margin-bottom: 15px;
+        overflow: hidden;
+        background: #ddd;
+        
+        -webkit-box-shadow: 0 0 5px #888;
+    
+    }
+    
+    .widget.albums li > a[href="#"] {
+    
+        cursor: default;
+    
+    }
+
+    .widget.albums img {
+    
+        width: 100%;
+        height: auto;
     
     }
 
@@ -135,51 +200,62 @@
 /* Gallery */
 
 
-    ul.gallery {
+    .widget.gallery {
     
-        float: left;
-        width: 600px;
+        background: none;
+        width: 100%;
         height: 400px;
-        position: relative;
+        margin: 0 0 20px -5px;
+        border: 10px solid #625a52;
+        padding: 0;
+        overflow: hidden;
+        
+        -webkit-box-shadow: 1px 1px 10px #625a52;
+        -moz-box-shadow: 1px 1px 10px #625a52;
     
     }
 
-    ul.gallery, ul.gallery > li {
-
+    .widget.gallery ul {
+    
+        float: left;
+        width: 100%;
+        position: relative;
+        margin: 0;
         padding: 0;
         list-style-type: none;
     
     }
     
-    ul.gallery > li {
+    .widget.gallery ul > li {
 
         position: absolute;
         top: 0;
         left: 0;
+        padding: 0;
+        list-style-type: none;
+    
+    }
+    
+    .widget.gallery img {
+    
+        width: auto;
+        height: 400px;
+    
+    }
+
+
+/* RSVP */
+
+
+    .widget.rsvp h3 {
+
+        margin-bottom: 5px;    
     
     }
 
 
 /* Text */
 
-
-    section.text div > p {
-    
-        clear: left;
-        margin: 0 0 20px 0;
-        padding: 0;
-        color: #625a52;
-        font-size: 16px;
-        line-height: 26px;
-        letter-spacing: 0.1em;
-
-    }
-    
-    section.text div > p strong {
-    
-        letter-spacing: 0;
-    
-    }
 
     section.text div > p:first-child {
     

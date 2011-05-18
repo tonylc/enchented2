@@ -83,12 +83,12 @@ RsvpQuestion.create(:wedding_id => tnc.id, :html_form_type => RsvpQuestion::TYPE
 
 p0 = Page.create(:url_name => "welcome", :wedding_id => tnc.id, :title => "Welcome", :navigation_order => 1, :is_locked => true, :is_home => true, :class_name => "welcome")
 p1 = Page.create(:url_name => "invitation", :wedding_id => tnc.id, :title => "Invitation", :navigation_order => 2, :class_name => "invitation")
-p2 = Page.create(:url_name => "about_us", :wedding_id => tnc.id, :title => "About Us", :navigation_order => 3, :class_name => "guest_and_travel")
-p3 = Page.create(:url_name => "photos", :wedding_id => tnc.id, :title => "Photos", :navigation_order => 4, :class_name => "comingsoon")
-p4 = Page.create(:url_name => "wedding_party", :wedding_id => tnc.id, :title => "Wedding Party", :navigation_order => 5, :class_name => "guest_and_travel")
+p2 = Page.create(:url_name => "about_us", :wedding_id => tnc.id, :title => "About Us", :navigation_order => 3, :class_name => "guest_and_travel", :show_title => false)
+p3 = Page.create(:url_name => "photos", :wedding_id => tnc.id, :title => "Photos", :navigation_order => 4, :class_name => "comingsoon", :show_title => false)
+p4 = Page.create(:url_name => "wedding_party", :wedding_id => tnc.id, :title => "Wedding Party", :navigation_order => 5, :class_name => "guest_and_travel", :show_title => false)
 p5 = Page.create(:url_name => "guest_and_travel", :wedding_id => tnc.id, :title => "Guest & Travel Information", :navigation_order => 6, :class_name => "guest_and_travel")
-p6 = Page.create(:url_name => "events", :wedding_id => tnc.id, :title => "Wedding Events", :navigation_order => 7, :class_name => "comingsoon")
-p7 = Page.create(:url_name => "registry", :wedding_id => tnc.id, :title => "Registry", :navigation_order => 8, :class_name => "registry")
+p6 = Page.create(:url_name => "events", :wedding_id => tnc.id, :title => "Wedding Events", :navigation_order => 7, :class_name => "comingsoon", :show_title => false)
+p7 = Page.create(:url_name => "registry", :wedding_id => tnc.id, :title => "Registry", :navigation_order => 8, :class_name => "registry", :show_title => false)
 
 #invitation
 w1 = WidgetText.create(:text => <<TEXT
@@ -166,6 +166,7 @@ PageWidget.create(:page_id => p0.id, :widget => w9, :verticle_order => 2)
 
 
 #about us
+=begin
 w10 = WidgetText.create(:text => <<TEXT
                 <h2>Caroline</h2>
                 <p>5'2, Brown hair, Brown eyes</p>
@@ -204,19 +205,36 @@ TEXT
 
 PageWidget.create(:page_id => p2.id, :widget => w10, :verticle_order => 1)
 PageWidget.create(:page_id => p2.id, :widget => w11, :verticle_order => 2)
+=end
+
+w10 = WidgetText.create(:title => "Coming Soon", :text => <<TEXT
+<p>please check back soon for more updates</p>
+TEXT
+)
+
+PageWidget.create(:page_id => p2.id, :widget => w10, :verticle_order => 1)
 
 
 #registry
+=begin
 w12 = WidgetText.create(:text => <<TEXT
  <p>We might be living out of our backpacks for the next year, so in lieu of a wedding gift registry, we would appreciate a donation to the<br />Caroline &amp; Tony Stay Alive Fund.</p>
 TEXT
 )
 
+PageWidget.create(:page_id => p7.id, :widget => w12, :verticle_order => 1)
+=end
+
+w12 = WidgetText.create(:title => "Coming Soon", :text => <<TEXT
+<p>please check back soon for more updates</p>
+TEXT
+)
 
 PageWidget.create(:page_id => p7.id, :widget => w12, :verticle_order => 1)
 
 
 #wedding party
+=begin
 w13 = WidgetAlbum.create(:service_provider => WeddingAuthentication::SERVICE_PROVIDER_FLICKR, :gallery_id => '72157626752617506')
 w14 = WidgetAlbum.create(:service_provider => WeddingAuthentication::SERVICE_PROVIDER_FLICKR, :gallery_id => '72157626752710466')
 w15 = WidgetAlbum.create(:service_provider => WeddingAuthentication::SERVICE_PROVIDER_FLICKR, :gallery_id => '72157626752714324')
@@ -224,3 +242,11 @@ w15 = WidgetAlbum.create(:service_provider => WeddingAuthentication::SERVICE_PRO
 PageWidget.create(:page_id => p4.id, :widget => w13, :verticle_order => 1)
 PageWidget.create(:page_id => p4.id, :widget => w14, :verticle_order => 2)
 PageWidget.create(:page_id => p4.id, :widget => w15, :verticle_order => 3)
+=end
+
+w13 = WidgetText.create(:title => "Coming Soon", :text => <<TEXT
+<p>please check back soon for more updates</p>
+TEXT
+)
+
+PageWidget.create(:page_id => p4.id, :widget => w13, :verticle_order => 1)

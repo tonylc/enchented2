@@ -1,4 +1,4 @@
-<% unless @page.title.blank? %><h2><%= @page.title %></h2><% end %>
+<% if @page.show_title %><h2><%= @page.title %></h2><% end %>
 
 <%  @page.page_widgets.each do |page_widget| %>
   <%= render_widget(page_widget.widget) %>

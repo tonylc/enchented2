@@ -8,6 +8,7 @@ class CreatePages < ActiveRecord::Migration
       t.integer :navigation_order
       t.boolean :is_locked, :default => false
       t.boolean :is_home, :default => false
+      t.boolean :show_title, :default => true
     end
   end
 

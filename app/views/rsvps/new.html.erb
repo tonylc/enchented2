@@ -46,7 +46,7 @@
 <% content_for :script do %>
 <script>
 	$('#rsvp_name').blur(function() {
-		if ($(this).val().match(/\s*/)) {
+		if ($(this).val().match(/\s+|/)) {
 			$(this).closest('label').find('.error').removeClass('off');
 		}
 	});

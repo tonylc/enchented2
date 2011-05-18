@@ -4,12 +4,12 @@
 
 
     form {
-    
+
         display: block;
         float: left;
         width: 100%;
         margin-bottom: 40px;
-    
+
     }
 
 
@@ -24,9 +24,9 @@
         margin: 0 10px 20px 0;
         border: 0;
         padding: 0;
-    
+
     }
-    
+
     fieldset {
 
         margin-bottom: 20px;
@@ -35,16 +35,16 @@
         padding: 5px;
 
     }
-    
+
     fieldset > label, fieldset p {
-    
+
         clear: none;
         margin-top: 0;
         margin-bottom: 0;
-    
+
     }
 
-    label em, fieldset legend {
+    label em, fieldset legend, form p {
 
         color: #625a52;
         margin: 0;
@@ -52,86 +52,83 @@
         font-weight: bold;
         font-style: normal;
         font-size: 14px;
-        line-height: 25px;
+        line-height: 12pt;
 
     }
-    
+
     label em {
-    
+
         display: block;
         margin-right: 5px;
         float: left;
-    
+				margin-top: 3px;
     }
-    
+
     label small {
-    
+
         display: block;
         clear: left;
         font-size: 14px;
-        line-height: 20px;        
-    
+        line-height: 20px;
+
     }
-    
+
     fieldset legend {
-    
+
         margin: 0 2px;
         padding: 0;
-        line-height: 12px;
-	    white-space: normal;
-    
+        line-height: 12pt;
+	    	white-space: normal;
     }
 
     fieldset p {
-    
+
         margin: 0 10px 0 2px;
         font-size: 14px;
         line-height: 20px;
-    
+
     }
 
     fieldset label em {
-    
+
         font-weight: normal;
-    
+
     }
-    
+
     label input[type=text] {
-    
+
         display: block;
         clear: left;
         float: left;
         margin-right: 5px;
-    
+
     }
-    
+
     label input[type=radio] {
-    
+
         float: left;
-    
-    }
-
-    form p {
-
-	font-size: 14px;
 
     }
 
+.required { color: #da8b91; }
+.error.off { display: none; }
+.rsvp-text { font-weight: bold; color: #625a52; }
+.rsvp-text.highlite { color: #da8b91; }
 
 /* Groups */
 
 
     div.group {
-    
+
         display: block;
         clear: left;
-    
+
     }
 
     div.group.toggle {
-    
+
         display: none;
-    
+
     }
 
 
@@ -145,23 +142,23 @@
         border-radius: 5px;
         padding: 15px;
         background: #625a52;
-    
+
     }
-    
+
     div.error h3 {
-    
+
         margin: 0 0 10px 0;
         color: #fdd5d5;
         font-size: 20px;
-    
+
     }
-    
+
     div.error p {
-    
+
         margin: 0;
-        font-size: 12px;
+        font-size: 10pt;
         color: #d8d8d8;
-    
+
     }
 
 
@@ -169,13 +166,13 @@
 
 
     fieldset.error legend, label.error em {
-    
+
         color: #da8b91
-    
+
     }
-    
+
     .error strong {
-    
+
         display: block;
         float: left;
         border-radius: 5px;
@@ -184,7 +181,7 @@
         color: #fdd5d5;
         font-size: 12px;
         line-height: 20px;
-    
+
     }
 
 
@@ -192,24 +189,29 @@
 
 
     menu {
-    
+
         display: block;
         width: 100%;
         float: left;
         margin: 0;
         padding: 0 0 20px 0;
+<<<<<<< HEAD
     
+=======
+        background: url(../images/skin/thread.png) repeat-x bottom left;
+
+>>>>>>> 7c395f53be238c70a03cbe90be65bd7be6804e88
     }
-    
+
     menu li {
-    
+
         margin: 0;
         padding: 0;
-    
+
     }
-    
+
     menu a {
-    
+
         display: block;
         width: 99%;
         margin: 0 0 1px 0;
@@ -228,11 +230,18 @@
 
     }
 
+<<<<<<< HEAD
+=======
+		menu a:hover {
+			color: #fff;
+		}
+
+>>>>>>> 7c395f53be238c70a03cbe90be65bd7be6804e88
     menu a:active {
 
         margin: 21px 0 0 3px;
 
         -webkit-box-shadow: 2px 2px 1px #b86c71;
         -moz-box-shadow: 2px 2px 1px #b86c71;
-   
+
     }

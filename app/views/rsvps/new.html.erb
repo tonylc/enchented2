@@ -1,55 +1,53 @@
 <% add_to_js('rsvp') %>
 
 <% form_for @rsvp do |f| %>
-<section class="widget rsvp vevent">
+	<section class="widget rsvp vevent">
+		<div>
+			<h2>RSVP</h2>
+			<h3 class="summary"><%= @wedding.bride.first_name.titleize %> &amp; <%= @wedding.groom.first_name.titleize %>'s Wedding</h3>
+			<time class="dtstart" title="<%= @wedding.date.strftime('%Y-%m-%d') %>"><a href="#"><%= nice_date(@wedding.date) %></a></time>
 
-            <div>
+			<% if flash[:error] %>
+			<div class="error">
+				<h3>Sorry, your RSVP wasn't accepted.</h3>
+				<p>Please double-check the following for any highlighted mistakes.</p>
+			</div>
+			<% end %>
 
-              <h2>RSVP</h2>
-              <h3 class="summary"><%= @wedding.bride.first_name.titleize %> &amp; <%= @wedding.groom.first_name.titleize %>'s Wedding</h3>
-              <time class="dtstart" title="<%= @wedding.date.strftime('%Y-%m-%d') %>"><a href="#"><%= nice_date(@wedding.date) %></a></time>
-        
-	      <% if flash[:error] %>
-	      <div class="error">
-                   <h3>Sorry, your RSVP wasn't accepted</h3>
-                    <p>Please double-check the following for any highlighted mistakes</p>
-               </div>
-	      <% end %>
+	    <%= f.hidden_field :wedding_id %>
 
-	      <%= f.hidden_field :wedding_id %>
+	    <p class=rsvp-text><%= @wedding.rsvp_message %></p>
 
-	      <p><%= @wedding.rsvp_message %></p>
+			<fieldset>
+				<legend><span class=required>*</span> Will you be able to attend?</legend>
+				<label><%= f.radio_button :can_attend, true, {:class => "toggle"} %><em>Yes</em></label>
+				<label><%= f.radio_button :can_attend, false %><em>No</em></label>
+			</fieldset>
+			<label<%= error_for(@rsvp, :name) %>><em><span class=required>*</span> Your Name:</em><span class="error<%= ' off' unless @rsvp.errors.on(:name) %>"><strong>Required</strong></span><%= f.text_field :name,  :size => nil %></label><br>
 
-             <fieldset>
-                
-                <legend>Will you be able to attend?</legend>
-		<label><%= f.radio_button :can_attend, true, {:class => "toggle"} %><em>Yes</em></label>
-		<label><%= f.radio_button :can_attend, false %><em>No</em></label>
+			<div id="rsvp_can_attend_true-true" class="group toggle">
 
-             </fieldset>
-		<label<%= error_for(@rsvp, :name) %>>
-                  <em>Your Name:</em>
-		  <%= f.text_field :name,  :size => nil %>
-		</label><br />
+			<% @wedding.rsvp_questions.each do |rsvp_question| %>
+			<%= render_rsvp_form_element(rsvp_question) %>
+			<% end %>
 
-            <div id="rsvp_can_attend_true-true" class="group toggle">
-		                   
-		<% @wedding.rsvp_questions.each do |rsvp_question| %>
-		<%= render_rsvp_form_element(rsvp_question) %>
-		<% end %>
+			<fieldset>
+				<legend>Additional Notes</legend>
+				<p>Please let us know if you have any special requests</p>
+				<%= f.text_area :additional_notes, :cols => 40, :rows => 4 %>
+			</fieldset><br>
+		</div>
+		<menu>
+			<li><input type="submit" value="Submit"/></li>
+		</menu>
+	</section>
+<% end %>
 
-		<fieldset>
-                  <legend>Additional Notes</legend>
-                  <p>Please let us know if you have any special requests</p>
-		  <%= f.text_area :additional_notes, :cols => 40, :rows => 4 %>
-               </fieldset><br />
-
-	      </div>
-    
-              <menu>
-                <li><input type="submit" value="Submit" /></li>
-              </menu>
-        
-            </div>
-</section>
+<% content_for :script do %>
+<script>
+	$('#rsvp_name').blur(function() {
+		var rsvpErr = $(this).closest('label').find('.error');
+		rsvpErr[$(this).val().match(/\s+|^$/) ? 'removeClass' : 'addClass']('off');
+	});
+</script>
 <% end %>

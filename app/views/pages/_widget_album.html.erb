@@ -1,0 +1,18 @@
+<section class="widget albums">
+        
+  <div>
+    
+    <% unless widget_album.title.blank? %><h3><%= widget_album.title %></h3><% end %>
+    
+    <ul>
+      <% widget_album.photos.each do |photo| %>
+      <li>
+        <a href="#"><img alt="<%= photo[:title] %>" title="<%= photo[:title] %>" src="<%= photo[:small_url] %>" /></a>
+        <% unless photo[:description].blank? %><strong><%= photo[:description] %>:</strong><br /><% end %><%= photo[:title] %>
+      </li>
+      <% end %>
+    </ul>
+    
+  </div>
+  
+</section>

@@ -1,0 +1,27 @@
+<ul class="widget events vcalendar">
+  <li class="vevent">
+    
+    <hgroup>            
+      <h2 class="summary"><%= raw(widget_event.title) %></h2>
+      <h3><%= widget_event.location.name %></h3>
+    </hgroup>
+    
+    <a class="calendar" href="event.ics"><strong class="dtstart" title="<%= widget_event.start_time.strftime('%Y-%m-%d') %>"><%= nice_date(widget_event.start_time) %></strong></a>
+
+<% if widget_event.is_rsvp_event %>
+    <dl>
+      <dt>Confirmed Guests</dt><dd><%= @wedding.confirmed_guests %></dd>
+      <dt>Pending Invitations</dt><dd>#</dd>
+    </dl>
+<% end %>
+    
+    <p class="location geo" title="<%= widget_event.location.latitude %> <%= widget_event.location.longitude %>"><%= widget_event.location.address %><br />
+      <%= nice_city(widget_event.location) %></p>
+
+    <figure>
+      <figcaption>Map</figcaption>
+    </figure>
+    
+  </li>
+  
+</ul>

@@ -61,75 +61,6 @@ RsvpOption.create(:rsvp_question_id => q3.id, :option => "No, I will not need a 
 
 RsvpQuestion.create(:wedding_id => tnc.id, :html_form_type => RsvpQuestion::TYPE_TEXT, :question => "For more information, please visit the Guest & Travel tab.", :display_order => 4)
 
-caroline = User.create(:first_name => "Caroline",
-                       :last_name => "Ryu",
-                       :wedding_id => tnc.id,
-                       :role_id => User::ROLE_BRIDE,
-                       :facebook_id => 18800629
-                       )
-
-tony = User.create(:first_name => "Tony",
-                   :last_name => "Chen",
-                   :wedding_id => tnc.id,
-                   :role_id => User::ROLE_GROOM,
-                   :facebook_id => 684296566
-                   )
-
-lijen = User.create(:first_name => "Lijen",
-                   :last_name => "Tan",
-                   :wedding_id => tnc.id,
-                   :role_id => User::ROLE_BEST_MAN,
-                   :facebook_id => 717411026
-                   )
-
-nelly = User.create(:first_name => "Chris",
-                   :last_name => "Nelson",
-                   :wedding_id => tnc.id,
-                   :role_id => User::ROLE_GROOMSMAN,
-                   :facebook_id => 504615468
-                   )
-
-james = User.create(:first_name => "James",
-                   :last_name => "Lee",
-                   :wedding_id => tnc.id,
-                   :role_id => User::ROLE_GROOMSMAN,
-                   :facebook_id => 1218821
-                   )
-
-norman = User.create(:first_name => "Norman",
-                   :last_name => "Hsieh",
-                   :wedding_id => tnc.id,
-                   :role_id => User::ROLE_GROOMSMAN,
-                   :facebook_id => 6701208
-                   )
-
-collin = User.create(:first_name => "Collin",
-                   :last_name => "Kim",
-                   :wedding_id => tnc.id,
-                   :role_id => User::ROLE_MAID_OF_HONOR,
-                   :facebook_id => 7924545
-                   )
-
-steph = User.create(:first_name => "Stephanie",
-                   :last_name => "Le",
-                   :wedding_id => tnc.id,
-                   :role_id => User::ROLE_BRIDESMAID,
-                   :facebook_id => 1204530
-                   )
-
-katheryn = User.create(:first_name => "Kathryn",
-                   :last_name => "Chin",
-                   :wedding_id => tnc.id,
-                   :role_id => User::ROLE_BRIDESMAID,
-                   :facebook_id => 1226209
-                   )
-
-rachel = User.create(:first_name => "Rachel",
-                   :last_name => "Wei",
-                   :wedding_id => tnc.id,
-                   :role_id => User::ROLE_BRIDESMAID,
-                   :facebook_id => 219711
-                   )
 
 p0 = Page.create(:url_name => "welcome", :wedding_id => tnc.id, :title => "Welcome", :navigation_order => 1, :is_locked => true, :is_home => true, :class_name => "welcome")
 p1 = Page.create(:url_name => "invitation", :wedding_id => tnc.id, :title => "Invitation", :navigation_order => 2, :class_name => "invitation")
@@ -267,5 +198,10 @@ PageWidget.create(:page_id => p7.id, :widget => w12, :verticle_order => 1)
 
 
 #wedding party
-#w13 = WidgetAlbum.create(:type => WidgetAlbum::TYPE_FLICKR, :gallery_id => 
-#PageWidget.create(:page_id => p4.id, :widget => w13, :verticle_order => 1)
+w13 = WidgetAlbum.create(:service_provider => WeddingAuthentication::SERVICE_PROVIDER_FLICKR, :gallery_id => '72157626752617506')
+w14 = WidgetAlbum.create(:service_provider => WeddingAuthentication::SERVICE_PROVIDER_FLICKR, :gallery_id => '72157626752710466')
+w15 = WidgetAlbum.create(:service_provider => WeddingAuthentication::SERVICE_PROVIDER_FLICKR, :gallery_id => '72157626752714324')
+
+PageWidget.create(:page_id => p4.id, :widget => w13, :verticle_order => 1)
+PageWidget.create(:page_id => p4.id, :widget => w14, :verticle_order => 2)
+PageWidget.create(:page_id => p4.id, :widget => w15, :verticle_order => 3)

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110518190928) do
+ActiveRecord::Schema.define(:version => 20110518203416) do
 
   create_table "domains", :force => true do |t|
     t.integer  "wedding_id"
@@ -104,6 +104,14 @@ ActiveRecord::Schema.define(:version => 20110518190928) do
     t.datetime "updated_at"
   end
 
+  create_table "wedding_authentications", :force => true do |t|
+    t.integer  "wedding_id"
+    t.integer  "service_provider"
+    t.string   "login"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "weddings", :force => true do |t|
     t.string   "name"
     t.string   "name_html"
@@ -113,6 +121,13 @@ ActiveRecord::Schema.define(:version => 20110518190928) do
     t.integer  "photo_gallery_id"
     t.string   "video_url"
     t.integer  "location_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "widget_albums", :force => true do |t|
+    t.integer  "service_provider"
+    t.string   "gallery_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

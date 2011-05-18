@@ -4,7 +4,7 @@
 	<section class="widget rsvp vevent">
 		<div>
 			<h2>RSVP</h2>
-			<h3 class="summary"><%= @wedding.bride.first_name.titleize %> &amp; <%= @wedding.groom.first_name.titleize %>'s Wedding</h3>
+			<h3 class="summary"><%= @wedding.bride_first_name.titleize %> &amp; <%= @wedding.groom_first_name.titleize %>'s Wedding</h3>
 			<time class="dtstart" title="<%= @wedding.date.strftime('%Y-%m-%d') %>"><a href="#"><%= nice_date(@wedding.date) %></a></time>
 
 			<% if flash[:error] %>

@@ -37,6 +37,8 @@
 
 	<%= stylesheet_link_tag ['master',@page_css].flatten.uniq.compact %>
 	<%= yield :head %>
+
+	<%= raw(@wedding.ga_tag) unless@wedding.ga_tag.blank? %>
 </head>
 <body class="<%= page_class_name %>">
 	<header>

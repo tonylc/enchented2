@@ -43,7 +43,26 @@ tnc = Wedding.create(:name => "Caroline &amp; Tony",
                      :name_html => "Caroline <em>&amp;</em> Tony",
 		                 :rsvp_message => "Kindly reply for each guest by 6/27/11. Thanks!",
                      :date => DateTime.parse('2011-08-27 18:30:00'),
-                     :location_id => austin.id
+                     :location_id => austin.id,
+		     :bride_first_name => "Caroline",
+		     :bride_last_name => "Ryu",
+		     :groom_first_name => "Tony",
+		     :groom_last_name => "Chen",
+		     :ga_tag => <<TEXT
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2311903-14']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+TEXT
                      )
 
 Domain.create(:wedding_id => tnc.id, :domain => "caroline-and-tony.com")
@@ -109,7 +128,7 @@ w3 = WidgetText.create(:text => <<TEXT
                 </dl>
                 
                 <menu>
-                    <li><a href="/rsvp/new">RSVP Now</a></li>
+                    <li><a href="/rsvps/new">RSVP Now</a></li>
                 </menu>
 TEXT
 )

@@ -121,6 +121,11 @@ ActiveRecord::Schema.define(:version => 20110518203416) do
     t.integer  "photo_gallery_id"
     t.string   "video_url"
     t.integer  "location_id"
+    t.string   "bride_first_name"
+    t.string   "bride_last_name"
+    t.string   "groom_first_name"
+    t.string   "groom_last_name"
+    t.text     "ga_tag"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

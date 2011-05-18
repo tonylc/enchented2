@@ -46,9 +46,8 @@
 <% content_for :script do %>
 <script>
 	$('#rsvp_name').blur(function() {
-		if ($(this).val().match(/\s+|^$/)) {
-			$(this).closest('label').find('.error').removeClass('off');
-		}
+		var rsvpErr = $(this).closest('label').find('.error');
+		rsvpErr[$(this).val().match(/\s+|^$/) ? 'removeClass' : 'addClass']('off');
 	});
 </script>
 <% end %>

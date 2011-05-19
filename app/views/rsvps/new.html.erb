@@ -47,7 +47,7 @@
 <script>
 	$('#rsvp_name').blur(function() {
 		var rsvpErr = $(this).closest('label').find('.error');
-		rsvpErr[$(this).val().match(/\s+|^$/) ? 'removeClass' : 'addClass']('off');
+		rsvpErr[$(this).val().match(/^\s*$/) ? 'removeClass' : 'addClass']('off');
 	});
 </script>
 <% end %>

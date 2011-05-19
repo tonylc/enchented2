@@ -1,5 +1,11 @@
 <% add_to_js('rsvp') %>
 
+<% content_for :head do %>
+<style>
+	p { letter-spacing: 0; }
+</style>
+<% end %>
+
 <% form_for @rsvp do |f| %>
 	<section class="widget rsvp vevent">
 		<div>

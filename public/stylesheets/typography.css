@@ -95,15 +95,12 @@
 
 
     p {
-    
         clear: left;
         margin: 0 0 20px 0;
         padding: 0;
         color: #625a52;
         font-size: 16px;
         line-height: 26px;
-        letter-spacing: 0.1em;
-
     }
     
     p strong {

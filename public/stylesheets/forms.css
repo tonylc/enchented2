@@ -231,3 +231,5 @@
         -moz-box-shadow: 2px 2px 1px #b86c71;
 
     }
+
+		.placeholder-empty { color:#777777; font-family:serif; font-size:8.5pt; padding:2px; }

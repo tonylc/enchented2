@@ -31,8 +31,7 @@
 				<% end %>
 				<fieldset>
 					<legend>Additional Notes</legend>
-					<p>Please let us know if you have any special requests</p>
-					<%= f.text_area :additional_notes, :cols => 40, :rows => 4 %>
+					<%= f.text_area :additional_notes, :placeholder => 'Please let us know if you have any special requests', :cols => 40, :rows => 4 %>
 				</fieldset><br>
 			</div>
 			<menu>
@@ -44,6 +43,7 @@
 
 <% content_for :script do %>
 <script>
+	ct.placeholder();
 	$('#rsvp_name').blur(function() {
 		var rsvpErr = $(this).closest('label').find('.error');
 		rsvpErr[$(this).val().match(/^\s*$/) ? 'removeClass' : 'addClass']('off');

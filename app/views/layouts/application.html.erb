@@ -38,6 +38,10 @@
 	<%= stylesheet_link_tag ['master',@page_css].flatten.uniq.compact %>
 	<%= yield :head %>
 
+	<style>
+		.bride { color: #da8b91; }
+	</style>
+
 	<%= raw(@wedding.ga_tag) unless@wedding.ga_tag.blank? %>
 </head>
 <body class="<%= page_class_name %>">

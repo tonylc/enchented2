@@ -50,7 +50,7 @@
 	<nav>
 		<h1>Navigation</h1>
 		<ul>
-		<% @wedding.pages.each do |page| %>
+		<% @wedding.pages.is_active(true).each do |page| %>
 			<li<% if current_page?(page) %> class="selected"<% end %>><% if current_page?(page) %><strong><% end %><%= link_to page.title, custom_page_path(page) %><% if current_page?(page) %></strong><% end %></li>
 		<% end %>
 			<li<% if rsvp_page? %> class="selected"<% end %>><% if rsvp_page? %><strong><% end %><%= link_to "Rsvp", custom_new_rsvp_path %><% if rsvp_page? %></strong><% end %></li>

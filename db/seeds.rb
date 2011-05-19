@@ -81,12 +81,12 @@ RsvpOption.create(:rsvp_question_id => q3.id, :option => "No, I will not need a 
 RsvpQuestion.create(:wedding_id => tnc.id, :html_form_type => RsvpQuestion::TYPE_TEXT, :question => "For more information, visit the Guest & Travel tab.", :display_order => 4)
 
 
-p0 = Page.create(:url_name => "welcome", :wedding_id => tnc.id, :title => "Welcome", :navigation_order => 1, :is_locked => true, :is_home => true, :class_name => "welcome")
-p1 = Page.create(:url_name => "invitation", :wedding_id => tnc.id, :title => "Invitation", :navigation_order => 2, :class_name => "invitation")
+p0 = Page.create(:url_name => "welcome", :wedding_id => tnc.id, :title => "Welcome", :navigation_order => 1, :is_locked => true, :is_home => true, :class_name => "welcome", :show_page => true)
+p1 = Page.create(:url_name => "invitation", :wedding_id => tnc.id, :title => "Invitation", :navigation_order => 2, :class_name => "invitation", :show_page => true)
 p2 = Page.create(:url_name => "about_us", :wedding_id => tnc.id, :title => "About Us", :navigation_order => 3, :class_name => "guest_and_travel", :show_title => false)
 p3 = Page.create(:url_name => "photos", :wedding_id => tnc.id, :title => "Photos", :navigation_order => 4, :class_name => "comingsoon", :show_title => false)
 p4 = Page.create(:url_name => "wedding_party", :wedding_id => tnc.id, :title => "Wedding Party", :navigation_order => 5, :class_name => "guest_and_travel", :show_title => false)
-p5 = Page.create(:url_name => "guest_and_travel", :wedding_id => tnc.id, :title => "Guest & Travel Information", :navigation_order => 6, :class_name => "guest_and_travel", :show_title => false)
+p5 = Page.create(:url_name => "guest_and_travel", :wedding_id => tnc.id, :title => "Guest & Travel Information", :navigation_order => 6, :class_name => "guest_and_travel", :show_title => false, :show_page => true)
 p6 = Page.create(:url_name => "events", :wedding_id => tnc.id, :title => "Wedding Events", :navigation_order => 7, :class_name => "comingsoon", :show_title => false)
 p7 = Page.create(:url_name => "registry", :wedding_id => tnc.id, :title => "Registry", :navigation_order => 8, :class_name => "registry", :show_title => false)
 
@@ -156,7 +156,7 @@ PageWidget.create(:page_id => p6.id, :widget => w7, :verticle_order => 1)
 #w8 = WidgetGallery.create(:title => "Caroline &amp; Tony in New York", :src => "http://caroline-and-tony.com/images/content/welcome.jpg")
 w9 = WidgetText.create(:title => "Howdy!", :text => <<TEXT
 <p>And welcome to our wedding website! You can find all the details about our upcoming wedding here so please come back often for new information. We are so excited for you to be a part of our big day and can't wait to see y'all there!</p>
-<p><strong>Love,<br />Caroline &amp; Tony</strong></p>
+<p><strong>Love,<br><span class=bride>Caroline</span> &amp; Tony</strong></p>
 TEXT
 )
 

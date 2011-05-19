@@ -153,7 +153,7 @@ PageWidget.create(:page_id => p6.id, :widget => w7, :verticle_order => 1)
 
 
 #welcome
-w8 = WidgetGallery.create(:title => "Caroline &amp; Tony in New York", :src => "http://caroline-and-tony.com/images/content/welcome.jpg")
+#w8 = WidgetGallery.create(:title => "Caroline &amp; Tony in New York", :src => "http://caroline-and-tony.com/images/content/welcome.jpg")
 w9 = WidgetText.create(:title => "Howdy!", :text => <<TEXT
 <p>And welcome to our wedding website! You can find all the details about our upcoming wedding here so please come back often for new information. We are so excited for you to be a part of our big day and can't wait to see y'all there!</p>
 <p><strong>Love,<br />Caroline &amp; Tony</strong></p>
@@ -161,7 +161,7 @@ TEXT
 )
 
 
-PageWidget.create(:page_id => p0.id, :widget => w8, :verticle_order => 1)
+#PageWidget.create(:page_id => p0.id, :widget => w8, :verticle_order => 1)
 PageWidget.create(:page_id => p0.id, :widget => w9, :verticle_order => 2)
 
 

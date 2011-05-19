@@ -195,12 +195,7 @@
         float: left;
         margin: 0;
         padding: 0 0 20px 0;
-<<<<<<< HEAD
-    
-=======
         background: url(../images/skin/thread.png) repeat-x bottom left;
-
->>>>>>> 7c395f53be238c70a03cbe90be65bd7be6804e88
     }
 
     menu li {
@@ -230,13 +225,10 @@
 
     }
 
-<<<<<<< HEAD
-=======
 		menu a:hover {
 			color: #fff;
 		}
 
->>>>>>> 7c395f53be238c70a03cbe90be65bd7be6804e88
     menu a:active {
 
         margin: 21px 0 0 3px;

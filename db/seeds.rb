@@ -78,7 +78,7 @@ q3 = RsvpQuestion.create(:wedding_id => tnc.id, :html_form_type => RsvpQuestion:
 RsvpOption.create(:rsvp_question_id => q3.id, :option => "Yes, I'd like a ride")
 RsvpOption.create(:rsvp_question_id => q3.id, :option => "No, I will not need a ride")
 
-RsvpQuestion.create(:wedding_id => tnc.id, :html_form_type => RsvpQuestion::TYPE_TEXT, :question => "For more information, please visit the Guest & Travel tab.", :display_order => 4)
+RsvpQuestion.create(:wedding_id => tnc.id, :html_form_type => RsvpQuestion::TYPE_TEXT, :question => "For more information, visit the Guest & Travel tab.", :display_order => 4)
 
 
 p0 = Page.create(:url_name => "welcome", :wedding_id => tnc.id, :title => "Welcome", :navigation_order => 1, :is_locked => true, :is_home => true, :class_name => "welcome")

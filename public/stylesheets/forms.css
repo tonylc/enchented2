@@ -56,6 +56,8 @@
 
     }
 
+		form p { margin: 0 0 20px 0; }
+
     label em {
 
         display: block;

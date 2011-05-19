@@ -200,14 +200,7 @@
         background: url(../images/skin/thread.png) repeat-x bottom left;
     }
 
-    menu li {
-
-        margin: 0;
-        padding: 0;
-
-    }
-
-    menu a {
+    menu input {
 
         display: block;
         width: 99%;
@@ -227,9 +220,8 @@
 
     }
 
-		menu a:hover {
-			color: #fff;
-		}
+		menu input:hover { cursor: pointer; }
+		menu a:hover { color: #fff; }
 
     menu a:active {
 

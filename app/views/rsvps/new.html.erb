@@ -26,20 +26,19 @@
 			<label<%= error_for(@rsvp, :name) %>><em><span class=required>*</span> Your Name:</em><span class="error<%= ' off' unless @rsvp.errors.on(:name) %>"><strong>Required</strong></span><%= f.text_field :name,  :size => nil %></label><br>
 
 			<div id="rsvp_can_attend_true-true" class="group toggle">
-
-			<% @wedding.rsvp_questions.each do |rsvp_question| %>
-			<%= render_rsvp_form_element(rsvp_question) %>
-			<% end %>
-
-			<fieldset>
-				<legend>Additional Notes</legend>
-				<p>Please let us know if you have any special requests</p>
-				<%= f.text_area :additional_notes, :cols => 40, :rows => 4 %>
-			</fieldset><br>
+				<% @wedding.rsvp_questions.each do |rsvp_question| %>
+				<%= render_rsvp_form_element(rsvp_question) %>
+				<% end %>
+				<fieldset>
+					<legend>Additional Notes</legend>
+					<p>Please let us know if you have any special requests</p>
+					<%= f.text_area :additional_notes, :cols => 40, :rows => 4 %>
+				</fieldset><br>
+			</div>
+			<menu>
+				<input type="submit" value="Submit"/>
+			</menu>
 		</div>
-		<menu>
-			<li><input type="submit" value="Submit"/></li>
-		</menu>
 	</section>
 <% end %>
 

@@ -1,25 +1,6 @@
 /* LOVE FOR DESIGN
 /* RSVP
 ----------------------------------------------------------------------------- */
-
-
-    $(document).ready(function() {
-
-        $('menu input').each(function() {
-        
-            $(this).hide();
-            $('<a href="#">' + $(this).val() + '</a>').insertAfter($(this)).click(function() {
-            
-                $(this).closest('form').submit();
-                return false;
-            
-            });
-        
-        });
-
-    });
-
-
 /* Page Load */
 
 

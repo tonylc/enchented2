@@ -86,7 +86,7 @@ p1 = Page.create(:url_name => "invitation", :wedding_id => tnc.id, :title => "In
 p2 = Page.create(:url_name => "about_us", :wedding_id => tnc.id, :title => "About Us", :navigation_order => 3, :class_name => "guest_and_travel", :show_title => false)
 p3 = Page.create(:url_name => "photos", :wedding_id => tnc.id, :title => "Photos", :navigation_order => 4, :class_name => "comingsoon", :show_title => false)
 p4 = Page.create(:url_name => "wedding_party", :wedding_id => tnc.id, :title => "Wedding Party", :navigation_order => 5, :class_name => "guest_and_travel", :show_title => false)
-p5 = Page.create(:url_name => "guest_and_travel", :wedding_id => tnc.id, :title => "Guest & Travel Information", :navigation_order => 6, :class_name => "guest_and_travel")
+p5 = Page.create(:url_name => "guest_and_travel", :wedding_id => tnc.id, :title => "Guest & Travel Information", :navigation_order => 6, :class_name => "guest_and_travel", :show_title => false)
 p6 = Page.create(:url_name => "events", :wedding_id => tnc.id, :title => "Wedding Events", :navigation_order => 7, :class_name => "comingsoon", :show_title => false)
 p7 = Page.create(:url_name => "registry", :wedding_id => tnc.id, :title => "Registry", :navigation_order => 8, :class_name => "registry", :show_title => false)
 

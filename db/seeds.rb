@@ -115,7 +115,7 @@ w3 = WidgetText.create(:text => <<TEXT
 
                 <h2>Accommodations</h2>
                 <p><a target='_blank' href="http://www.omnihotels.com/FindAHotel/AustinDowntown/GuestRoomsAndSuites.aspx">Omni Austin Downtown Hotel</a><br />700 San Jacinto at 8th Street, Austin, TX<br />Reservations: (512) 476-3700</p>
-                <p>There is a wedding block set up at with discounted rates for the weekend. Please call and ask for the "Ryu/Chen" wedding block or <a href="https://ssl.omnihotels.com/Omni?Perseus_state=clear&lang_code=en-us&prop=AUSCTR&group_code=13600109405" target=_blank>reserve online</a> with Group Code: 13600109405.<br /><strong>Must reserve by 8/1.</strong></p>
+                <p>There is a wedding block set up at with discounted rates for the weekend. Please call and ask for the "Ryu/Chen" wedding block or <a href="https://ssl.omnihotels.com/Omni?Perseus_state=clear&lang_code=en-us&prop=AUSCTR&group_code=13600109405" target=_blank>reserve online</a> with Group Code: 13600109405.<strong>Must reserve by 8/1.</strong></p>
                 <p>Special rate: $139/night for standard guestroom with a King or two Double bed accomodations.</p>
 
                 <hr />

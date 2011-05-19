@@ -199,8 +199,9 @@
         padding: 0 0 20px 0;
         background: url(../images/skin/thread.png) repeat-x bottom left;
     }
-
-    menu input {
+		menu li { margin: 0; padding: 0; }
+		menu li a,
+    menu li input {
 
         display: block;
         width: 99%;
@@ -220,16 +221,7 @@
 
     }
 
-		menu input:hover { cursor: pointer; }
+		menu li input:hover { cursor: pointer; }
 		menu a:hover { color: #fff; }
-
-    menu a:active {
-
-        margin: 21px 0 0 3px;
-
-        -webkit-box-shadow: 2px 2px 1px #b86c71;
-        -moz-box-shadow: 2px 2px 1px #b86c71;
-
-    }
 
 		.placeholder-empty { color:#777777; font-family:serif; font-size:8.5pt; padding:2px; }

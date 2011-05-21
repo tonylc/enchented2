@@ -20,6 +20,9 @@ class ApplicationController < ActionController::Base
         else
           @wedding = Wedding.find(params[:wedding_id])
         end
+      else
+        # hax
+        @wedding = Wedding.first
       end
 
       @custom_domain = false

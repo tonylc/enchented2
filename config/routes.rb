@@ -1,5 +1,6 @@
 Prototype::Application.routes.draw do
   
+  match 'wedding_party' => 'static#wedding_party'
   #standard request urls
   resources :pages, :only => [:show]
   resources :rsvps, :only => [:new, :create]

@@ -22,7 +22,7 @@ module ApplicationHelper
   def previous
     request.request_uri.split('/').pop().capitalize;
   end
-  
+
   def user
     params[:user]
   end
@@ -37,9 +37,9 @@ module ApplicationHelper
   def heading(options={})
 
     if couple? || trial?
-      raw('<h3 class="handle">' + options[:verb] + ' ' + options[:content] + '</h3>')    
+      raw('<h3 class="handle">' + options[:verb] + ' ' + options[:content] + '</h3>')
     else
-      raw('<h3>' + options[:verb] + ' ' + options[:content] + '</h3>')    
+      raw('<h3>' + options[:verb] + ' ' + options[:content] + '</h3>')
     end
   end
 
@@ -82,13 +82,13 @@ module ApplicationHelper
   end
 
 
-# 
+#
 # ---------------------------------------------------------------------------
 
   def wedding_title(wedding)
     "#{wedding.name} &infin; #{nice_date(wedding.date)} &infin; #{nice_location(wedding.location)}"
   end
-  
+
   def nice_date(datetime)
     datetime.strftime("%B %d, %Y")
   end
@@ -126,6 +126,10 @@ module ApplicationHelper
   end
 
   def custom_page_path(page)
+    # haxing sorry
+    if page.is_static
+      return '/' + page.url_name
+    end
     if @custom_domain
       readable_page_url(:page_name => page.url_name, :only_path => true)
     else

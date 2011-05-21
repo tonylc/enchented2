@@ -83,12 +83,12 @@ RsvpQuestion.create(:wedding_id => tnc.id, :html_form_type => RsvpQuestion::TYPE
 
 p0 = Page.create(:url_name => "welcome", :wedding_id => tnc.id, :title => "Welcome", :navigation_order => 1, :is_locked => true, :is_home => true, :class_name => "welcome", :show_page => true)
 p1 = Page.create(:url_name => "invitation", :wedding_id => tnc.id, :title => "Invitation", :navigation_order => 2, :class_name => "invitation", :show_page => true)
-p2 = Page.create(:url_name => "about_us", :wedding_id => tnc.id, :title => "About Us", :navigation_order => 3, :class_name => "guest_and_travel", :show_title => false)
-p3 = Page.create(:url_name => "photos", :wedding_id => tnc.id, :title => "Photos", :navigation_order => 4, :class_name => "comingsoon", :show_title => false)
-p4 = Page.create(:url_name => "wedding_party", :wedding_id => tnc.id, :title => "Wedding Party", :navigation_order => 5, :class_name => "guest_and_travel", :show_title => false)
+p2 = Page.create(:url_name => "about_us", :wedding_id => tnc.id, :title => "About Us", :navigation_order => 3, :class_name => "guest_and_travel", :show_title => false, :show_page => true)
+p3 = Page.create(:url_name => "photos", :wedding_id => tnc.id, :title => "Photos", :navigation_order => 4, :class_name => "comingsoon", :show_title => false, :show_page => true)
+p4 = Page.create(:url_name => "wedding_party", :wedding_id => tnc.id, :title => "Wedding Party", :navigation_order => 5, :class_name => "guest_and_travel", :show_title => false, :show_page => true, :is_static => true)
 p5 = Page.create(:url_name => "guest_and_travel", :wedding_id => tnc.id, :title => "Guest & Travel Information", :navigation_order => 6, :class_name => "guest_and_travel", :show_title => false, :show_page => true)
-p6 = Page.create(:url_name => "events", :wedding_id => tnc.id, :title => "Wedding Events", :navigation_order => 7, :class_name => "comingsoon", :show_title => false)
-p7 = Page.create(:url_name => "registry", :wedding_id => tnc.id, :title => "Registry", :navigation_order => 8, :class_name => "registry", :show_title => false)
+p6 = Page.create(:url_name => "events", :wedding_id => tnc.id, :title => "Wedding Events", :navigation_order => 7, :class_name => "comingsoon", :show_title => false, :show_page => true)
+p7 = Page.create(:url_name => "registry", :wedding_id => tnc.id, :title => "Registry", :navigation_order => 8, :class_name => "registry", :show_title => false, :show_page => true)
 
 #invitation
 w1 = WidgetText.create(:text => <<TEXT
@@ -166,54 +166,17 @@ PageWidget.create(:page_id => p0.id, :widget => w9, :verticle_order => 2)
 
 
 #about us
-=begin
 w10 = WidgetText.create(:text => <<TEXT
-                <h2>Caroline</h2>
-                <p>5'2, Brown hair, Brown eyes</p>
-                <dl>
-                    <dt>Occupation</dt><dd>Advertising Executive</dd>
-                    <dt>Hometown</dt><dd>Coppell, TX</dd>
-                    <dt>Likes</dt><dd>Cooking, Celebrity gossip, Folding laundry, Dallas sports, Board games, Party planning</dd>
-                    <dt>Special Talent</dt><dd>Crying like a baby</dd>
-                </dl>
-
-                <hr />
-
-                <h2>Tony</h2>
-                <p>5'10, Black hair, brown eyes</p>
-                <dl>
-                    <dt>Occupation</dt><dd>Software Engineer</dd>
-                    <dt>Hometown</dt><dd>Cupertino, CA</dd>
-                </dl>
-TEXT
-)
-
-w11 = WidgetText.create(:title => "How did it all start?", :text => <<TEXT
-                <p>One magnificent night out at the Bubble Lounge in San Francisco...</p>
-                
-                <dl>
-                    <dt>Tony</dt><dd>&ldquo;I think you&rsquo;re cute.<br />We should hang out more&rdquo;</dd>
-                    <dt>Caroline</dt><dd>&ldquo;Uhhh...&rdquo;</dd>
-                    <dt>Tony</dt><dd>&ldquo;Was that a yes or a no?&rdquo;</dd>
-                    <dt>Caroline</dt><dd>(Smile) &ldquo;Okay&rdquo;</dd>
-                </dl>
-                
-                <p>That was followed by a romantic first date the next day... with Lijen. We browsed through a contemporary art gallery in Union Square and had dinner at Del Taco.</p>
-TEXT
-)
-
-
-PageWidget.create(:page_id => p2.id, :widget => w10, :verticle_order => 1)
-PageWidget.create(:page_id => p2.id, :widget => w11, :verticle_order => 2)
-=end
-
-w10 = WidgetText.create(:title => "Coming Soon", :text => <<TEXT
-<p>please check back soon for more updates</p>
+                <h2>How did it all start?</h2>
+                <h3>Established January 18, 2008</h3>
+                <img src='http://farm6.static.flickr.com/5264/5732027366_e80bfae1d3_m.jpg'/>
+                <p>PB&J. It started over a discussion of the show, <a href=\"http://en.wikipedia.org/wiki/The_Office_(U.S._TV_series)\">The Office</a>.  I loved Pam and Caroline loved Jim. As we shared with one another what we liked about each character, I started to realize all the little things about Caroline that I have never noticed before.</p>
+                <p>To this day, our phone numbers and email nicknames are still listed as Jim Halpert and Pam Beasley.  But as our relationship has evolved, we’re actually a lot more like <a href=\"http://en.wikipedia.org/wiki/Modern_Family\">Claire and Phil</a>.  Maybe over time, we’ll end up like <a href=\"http://en.wikipedia.org/wiki/Married..._with_Children\">Peggy and Al</a>.</p>
+                <p>-Tony</p>
 TEXT
 )
 
 PageWidget.create(:page_id => p2.id, :widget => w10, :verticle_order => 1)
-
 
 #registry
 =begin
@@ -234,7 +197,6 @@ PageWidget.create(:page_id => p7.id, :widget => w12, :verticle_order => 1)
 
 
 #wedding party
-=begin
 w13 = WidgetAlbum.create(:service_provider => WeddingAuthentication::SERVICE_PROVIDER_FLICKR, :gallery_id => '72157626752617506')
 w14 = WidgetAlbum.create(:service_provider => WeddingAuthentication::SERVICE_PROVIDER_FLICKR, :gallery_id => '72157626752710466')
 w15 = WidgetAlbum.create(:service_provider => WeddingAuthentication::SERVICE_PROVIDER_FLICKR, :gallery_id => '72157626752714324')
@@ -242,11 +204,3 @@ w15 = WidgetAlbum.create(:service_provider => WeddingAuthentication::SERVICE_PRO
 PageWidget.create(:page_id => p4.id, :widget => w13, :verticle_order => 1)
 PageWidget.create(:page_id => p4.id, :widget => w14, :verticle_order => 2)
 PageWidget.create(:page_id => p4.id, :widget => w15, :verticle_order => 3)
-=end
-
-w13 = WidgetText.create(:title => "Coming Soon", :text => <<TEXT
-<p>please check back soon for more updates</p>
-TEXT
-)
-
-PageWidget.create(:page_id => p4.id, :widget => w13, :verticle_order => 1)

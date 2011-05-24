@@ -82,7 +82,7 @@ RsvpQuestion.create(:wedding_id => tnc.id, :html_form_type => RsvpQuestion::TYPE
 
 
 p0 = Page.create(:url_name => "welcome", :wedding_id => tnc.id, :title => "Welcome", :navigation_order => 1, :is_locked => true, :is_home => true, :class_name => "welcome", :show_page => true)
-p1 = Page.create(:url_name => "invitation", :wedding_id => tnc.id, :title => "Invitation", :navigation_order => 2, :class_name => "invitation", :show_page => true)
+p1 = Page.create(:url_name => "invitation", :wedding_id => tnc.id, :title => "The Wedding", :navigation_order => 2, :class_name => "invitation", :show_page => true)
 p2 = Page.create(:url_name => "about_us", :wedding_id => tnc.id, :title => "About Us", :navigation_order => 3, :class_name => "guest_and_travel", :show_title => false, :show_page => true)
 p3 = Page.create(:url_name => "photos", :wedding_id => tnc.id, :title => "Photos", :navigation_order => 4, :class_name => "comingsoon", :show_title => false, :show_page => true)
 p4 = Page.create(:url_name => "wedding_party", :wedding_id => tnc.id, :title => "Wedding Party", :navigation_order => 5, :class_name => "guest_and_travel", :show_title => false, :show_page => true, :is_static => true)

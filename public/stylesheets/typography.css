@@ -4,23 +4,23 @@
 
 
     body {
-    
+
         font-family: "Bodoni Egyptian", serif;
-    
+
     }
-    
+
 
 /* Header */
 
 
     header > * {
-    
+
         margin: 0 auto;
-    
+
     }
 
     header h1, header h1 a {
-    
+
         margin-bottom: 5px;
         color: #625a52;
         font-weight: normal;
@@ -29,22 +29,22 @@
         text-decoration: none;
 
     }
-    
+
     header h1 em {
-    
+
         color: #fdd5d5;
         font-style: normal;
-    
+
     }
 
     header time, header time + em {
-    
+
         color: #fff;
         font-style: normal;
         font-size: 15px;
         line-height: 15px;
         text-transform: lowercase;
-    
+
     }
 
 
@@ -52,43 +52,43 @@
 
 
     body > div dl {
-    
+
         float: left;
         width: 100%;
         margin: 0 0 20px 0;
         line-height: 26px;
-    
+
     }
 
     body > div dt, body > div dd {
-    
+
         display: block;
         float: left;
-    
+
     }
-    
+
     body > div dt {
-    
+
         clear: left;
         color: #625A52;
         width: 48%;
         margin-right: 2%;
         text-align: right;
-    
+
     }
-    
+
     body > div dt:after {
-    
+
         content: ":";
-    
+
     }
-    
+
     body > div dd {
-    
+
         width: 50%;
         color: #625A52;
         text-align: left;
-    
+
     }
 
 
@@ -100,13 +100,13 @@
         margin: 0 0 20px 0;
         padding: 0;
         color: #625a52;
-        font-size: 16px;
-        line-height: 26px;
-				letter-spacing: 0.1em;
+        font-size: 14px;
+        line-height: 20px;
+		letter-spacing: 0.1em;
     }
-    
+
     p strong {
-    
+
         letter-spacing: 0;
-    
+
     }

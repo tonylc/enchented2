@@ -44,7 +44,7 @@
 
     }
 
-    label em, fieldset legend, form p {
+    label em, fieldset legend {
 
         color: #625a52;
         margin: 0;
@@ -196,12 +196,14 @@
         width: 100%;
         float: left;
         margin: 0;
-        padding: 0 0 20px 0;
+        padding: 0 0 30px 0;
         background: url(../images/skin/thread.png) repeat-x bottom left;
+
     }
-		menu li { margin: 0; padding: 0; }
-		menu li a,
-    menu li input {
+
+    menu li { margin: 0; padding: 0; }
+
+    menu li a, menu li input {
 
         display: block;
         width: 99%;
@@ -211,8 +213,8 @@
         padding-top: 5px;
         background-color: #da8b91;
         color: #fff;
+		font-family: "Bodoni Egyptian", serif;
         font-size: 20px;
-				font-family: "Bodoni Egyptian", serif;
         line-height: 30px;
         text-align: center;
         text-decoration: none;
@@ -222,7 +224,7 @@
 
     }
 
-		menu li input:hover { cursor: pointer; }
-		menu a:hover { color: #fff; }
+    menu li input:hover { cursor: pointer; }
+    menu a:hover { color: #fff; }
 
-		.placeholder-empty { color:#777777; font-family:serif; font-size:8.5pt; padding:2px; }
+    .placeholder-empty { color:#777777; font-family:serif; font-size:8.5pt; padding:2px; }

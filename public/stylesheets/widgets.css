@@ -4,7 +4,7 @@
 
 
     .widget {
-    
+
         display: block;
         width: 100%;
         float: left;
@@ -14,55 +14,76 @@
         background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
         background-position: top left, bottom left, top left, top right;
         list-style-type: none;
-    
+
     }
-    
+
     .widget > div {
-    
+
         width: 90%;
         float: left;
         padding: 20px 5%;
         background: url(../images/skin/widget.png) repeat, top left;
-    
+
     }
-    
+
     .widget > div > h2 {
-    
+
         margin: 0 0 10px 0;
         padding: 0;
         color: #da8b91;
         font-weight: normal;
         font-size: 30px;
         line-height: 40px;
-    
+
     }
-    
+
+    .widget > div > h2:first-child {
+
+        padding-top: 20px;
+        background: url(../images/skin/thread.png) repeat-x;
+
+    }
+
     .widget > div > h3 {
-    
+
         margin: 0 0 20px 0;
         padding: 0;
         color: #625a52;
         font-size: 20px;
         line-height: 30px;
-    
+
     }
 
-    .widget > section + section > div > h3 {
-    
-        
-    
+    .widget time {
+
+        display: block;
+        margin-bottom: 20px;
+        padding-left: 22px;
+        background: url(../images/skin/date.png) no-repeat top left;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 20px;
+
     }
-    
+
+    .widget time, .widget time a {
+
+        color: #da8b91;
+        text-decoration: none;
+	    cursor: default;
+
+    }
+
     .widget > div > h3 + time {
-    
+
         margin-bottom: 20px;
         clear: left;
         float: left;
-    
+
     }
-    
+
     .widget > div > hr {
-    
+
         display: block;
         width: 100%;
         height: 7px;
@@ -72,128 +93,61 @@
         padding: 0;
         background: url(../images/skin/thread.png) repeat-x bottom left;
         color: transparent;
-    
+
     }
 
+    div.map {
 
-/* Albums */
-/*
-
-    .widget.albums {
-    
-        text-align: center;
-    
-    }
-
-    .widget.albums ul, .widget.albums li {
-    
-        float: left;
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-    
-    }
-    
-    .widget.albums ul {
-    
-        width: 100%;
-    
-    }
-
-    .widget.albums li {
-
-        width: 48%;
-        margin: 0 2% 10px 0;
-    
-    }
-    
-    .widget.albums li:nth-child(2n+2) {
-    
-        margin: 0 0 10px 2%;
-    
-    }
-    
-    .widget.albums li > a {
-    
         display: block;
         width: 100%;
-        height: 200px;
-        margin-bottom: 15px;
-        overflow: hidden;
-        background: #ddd;
-        
-        -webkit-box-shadow: 0 0 5px #888;
-    
-    }
-    
-    .widget.albums li > a[href="#"] {
-    
-        cursor: default;
-    
+        height: 300px;
+        margin-bottom: 20px;
+        background: #888;
+
+        -webkit-box-shadow: 1px 1px 5px #888;
+        -moz-box-shadow: 1px 1px 5px #888;
+
     }
 
-    .widget.albums img {
-    
-        width: 100%;
-        height: auto;
-    
-    }
 
-*/
 /* Events */
 
 
-    ul.events dl {
-    
-        margin: 10px 0;
-    
-    }
-    
-    ul.events a.calendar {
+    .widget.events .geo span {
 
-        display: block;
-        text-decoration: none;
-    
+        display: none;
+
     }
 
-    ul.events p {
-    
-        display: block;
-    
-    }
-
-    ul.events figure {
-    
-        display: block;
-        width: 300px;
-        height: 200px;
-        background-color: #eee;
-    
-    }
-    
-    ul.events figcaption {
-    
-        display: none;   
-    
-    }
-    
-    .widget time, .widget time a {
+    .widget.events p.location {
 
         display: block;
-        color: #da8b91;
-        font-weight: bold;
+        margin: -20px 0 20px 0;
+        padding: 10px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background: #c8c8c4;
+        color: #625a52;
         font-size: 14px;
         line-height: 20px;
-        text-decoration: none;
-	    cursor: default;
-    
+
     }
-    
-    .widget time a {
-        
-        padding-left: 22px;
-        background: url(../images/skin/date.png) no-repeat 0 0;
-    
+
+    .widget.events p.location strong {
+
+        color: #fff;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: bold;
+
+    }
+
+    .widget.events p.location a {
+
+        font-size: 12px;
+        font-weight: bold;
+        text-decoration: none;
+
     }
 
 
@@ -201,7 +155,7 @@
 
 
     .widget.gallery {
-    
+
         background: none;
         width: 100%;
         height: 400px;
@@ -209,23 +163,23 @@
         border: 10px solid #625a52;
         padding: 0;
         overflow: hidden;
-        
+
         -webkit-box-shadow: 1px 1px 10px #625a52;
         -moz-box-shadow: 1px 1px 10px #625a52;
-    
+
     }
 
     .widget.gallery ul {
-    
+
         float: left;
         width: 100%;
         position: relative;
         margin: 0;
         padding: 0;
         list-style-type: none;
-    
+
     }
-    
+
     .widget.gallery ul > li {
 
         position: absolute;
@@ -233,14 +187,14 @@
         left: 0;
         padding: 0;
         list-style-type: none;
-    
+
     }
-    
+
     .widget.gallery img {
-    
+
         width: auto;
         height: 400px;
-    
+
     }
 
 
@@ -249,8 +203,8 @@
 
     .widget.rsvp h3 {
 
-        margin-bottom: 5px;    
-    
+        margin-bottom: 5px;
+
     }
 
 
@@ -258,15 +212,15 @@
 
 
     section.text div > p:first-child {
-    
+
         display: block;
         padding-top: 20px;
         background: url(../images/skin/thread.png) repeat-x;
-    
+
     }
 
     section.text div > p:last-child {
-    
+
         display: block;
         margin-bottom: 0;
         padding-bottom: 20px;

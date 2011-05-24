@@ -1,49 +1,49 @@
 /* LOVE FOR DESIGN
-/* Layout Stylesheet
+/* Layout
 ----------------------------------------------------------------------------- */
 
 
     body {
-    
-        min-width: 810px;
+
+        min-width: 980px;
         margin: 0 0 20px 0;
         padding: 0;
         background: #c7af82 url(../images/skin/body.jpg);
-    
+
     }
 
     header {
-    
+
         display: block;
-        width: 100%;
+        width: 500px;
         margin: 50px auto 30px auto;
         text-align: center;
-    
+
     }
 
 
-/* Page Layout */
+/* Page */
 
 
     body > div {
-    
-        width: 450px;
+
+        width: 500px;
         margin: 0 auto;
- 
+
     }
-    
+
     body > div:after {
-    
+
         content: ".";
         display: block;
         height: 0;
         clear: both;
         visibility: hidden;
-    
+
     }
 
     body > div > h2 {
-    
+
         display: block;
         width: 100%;
         margin: 0 0 30px 0;
@@ -55,11 +55,90 @@
         font-size: 30px;
         line-height: 58px;
         text-align: center;
-    
+
     }
-    
+
     body.welcome > div > h2, body.invitation > div > h2 {
-    
+
         display: none;
-    
+
+    }
+
+
+/* Tabbed Panels */
+
+
+    .ui-tabs-hide {
+
+        display: none;
+
+    }
+
+    div.tabbed > ul {
+
+        display: block;
+        width: 100%;
+        float: left;
+        margin: 0;
+        border-bottom: 2px solid #625a52;
+        padding: 0;
+
+    }
+
+    div.tabbed > ul li {
+
+        display: block;
+        float: left;
+        margin: 0 10px 0 0;
+        padding: 0;
+    	cursor: pointer;
+
+    }
+
+    div.tabbed > ul a {
+
+        display: block;
+        outline: none;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding: 2px 7px 0 7px;
+        background-color: #c8c8c4;
+        color: #fff;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 20px;
+        text-decoration: none;
+    	cursor: pointer;
+
+        -moz-user-select: none;
+        -webkit-user-select: none;
+
+    }
+
+    div.tabbed > ul li.ui-tabs-selected a {
+
+       background-color: #625a52;
+       color: #c7af82;
+
+    }
+
+    div.tabbed > div h4, div.tabbed > div h4 a {
+
+        color: #625a52;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        line-height: 30px;
+        text-decoration: none;
+
+    }
+
+    div.tabbed > div {
+
+        clear: left;
+        float: left;
+        width: 100%;
+        padding-top: 20px;
+        text-align: left;
+
     }

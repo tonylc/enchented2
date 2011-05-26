@@ -1,0 +1,8 @@
+  <div class="tabbed"> 
+    
+    <ul> 
+    <% widget_group.each do |page_widget| %>
+      <li><a href="#<%= widget_dom_id(page_widget.widget) %>"><%= raw(widget_title(page_widget.widget)) %></a></li> 
+    <% end %>
+    </ul> 
+

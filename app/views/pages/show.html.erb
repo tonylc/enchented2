@@ -1,5 +1,9 @@
 <% if @page.show_title %><h2><%= @page.title %></h2><% end %>
 
-<%  @page.page_widgets.each do |page_widget| %>
+<% @page.grouped_widgets.each do |widget_group| %>
+  <%= render_grouped_widget(widget_group) %>
+<% end %>
+
+<%  @page.ungrouped_widgets.each do |page_widget| %>
   <%= render_widget(page_widget.widget) %>
 <% end %>

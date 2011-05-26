@@ -1,27 +1,16 @@
-<ul class="widget events vcalendar">
-  <li class="vevent">
-    
-    <hgroup>            
-      <h2 class="summary"><%= raw(widget_event.title) %></h2>
-      <h3><%= widget_event.location.name %></h3>
-    </hgroup>
-    
-    <a class="calendar" href="event.ics"><strong class="dtstart" title="<%= widget_event.start_time.strftime('%Y-%m-%d') %>"><%= nice_date(widget_event.start_time) %></strong></a>
+<% add_to_js %w{http://maps.google.com/maps/api/js?sensor=false layout maps rsvp} %>
 
-<% if widget_event.is_rsvp_event %>
-    <dl>
-      <dt>Confirmed Guests</dt><dd><%= @wedding.confirmed_guests %></dd>
-      <dt>Pending Invitations</dt><dd>#</dd>
-    </dl>
-<% end %>
-    
-    <p class="location geo" title="<%= widget_event.location.latitude %> <%= widget_event.location.longitude %>"><%= widget_event.location.address %><br />
-      <%= nice_city(widget_event.location) %></p>
-
-    <figure>
-      <figcaption>Map</figcaption>
-    </figure>
-    
-  </li>
-  
-</ul>
+<div id="<%= widget_dom_id(widget_event) %>" class="vevent"> 
+  <h4 class="summary"><%= raw(widget_event.title) %></h4> 
+  <time class="dtstart" title="<%= short_date(widget_event.start_time) %>"><%= nice_date_with_day(widget_event.start_time) %> at <span class="value"><%= nice_time(widget_event.start_time) %></span></time> 
+  <% unless widget_event.description.blank? %><p class="description"><%= widget_event.description %></p><% end %>
+  <% unless widget_event.location.blank? %>
+  <p class="location geo"> 
+    <strong><%= widget_event.location.name %></strong><br /> 
+    <%= nice_address(widget_event.location) %><br /> 
+    <a target="_blank" href="<%= widget_event.location.map_url %>">Get Directions</a> 
+    <span class="latitude"><%= widget_event.location.latitude %></span> 
+    <span class="longitude"><%= widget_event.location.longitude %></span>
+  </p> 
+  <% end %>
+</div>

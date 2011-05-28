@@ -11,7 +11,8 @@ class AddEventsPages < ActiveRecord::Migration
       page_widget.widget.destroy
       page_widget.destroy
     end
-    
+
+=begin    
     chuys = Location.create(:name => "Chuy's Tex Mex",
                             :address1 => "1728 Barton Springs Road",
                             :city => "austin",
@@ -21,9 +22,10 @@ class AddEventsPages < ActiveRecord::Migration
                             :longitude => -97.762819,
                             :map_url => "http://maps.google.com/maps?f=d&source=s_d&saddr=700+San+Jacinto+at+8th+Street,+Austin,+TX&daddr=1728+Barton+Springs+Road,+Austin+TX&hl=en&geocode=FXjezQEd_5ks-ilFVkg_p7VEhjGd-ppcWLIwIg%3BFfbJzQEdlj8s-ilpgNxXPbVEhjFfybkIb9AqIA&mra=ls&sll=37.0625,-95.677068&sspn=48.688845,56.425781&ie=UTF8&t=h&z=15"
                             )
+=end
 
-    w1 = WidgetEvent.create(:location_id => chuys.id,
-                            :title => "rehearsal dinner", 
+    w1 = WidgetEvent.create(:title => "rehearsal dinner",
+                            :description => "Location TBD",
                             :start_time => DateTime.parse('2011-08-26 19:00:00'),
                             :is_rsvp_event => false)
 
@@ -47,6 +49,7 @@ class AddEventsPages < ActiveRecord::Migration
                             :start_time => DateTime.parse('2011-08-27 23:30:00'),
                             :is_rsvp_event => false)
 
+=begin
     juan = Location.create(:name => "Juan in a Million",
                             :address1 => "2300 Cesar Chavez Street",
                             :city => "austin",
@@ -56,15 +59,16 @@ class AddEventsPages < ActiveRecord::Migration
                             :longitude => -97.719037,                            
 			    :map_url => "http://maps.google.com/maps?f=d&source=s_d&saddr=700+San+Jacinto+at+8th+Street,+Austin,+TX&daddr=2300+East+Cesar+Chavez+Street,+Austin,+TX&hl=en&geocode=FXjezQEd_5ks-ilFVkg_p7VEhjGd-ppcWLIwIg%3BFc2ozQEdeews-im73hW7yrVEhjE8jK_Ovsv-iw&mra=ls&sll=30.20449,-97.876865&sspn=0.418362,0.440826&ie=UTF8&t=h&z=15"
                             )
+=end
 
-    w4 = WidgetEvent.create(:location_id => juan.id,
-                            :title => "sunday brunch", 
-			    :description => "If you're around, we'd love for you to join us!",
+    w4 = WidgetEvent.create(:title => "sunday brunch", 
+                            :description => "Location TBD",
+#			    :description => "If you're around, we'd love for you to join us!",
                             :start_time => DateTime.parse('2011-08-28 12:00:00'),
                             :is_rsvp_event => false)
 
-    PageWidget.create(:page_id => page.id, :widget => w1, :verticle_order => 1, :widget_group => 1)
-    PageWidget.create(:page_id => page.id, :widget => w2, :verticle_order => 2, :widget_group => 1)
+    PageWidget.create(:page_id => page.id, :widget => w2, :verticle_order => 1, :widget_group => 1)
+    PageWidget.create(:page_id => page.id, :widget => w1, :verticle_order => 2, :widget_group => 1)
     PageWidget.create(:page_id => page.id, :widget => w3, :verticle_order => 3, :widget_group => 1)
     PageWidget.create(:page_id => page.id, :widget => w4, :verticle_order => 4, :widget_group => 1)
   end

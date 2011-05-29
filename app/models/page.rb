@@ -8,14 +8,14 @@ class Page < ActiveRecord::Base
   end
 
   def grouped_widgets
-    representatives = PageWidget.where(["page_id = ? and widget_group is not null", id]).group(:widget_group).order("widget_group ASC")
-
+    representatives = PageWidget.where(["page_id = ? and widget_group_id is not null", id]).group(:widget_group_id).order("verticle_order ASC")
+    
     representatives.map do |rep|
-      PageWidget.where(:page_id => id, :widget_group => rep.widget_group).order("verticle_order ASC")
+      PageWidget.where(:page_id => id, :widget_group_id => rep.widget_group_id).order("verticle_order ASC")
     end
   end
 
   def ungrouped_widgets
-    PageWidget.where(["page_id = ? and widget_group is null", id]).order("verticle_order ASC")
+    PageWidget.where(["page_id = ? and widget_group_id is null", id]).order("verticle_order ASC")
   end
 end

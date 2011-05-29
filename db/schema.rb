@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(:version => 20110525073929) do
     t.string  "widget_type"
     t.integer "widget_id"
     t.integer "verticle_order"
-    t.integer "widget_group"
+    t.integer "widget_group_id"
   end
 
   create_table "pages", :force => true do |t|
@@ -142,6 +142,16 @@ ActiveRecord::Schema.define(:version => 20110525073929) do
     t.datetime "updated_at"
   end
 
+  create_table "widget_content_links", :force => true do |t|
+    t.string  "name"
+    t.boolean "is_internal"
+    t.text    "url"
+  end
+
+  create_table "widget_content_texts", :force => true do |t|
+    t.text "text"
+  end
+
   create_table "widget_events", :force => true do |t|
     t.integer  "location_id"
     t.string   "title"
@@ -160,9 +170,30 @@ ActiveRecord::Schema.define(:version => 20110525073929) do
     t.datetime "updated_at"
   end
 
+  create_table "widget_group_widgets", :force => true do |t|
+    t.integer "widget_group_id"
+    t.string  "widget_type"
+    t.integer "widget_id"
+  end
+
+  create_table "widget_groups", :force => true do |t|
+    t.string   "title"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "widget_texts", :force => true do |t|
     t.string "title"
     t.text   "text"
+  end
+
+  create_table "widget_widget_contents", :force => true do |t|
+    t.string  "widget_type"
+    t.integer "widget_id"
+    t.string  "widget_content_type"
+    t.integer "widget_content_id"
+    t.integer "verticle_order"
   end
 
 end

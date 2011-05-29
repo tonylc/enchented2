@@ -1,0 +1,21 @@
+<section class="widget events" style="text-align: center">
+
+<div> 
+  <h2><%= widget_group.title %></h2> 
+  
+  <div class="tabbed"> 
+    
+    <ul> 
+    <% widget_group.page_widgets.each do |page_widget| %>
+    <li><a href="#<%= widget_dom_id(page_widget.widget) %>"><%= raw(widget_title(page_widget.widget)) %></a></li> 
+    <% end %>
+    </ul> 
+
+    <% widget_group.page_widgets.each do |page_widget| %>
+    <%= render_page_widget(page_widget) %> 
+    <% end %>
+
+  </div>
+
+</div>
+</section>

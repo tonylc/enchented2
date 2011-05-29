@@ -67,10 +67,16 @@ class AddEventsPages < ActiveRecord::Migration
                             :start_time => DateTime.parse('2011-08-28 12:00:00'),
                             :is_rsvp_event => false)
 
-    PageWidget.create(:page_id => page.id, :widget => w2, :verticle_order => 1, :widget_group => 1)
-    PageWidget.create(:page_id => page.id, :widget => w1, :verticle_order => 2, :widget_group => 1)
-    PageWidget.create(:page_id => page.id, :widget => w3, :verticle_order => 3, :widget_group => 1)
-    PageWidget.create(:page_id => page.id, :widget => w4, :verticle_order => 4, :widget_group => 1)
+    wg = WidgetGroup.create(:title => "Wedding Events")
+    WidgetGroupWidget.create(:widget_group_id => wg.id, :widget => w1)
+    WidgetGroupWidget.create(:widget_group_id => wg.id, :widget => w2)
+    WidgetGroupWidget.create(:widget_group_id => wg.id, :widget => w3)
+    WidgetGroupWidget.create(:widget_group_id => wg.id, :widget => w4)
+    
+    PageWidget.create(:page_id => page.id, :widget => w2, :verticle_order => 1, :widget_group_id => wg.id)
+    PageWidget.create(:page_id => page.id, :widget => w1, :verticle_order => 2, :widget_group_id => wg.id)
+    PageWidget.create(:page_id => page.id, :widget => w3, :verticle_order => 3, :widget_group_id => wg.id)
+    PageWidget.create(:page_id => page.id, :widget => w4, :verticle_order => 4, :widget_group_id => wg.id)
   end
 
   def self.down

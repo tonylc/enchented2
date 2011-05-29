@@ -10,7 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110525073929) do
+ActiveRecord::Schema.define(:version => 20110529081000) do
+
+  create_table "content_links", :force => true do |t|
+    t.string  "name"
+    t.boolean "is_internal"
+    t.text    "url"
+  end
+
+  create_table "content_texts", :force => true do |t|
+    t.text "text"
+  end
 
   create_table "domains", :force => true do |t|
     t.integer  "wedding_id"
@@ -142,14 +152,12 @@ ActiveRecord::Schema.define(:version => 20110525073929) do
     t.datetime "updated_at"
   end
 
-  create_table "widget_content_links", :force => true do |t|
-    t.string  "name"
-    t.boolean "is_internal"
-    t.text    "url"
-  end
-
-  create_table "widget_content_texts", :force => true do |t|
-    t.text "text"
+  create_table "widget_contents", :force => true do |t|
+    t.string  "widget_type"
+    t.integer "widget_id"
+    t.string  "content_type"
+    t.integer "content_id"
+    t.integer "verticle_order"
   end
 
   create_table "widget_events", :force => true do |t|
@@ -183,17 +191,16 @@ ActiveRecord::Schema.define(:version => 20110525073929) do
     t.datetime "updated_at"
   end
 
+  create_table "widget_informations", :force => true do |t|
+    t.string  "title"
+    t.text    "title_url"
+    t.string  "tab_name"
+    t.integer "description_content_text_id"
+  end
+
   create_table "widget_texts", :force => true do |t|
     t.string "title"
     t.text   "text"
-  end
-
-  create_table "widget_widget_contents", :force => true do |t|
-    t.string  "widget_type"
-    t.integer "widget_id"
-    t.string  "widget_content_type"
-    t.integer "widget_content_id"
-    t.integer "verticle_order"
   end
 
 end

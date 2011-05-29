@@ -1,0 +1,11 @@
+<% add_to_js %w{http://maps.google.com/maps/api/js?sensor=false layout maps rsvp} %>
+
+<div id="<%= widget_dom_id(widget_information) %>"> 
+  <h4 class="summary"><%= raw(widget_information.title) %></h4> 
+
+  <%= render_content(widget_information.description_content_text) unless widget_information.description_content_text.blank?  %>
+  
+  <% widget_information.widget_contents.each do |widget_content| %>
+  <%= render_content(widget_content.content) %>
+  <% end %>
+</div>

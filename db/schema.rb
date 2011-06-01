@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110518203416) do
+ActiveRecord::Schema.define(:version => 20110525073929) do
 
   create_table "domains", :force => true do |t|
     t.integer  "wedding_id"
@@ -26,10 +26,11 @@ ActiveRecord::Schema.define(:version => 20110518203416) do
     t.string   "city"
     t.string   "state_id"
     t.string   "postal_code"
-    t.decimal  "latitude"
-    t.decimal  "longitude"
+    t.decimal  "latitude",    :precision => 9, :scale => 6
+    t.decimal  "longitude",   :precision => 9, :scale => 6
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "map_url"
   end
 
   create_table "page_widgets", :force => true do |t|
@@ -37,6 +38,7 @@ ActiveRecord::Schema.define(:version => 20110518203416) do
     t.string  "widget_type"
     t.integer "widget_id"
     t.integer "verticle_order"
+    t.integer "widget_group"
   end
 
   create_table "pages", :force => true do |t|
@@ -48,6 +50,8 @@ ActiveRecord::Schema.define(:version => 20110518203416) do
     t.boolean "is_locked",        :default => false
     t.boolean "is_home",          :default => false
     t.boolean "show_title",       :default => true
+    t.boolean "show_page",        :default => false, :null => false
+    t.boolean "is_static",        :default => false
   end
 
   create_table "rsvp_options", :force => true do |t|
@@ -146,6 +150,7 @@ ActiveRecord::Schema.define(:version => 20110518203416) do
     t.boolean  "is_rsvp_event", :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "description"
   end
 
   create_table "widget_galleries", :force => true do |t|

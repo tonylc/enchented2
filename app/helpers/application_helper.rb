@@ -93,27 +93,6 @@ module ApplicationHelper
     datetime.strftime("%B %d, %Y")
   end
 
-  def nice_date_with_day(datetime)
-    datetime.strftime("%A, %B %d, %Y")
-  end
-
-  def short_date(datetime)
-    datetime.strftime("%Y-%m-%d")
-  end
-
-  def nice_time(datetime)
-    t = datetime.strftime("%l")
-    t += datetime.strftime(":%M") unless datetime.strftime(":%M") == ":00"
-    t += datetime.strftime("%p").downcase
-  end
-
-  def nice_address(location)
-    adr = ""
-    adr += location.address1 unless location.address1.blank?
-    adr += " #{location.address2}" unless location.address2.blank?
-    adr += ", #{location.city.titleize} #{location.state.short_name.upcase}"
-  end
-
   def nice_location(location)
     "#{location.city.titleize}, #{location.state.name.titleize}"
   end

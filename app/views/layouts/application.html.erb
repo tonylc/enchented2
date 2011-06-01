@@ -36,7 +36,6 @@
     -->
 
 	<%= stylesheet_link_tag ['master',@page_css].flatten.uniq.compact %>
-
 	<%= yield :head %>
 
 	<style>
@@ -66,10 +65,8 @@
     <%= yield :layout %>
   </div>
 
-  <script type="text/javascript" src="/javascripts/jquery/jquery-1.6.min.js"></script> 
-  <script type="text/javascript" src="/javascripts/jquery/plugins/jquery-ui-1.8.13.min.js"></script> 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
   <%= javascript_include_tag [@page_js].flatten.uniq.compact %>
   <%= yield :script %>
-
 </body>
 </html>

@@ -1,0 +1,12 @@
+<div class="adr"> 
+  <h3><%= raw(location.name) %></h3> 
+  <span class="street-address"><%= nice_address(location) %></span><br /> 
+  <span class="locality"><%= location.city.capitalize %></span>,&nbsp;
+  <span class="region"><%= location.state.short_name %></span><br /> 
+  <a class="directions" href="<%= location.map_url %>">Get Directions</a> 
+</div> 
+
+<div class="geo"> 
+  <span class="latitude"><%= location.latitude %></span> 
+  <span class="longitude"><%= location.longitude %></span> 
+</div> 

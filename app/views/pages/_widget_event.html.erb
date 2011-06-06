@@ -1,16 +1,40 @@
 <% add_to_js %w{http://maps.google.com/maps/api/js?sensor=false layout maps rsvp} %>
 
-<div id="<%= widget_dom_id(widget_event) %>" class="vevent"> 
-  <h4 class="summary"><%= raw(widget_event.title) %></h4> 
-  <time class="dtstart" title="<%= short_date(widget_event.start_time) %>"><%= nice_date_with_day(widget_event.start_time) %> at <span class="value"><%= nice_time(widget_event.start_time) %></span></time> 
-  <% unless widget_event.description.blank? %><p class="description"><%= widget_event.description %></p><% end %>
+<div id="<%= widget_dom_id(widget_event) %>" class="event"> 
+  <div class="event vevent"> 
+    <h3 class="summary"><%= raw(widget_event.title) %></h3> 
+    <time class="dtstart" datetime=<%= short_date(widget_event.start_time) %>><%= nice_date_with_day(widget_event.start_time) %> at <span class="value"><%= nice_time(widget_event.start_time) %></span></time> 
+    <% unless widget_event.location.blank? %><h4 class="location"><%= widget_event.location.name %></h4><% end %>
+    <% unless widget_event.description.blank? %><p class="description"><%= widget_event.description %></p><% end %>   
+  </div>
+
   <% unless widget_event.location.blank? %>
-  <p class="location geo"> 
-    <strong><%= widget_event.location.name %></strong><br /> 
-    <%= nice_address(widget_event.location) %><br /> 
-    <a target="_blank" href="<%= widget_event.location.map_url %>">Get Directions</a> 
-    <span class="latitude"><%= widget_event.location.latitude %></span> 
-    <span class="longitude"><%= widget_event.location.longitude %></span>
-  </p> 
+  <ol class="places"> 
+    <li> 
+      <div class="adr"> 
+        <h3><%= raw(widget_event.location.name) %></h3> 
+        <span class="street-address"><%= full_address(widget_event.location) %></span><br />
+        <span class="locality"><%= widget_event.location.city.capitalize %></span>,&nbsp;
+        <span class="region"><%= widget_event.location.state.short_name.upcase %></span><br /> 
+        <a class="directions" href="<%= widget_event.location.map_url %>">Get Directions</a> 
+      </div> 
+      <div class="geo"> 
+        <span class="latitude"><%= widget_event.location.latitude %></span> 
+        <span class="longitude"><%= widget_event.location.longitude %></span> 
+      </div>
+    </li>
+  </ol>
+  <% end %> 
+
+  <% if widget_event.widget_content_count(:content_link) > 0 %>
+  <menu> 
+    <% widget_event.widget_contents_by_type(:content_link).each do |widget_content| %>
+    <li>
+      <%= render_content(widget_content.content) %>
+    </li> 
+    <% end %>
+  </menu> 
   <% end %>
+
+
 </div>

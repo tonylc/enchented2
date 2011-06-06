@@ -185,10 +185,9 @@ ActiveRecord::Schema.define(:version => 20110529081000) do
   end
 
   create_table "widget_groups", :force => true do |t|
-    t.string   "title"
-    t.string   "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string  "title"
+    t.string  "description"
+    t.integer "type_id"
   end
 
   create_table "widget_informations", :force => true do |t|

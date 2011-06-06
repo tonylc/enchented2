@@ -122,6 +122,12 @@ module ApplicationHelper
     "#{location.city.titleize}, #{location.state.name.titleize} #{location.postal_code}"
   end
 
+  def full_address(location)
+    addr = "#{location.address1}"
+    addr += " #{location.address2}" unless location.address2.blank?
+    addr
+  end
+
   def add_to_js(*js)
     (@page_js ||= []) << js
   end
@@ -160,5 +166,9 @@ module ApplicationHelper
 
   def page_class_name
     rsvp_page? ? "rsvp" : (@page.blank? ? nil : @page.class_name)
+  end
+
+  def page_id_name
+    rsvp_page? ? "rsvp" : (@page.blank? ? nil : @page.id_name)
   end
 end

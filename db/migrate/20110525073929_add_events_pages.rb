@@ -43,6 +43,12 @@ class AddEventsPages < ActiveRecord::Migration
                             :start_time => DateTime.parse('2011-08-27 18:30:00'),
                             :is_rsvp_event => true)
 
+    rsvp = ContentLink.create(:name => "RSVP for wedding &amp; reception",
+                              :is_internal => true,
+                              :url => "rsvps")
+
+    WidgetContent.create(:widget => w2, :content => rsvp, :verticle_order => 1)
+
     w3 = WidgetEvent.create(:location_id => nil, 
                             :title => "after party", 
                             :description => "Location TBD",
@@ -67,7 +73,7 @@ class AddEventsPages < ActiveRecord::Migration
                             :start_time => DateTime.parse('2011-08-28 12:00:00'),
                             :is_rsvp_event => false)
 
-    wg = WidgetGroup.create(:title => "Wedding Events")
+    wg = WidgetGroup.create(:title => "Wedding Events", :type_id => WidgetGroup::TYPE_TABBED)
     WidgetGroupWidget.create(:widget_group_id => wg.id, :widget => w1)
     WidgetGroupWidget.create(:widget_group_id => wg.id, :widget => w2)
     WidgetGroupWidget.create(:widget_group_id => wg.id, :widget => w3)

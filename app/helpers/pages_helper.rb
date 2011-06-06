@@ -14,7 +14,7 @@ module PagesHelper
   end
 
   def render_content(content)
-    "Widget Content Goes Here for #{content.class.to_s} #{content.id}"
+    render :partial => content.class.to_s.underscore, :object => content
   end
 
   def widget_dom_id(widget)
@@ -23,5 +23,37 @@ module PagesHelper
 
   def tab_name(widget)
     (widget.respond_to?(:tab_name) && !widget.tab_name.blank?) ? widget.tab_name : widget.title
+  end
+
+  def widget_group_type_class(widget_group)
+    case widget_group.type_id
+    when WidgetGroup::TYPE_REGULAR
+      ""
+    when WidgetGroup::TYPE_TABBED
+      " tabbed"
+    when WidgetGroup::TYPE_ACCORDION
+      " accordion"
+    end
+  end
+
+  def widget_group_class(widget_group)
+    case widget_group.page_widgets.first.widget_type
+    when "WidgetEvent"
+      "event"
+    when "WidgetInformation"
+      "info"
+    end
+  end
+
+  def content_link_href(content_link)
+    if content_link.is_internal
+      if content_link.url == "rsvps"
+        custom_new_rsvp_path
+      else
+        custom_page_path(page)
+      end
+    else
+      content_link.url
+    end
   end
 end

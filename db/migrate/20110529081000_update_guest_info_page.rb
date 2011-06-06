@@ -87,7 +87,7 @@ TEXT
 
     WidgetContent.create(:widget => w3, :content => rsvp, :verticle_order => 3)
 
-    wg = WidgetGroup.create(:title => "Guest &amp; Travel Information")
+    wg = WidgetGroup.create(:title => "Guest &amp; Travel Information", :type_id => WidgetGroup::TYPE_TABBED)
     WidgetGroupWidget.create(:widget_group_id => wg.id, :widget => w1)
     WidgetGroupWidget.create(:widget_group_id => wg.id, :widget => w2)
     WidgetGroupWidget.create(:widget_group_id => wg.id, :widget => w3)

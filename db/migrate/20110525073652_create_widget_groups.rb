@@ -3,8 +3,7 @@ class CreateWidgetGroups < ActiveRecord::Migration
     create_table :widget_groups do |t|
       t.string :title
       t.string :description
-
-      t.timestamps
+      t.integer :type_id
     end
 
     create_table :widget_group_widgets do |t|

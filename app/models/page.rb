@@ -18,4 +18,8 @@ class Page < ActiveRecord::Base
   def ungrouped_widgets
     PageWidget.where(["page_id = ? and widget_group_id is null", id]).order("verticle_order ASC")
   end
+
+  def id_name
+    title.gsub("&", "and").gsub(" ", "_").downcase
+  end
 end

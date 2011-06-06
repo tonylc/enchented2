@@ -45,7 +45,7 @@
 
 	<%= raw(@wedding.ga_tag) unless@wedding.ga_tag.blank? %>
 </head>
-<body class="<%= page_class_name %>">
+<body id="<%= page_id_name %>">
 	<header>
 		<h1><%= raw(@wedding.name_html) %></h1>
 		<time datetime="<%= @wedding.date.strftime('%Y-%m-%d') %>"><%= nice_date(@wedding.date) %></time>
@@ -62,9 +62,9 @@
 		</ul>
 	</nav>
 
-  <div>
+  <section id="page">
     <%= yield :layout %>
-  </div>
+  </section>
 
   <script type="text/javascript" src="/javascripts/jquery/jquery-1.6.min.js"></script> 
   <script type="text/javascript" src="/javascripts/jquery/plugins/jquery-ui-1.8.13.min.js"></script> 

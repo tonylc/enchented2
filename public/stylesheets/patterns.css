@@ -1,0 +1,136 @@
+/* LOVE FOR DESIGN
+/* Patterns Stylesheet
+----------------------------------------------------------------------------- */
+
+
+/* Calls to Action
+----------------------------------------------------------------------------- */
+
+
+    menu {
+
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        padding: 0 0 30px 0;
+
+    }
+
+    menu li {
+
+        margin: 0;
+        padding: 0;
+
+    }
+
+    menu li a, menu li input {
+
+        display: block;
+        width: 99%;
+        margin: 0 0 1px 0;
+        border: 0;
+        border-radius: 10px;
+        padding-top: 5px;
+        background-color: #da8b91;
+        color: #fff;
+		font-family: "Bodoni Egyptian", serif;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+        text-decoration: none;
+
+        -webkit-box-shadow: 3px 3px 1px #b86c71;
+        -moz-box-shadow: 3px 3px 1px #b86c71;
+
+    }
+
+    menu li input:hover {
+
+        cursor: pointer;
+
+    }
+
+    menu a:hover {
+
+        color: #fff;
+
+    }
+
+
+/* Freeform Content
+----------------------------------------------------------------------------- */
+
+
+    .text {
+
+        color: #625a52;
+
+    }
+
+    .text a {
+
+        color: #da8b91;
+
+    }
+
+    .text h3 {
+
+        margin: 20px 0;
+        font-size: 24px;
+        line-height: 30px;
+
+    }
+
+    .text h4 {
+
+        margin: 20px 0;
+        font-size: 18px;
+        line-height: 20px;
+
+    }
+
+    .text hr {
+
+        display: block;
+        width: 90%;
+        height: 7px;
+        margin: 20px auto;
+        border: 0;
+        padding: 0;
+        background: url(../images/skin/thread.png) repeat-x bottom left;
+        color: transparent;
+
+    }
+
+    .text figure {
+
+        float: left;
+        margin: 0 20px 20px 20px;
+
+    }
+
+    .text img {
+
+        border: 5px solid #625a52;
+        border-radius: 5px;
+        box-shadow: #625a52 0 0 5px;
+
+    }
+
+    .text p {
+
+        width: 90%;
+        clear: left;
+        margin: 20px auto;
+        padding: 0;
+        font-size: 14px;
+        line-height: 20px;
+		letter-spacing: 0.1em;
+
+    }
+
+    .text p strong {
+
+        letter-spacing: 0;
+
+    }

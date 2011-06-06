@@ -1,5 +1,59 @@
 /* LOVE FOR DESIGN
-/* Navigation Stylesheet
+/* Global Elements
+----------------------------------------------------------------------------- */
+
+
+    header {
+
+        display: block;
+        width: 500px;
+        margin: 50px auto 30px auto;
+        text-align: center;
+
+    }
+
+    header > * {
+
+        margin: 0 auto;
+
+    }
+
+    header h1, header h1 a {
+
+        margin-bottom: 5px;
+        color: #625a52;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 40px;
+        text-decoration: none;
+
+    }
+
+    header h1 em {
+
+        color: #fdd5d5;
+        font-style: normal;
+
+    }
+
+    header time, header time + em {
+
+        color: #fff;
+        font-style: normal;
+        font-size: 15px;
+        line-height: 15px;
+        text-transform: lowercase;
+
+    }
+
+    header time:after {
+
+        content: " \2014"
+
+    }
+
+
+/* Navigation
 ----------------------------------------------------------------------------- */
 
 
@@ -9,41 +63,41 @@
         position: fixed;
         top: 145px;
         right: 0;
-    
+
     }
-    
+
     nav ul, li {
-    
+
         margin: 0;
         padding: 0;
         list-style-type: none;
-    
+
     }
-    
+
     nav li {
-    
+
         margin-bottom: 10px;
         padding-left: 5px;
         background: url(../images/skin/navigation.png) no-repeat 0 0;
-    
+
     }
-    
-    nav li.selected {
-    
-        background-image: url(../images/skin/navigation-selected.png);
-    
+
+    nav li.current {
+
+        background-image: url(../images/skin/navigation-current.png);
+
     }
-    
+
     nav li + li {
-    
+
         background-position: 0 -30px;
-    
+
     }
 
     nav li + li + li {
-    
+
         background-position: 0 -60px;
-    
+
     }
 
 
@@ -61,18 +115,18 @@
         text-transform: lowercase;
         font-size: 14px;
         line-height: 28px;
-    
+
     }
 
     nav a:hover {
-    
+
         color: #da8b91;
-    
+
     }
 
     nav li.selected a {
-    
+
         background-color: #fff;
         color: #da8b91;
-    
+
     }

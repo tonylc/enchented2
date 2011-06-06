@@ -3,44 +3,49 @@
 ----------------------------------------------------------------------------- */
 
 
-    @import url('typography.css');
-    @import url('color.css');
     @import url('layout.css');
-    @import url('forms.css');
-    @import url('navigation.css');
+    @import url('global.css');
+    @import url('group.css');
+    @import url('patterns.css');
     @import url('widgets.css');
 
     @font-face {
-    
+
         font-family: 'Bodoni Egyptian';
         src: url('../fonts/eot/style_196043.eot');
         src: url('../fonts/eot/style_196043.eot?#iefix') format('embedded-opentype'),url('../fonts/woff/style_196043.woff') format('woff'),url('../fonts/ttf/style_196043.ttf') format('truetype'),url('../fonts/svg/style_196043.svg#BodoniEgyptianPro-Regular') format('svg');
-    
+
     }
-    
+
     @font-face {
-     
+
         font-family: 'Bodoni Egyptian';
         font-weight: bold;
         src: url('../fonts/eot/style_196039.eot');
         src: url('../fonts/eot/style_196039.eot?#iefix') format('embedded-opentype'),url('../fonts/woff/style_196039.woff') format('woff'),url('../fonts/ttf/style_196039.ttf') format('truetype'),url('../fonts/svg/style_196039.svg#BodoniEgyptianPro-Bold') format('svg');
-        
+
     }
 
 
 /* Reset
 ----------------------------------------------------------------------------- */
 
-    
-    nav h1 {
-    
-        display: none;
-        
+
+    body {
+
+        font-family: "Bodoni Egyptian", serif;
+
     }
-    
+
+    nav h1 {
+
+        display: none;
+
+    }
+
     dl, dt, dd {
-    
+
         margin: 0;
         padding: 0;
-    
+
     }

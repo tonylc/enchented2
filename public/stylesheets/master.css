@@ -5,7 +5,7 @@
 
     @import url('layout.css');
     @import url('global.css');
-    @import url('group.css');
+    @import url('groups.css');
     @import url('patterns.css');
     @import url('widgets.css');
 
@@ -43,7 +43,7 @@
 
     }
 
-    dl, dt, dd {
+    form, h3, h4 {
 
         margin: 0;
         padding: 0;

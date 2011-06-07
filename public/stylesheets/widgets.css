@@ -3,7 +3,7 @@
 ----------------------------------------------------------------------------- */
 
 
-    section#page > div > * > h1 {
+    section#page > div > * > h1, section#page > div > form > * > h1 {
 
         margin: 20px 0;
         color: #da8b91;
@@ -13,18 +13,37 @@
 
     }
 
-
-/* Text Widget
------------------------------------------------------------------------------ */
-
-
-    section#page > div > .text {
+    section#page > div > * {
 
         width: 460px;
         margin: 20px;
-        padding: 20px 0;
+        padding: 5px 0;
         background: url(../images/skin/thread.png), url(../images/skin/thread.png), url(../images/skin/widget.png);
         background-repeat: repeat-x, repeat-x, repeat;
-        background-position: center 10px, bottom center, top left;
+        background-position: top center, bottom center, top left;
+        color: #625a52;
+
+    }
+
+
+/* Events Widget
+----------------------------------------------------------------------------- */
+
+
+    section.events .event h4.location {
+
+        display: none;
+
+    }
+
+
+/* RSVP Widget
+----------------------------------------------------------------------------- */
+
+
+    .rsvp section, .rsvp section h1 {
+
+        clear: left;
+        display: none;
 
     }

@@ -12,7 +12,13 @@
 
     }
 
-    div.tabbed > ul {
+    section.tabbed > h1 {
+
+        text-align: center;
+
+    }
+
+    section.tabbed > ul {
 
         display: block;
         width: 100%;
@@ -23,7 +29,7 @@
 
     }
 
-    div.tabbed > ul li {
+    section.tabbed > ul li {
 
         display: block;
         float: left;
@@ -33,7 +39,16 @@
 
     }
 
-    div.tabbed > ul a {
+    section.tabbed > div {
+
+        clear: left;
+        float: left;
+        width: 100%;
+        text-align: left;
+
+    }
+
+    section.tabbed > ul a {
 
         display: block;
         outline: none;
@@ -53,14 +68,14 @@
 
     }
 
-    div.tabbed > ul li.ui-tabs-selected a {
+    section.tabbed > ul li.ui-tabs-selected a {
 
        background-color: #625a52;
        color: #c7af82;
 
     }
 
-    div.tabbed > div h4, div.tabbed > div h4 a {
+    section.tabbed > div h4, section.tabbed > div h4 a {
 
         color: #625a52;
         margin: 0;
@@ -68,15 +83,5 @@
         font-size: 20px;
         line-height: 30px;
         text-decoration: none;
-
-    }
-
-    div.tabbed > div {
-
-        clear: left;
-        float: left;
-        width: 100%;
-        padding-top: 20px;
-        text-align: left;
 
     }

@@ -12,27 +12,22 @@
 
     }
 
-    header {
-
-        display: block;
-        width: 500px;
-        margin: 50px auto 30px auto;
-        text-align: center;
-
-    }
-
 
 /* Page */
 
 
-    body > div {
+    section#page {
 
         width: 500px;
         margin: 0 auto;
+        padding: 5px;
+        background: url(../images/skin/border-top.png), url(../images/skin/border-bottom.png), url(../images/skin/border-left.png), url(../images/skin/border-right.png);
+        background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+        background-position: top left, bottom left, top left, top right;
 
     }
 
-    body > div:after {
+    section#page:after, section#page > div > *:after {
 
         content: ".";
         display: block;
@@ -42,103 +37,10 @@
 
     }
 
-    body > div > h2 {
+    section#page > div {
 
-        display: block;
-        width: 100%;
-        margin: 0 0 30px 0;
-        border-top: 3px solid #fdd5d5;
-        border-bottom: 3px solid #fdd5d5;
-        padding: 5px 4px 0 4px;
-        color: #f8f8f8;
-        font-weight: normal;
-        font-size: 30px;
-        line-height: 58px;
-        text-align: center;
-
-    }
-
-    body.welcome > div > h2, body.invitation > div > h2 {
-
-        display: none;
-
-    }
-
-
-/* Tabbed Panels */
-
-
-    .ui-tabs-hide {
-
-        display: none;
-
-    }
-
-    div.tabbed > ul {
-
-        display: block;
         width: 100%;
         float: left;
-        margin: 0;
-        border-bottom: 2px solid #625a52;
-        padding: 0;
-
-    }
-
-    div.tabbed > ul li {
-
-        display: block;
-        float: left;
-        margin: 0 10px 0 0;
-        padding: 0;
-    	cursor: pointer;
-
-    }
-
-    div.tabbed > ul a {
-
-        display: block;
-        outline: none;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        padding: 2px 7px 0 7px;
-        background-color: #c8c8c4;
-        color: #fff;
-        font-size: 12px;
-        font-weight: bold;
-        line-height: 20px;
-        text-decoration: none;
-    	cursor: pointer;
-
-        -moz-user-select: none;
-        -webkit-user-select: none;
-
-    }
-
-    div.tabbed > ul li.ui-tabs-selected a {
-
-       background-color: #625a52;
-       color: #c7af82;
-
-    }
-
-    div.tabbed > div h4, div.tabbed > div h4 a {
-
-        color: #625a52;
-        margin: 0;
-        padding: 0;
-        font-size: 20px;
-        line-height: 30px;
-        text-decoration: none;
-
-    }
-
-    div.tabbed > div {
-
-        clear: left;
-        float: left;
-        width: 100%;
-        padding-top: 20px;
-        text-align: left;
+        background: url(../images/skin/background-page.png) repeat, top left;
 
     }

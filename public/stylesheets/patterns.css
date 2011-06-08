@@ -1,0 +1,478 @@
+/* LOVE FOR DESIGN
+/* Patterns Stylesheet
+----------------------------------------------------------------------------- */
+
+
+    .events p, .form p, .freeform p {
+
+        width: 90%;
+        clear: left;
+        margin: 20px auto;
+        padding: 0;
+        font-size: 14px;
+        line-height: 20px;
+		letter-spacing: 0.1em;
+
+    }
+
+
+/* Calls to Action
+----------------------------------------------------------------------------- */
+
+
+    menu {
+
+        display: block;
+        float: left;
+        clear: left;
+        width: 90%;
+        margin: 0 5% 20px 5%;
+        padding: 0;
+
+    }
+
+    menu li {
+
+        margin: 0 0 20px 0;
+        padding: 0;
+        list-style-type: none;
+
+    }
+
+    menu li a, menu li input {
+
+        display: block;
+        width: 99%;
+        margin: 0 0 1px 0;
+        border: 0;
+        border-radius: 10px;
+        padding-top: 5px;
+        box-shadow: 0px 0px 5px #a4a4a4;
+        background-color: #da8b91;
+        color: #fff;
+        text-shadow: 1px 1px 1px #8a4a4e;
+        font-weight: bold;
+        font-family: 'Bodoni Egyptian';
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+        text-decoration: none;
+
+    }
+
+    menu li input:hover {
+
+        cursor: pointer;
+
+    }
+
+    menu a:hover {
+
+        color: #fff;
+
+    }
+
+
+/* Events
+----------------------------------------------------------------------------- */
+
+
+    .event {
+
+        margin-top: 20px;
+
+    }
+
+    .event h3, .event time {
+
+        margin: 0;
+        padding: 0;
+        font-size: 24px;
+        line-height: 30px;
+
+    }
+
+    .event p {
+
+        width: 100%;
+
+    }
+
+    .event time {
+
+        display: block;
+        margin: 5px 0 20px 0;
+        padding: 0 0 0 22px;
+        background: url(../images/skin/date.png) no-repeat 0 0 ;
+        color: #da8b91;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 20px;
+
+    }
+
+    .event time a {
+
+        color: #da8b91;
+        text-decoration: none;
+
+    }
+
+
+/* Forms
+----------------------------------------------------------------------------- */
+
+
+    form, .form menu {
+
+        display: block;
+        float: left;
+        width: 100%;
+
+    }
+
+    .form p {
+
+        margin: 0 0 20px 0;
+
+    }
+
+
+/* Controls */
+
+
+    input, select, textarea {
+
+        float: left;
+        margin: 0 5px 0 0;
+
+    }
+
+    input[type=email], input[type=text], input[type=url], select {
+
+        clear: left;
+        margin-bottom: 20px;
+
+    }
+
+    input[type=radio] {
+
+        margin-top: 3px;
+
+    }
+
+    textarea {
+
+        clear: left;
+        resize: none;
+        margin: 5px 0 20px 0;
+        border: 0;
+        outline: none;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: #a4a4a4 0 0 5px;
+
+    }
+
+    textarea:focus {
+
+        box-shadow: #646464 0 0 5px;
+
+    }
+
+
+/* Groups */
+
+
+    fieldset {
+
+        clear: left;
+        float: left;
+        margin: 0 0 20px 0;
+        border: 1px dashed #aaa;
+        border-radius: 3px;
+        padding: 10px;
+
+    }
+
+
+/* Labels */
+
+
+    label, legend {
+
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 20px;
+        white-space: normal;
+        cursor: pointer;
+
+        -moz-user-select: none;
+        -webkit-user-select: none;
+
+    }
+
+    label {
+
+        clear: left;
+        float: left;
+        margin: 0 10px 5px 0;
+
+    }
+
+    label.optional {
+
+        color: #aca8a3;
+
+    }
+
+    label.optional.focused {
+
+        color: #625a52;
+
+    }
+
+    fieldset label {
+
+        clear: none;
+        margin: 0 10px 0 0;
+        color: #625a52;
+        font-weight: normal;
+
+    }
+
+    .form small {
+
+        display: block;
+        float: left;
+        color: #aca8a3;
+        font-size: 12px;
+        line-height: 20px;
+
+    }
+
+    .form label small {
+
+        display: inline;
+        padding-left: 5px;
+        font-weight: normal;
+        float: none;
+
+    }
+
+
+/* Validation */
+
+
+    label.error, legend.error {
+
+        float: left;
+        color: #da8b91;
+
+    }
+
+    .form aside.error, .form strong.error {
+
+        margin: 0 0 20px 0;
+        border-radius: 5px;
+        padding: 10px;
+        color: #fdd5d5;
+        background-color: #625a52;
+        font-size: 12px;
+
+    }
+
+    .form aside.error h3 {
+
+        margin: 0 0 5px 0;
+        font-size: 20px;
+
+    }
+
+    .form aside.error p {
+
+        margin: 0;
+        color: #d8d8d8;
+        font-size: 12px;
+
+    }
+
+    .form strong.error {
+
+        float: left;
+        margin: 0;
+        padding: 0 5px;
+        line-height: 20px;
+
+    }
+
+
+/* Freeform Content
+----------------------------------------------------------------------------- */
+
+
+    .freeform {
+
+        color: #625a52;
+
+    }
+
+    .freeform a {
+
+        color: #da8b91;
+
+    }
+
+    .freeform h3 {
+
+        margin: 20px 0;
+        font-size: 24px;
+        line-height: 24px;
+
+    }
+
+    .freeform h4 {
+
+        margin: 20px 0;
+        font-size: 18px;
+        line-height: 20px;
+
+    }
+
+    .freeform hr {
+
+        display: block;
+        width: 90%;
+        height: 7px;
+        margin: 20px auto;
+        border: 0;
+        padding: 0;
+        background: url(../images/skin/thread.png) repeat-x bottom left;
+        color: transparent;
+
+    }
+
+    .freeform figure {
+
+        float: left;
+        margin: 0 20px 20px 20px;
+
+    }
+
+    .freeform img {
+
+        border: 5px solid #625a52;
+        border-radius: 5px;
+        box-shadow: #625a52 0 0 5px;
+
+    }
+
+    .freeform p {
+
+        width: 100%;
+
+    }
+
+    .freeform p strong {
+
+        letter-spacing: 0;
+
+    }
+
+    .freeform ul, .freeform ol {
+
+        margin: 20px 0;
+
+    }
+
+
+/* Places
+----------------------------------------------------------------------------- */
+
+
+    .places {
+
+        display: block;
+        margin: 0 0 20px 0;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        padding: 10px 0 0 0;
+        background: #625a52;
+        box-shadow: #625a52 0 0 5px;
+        color: #fff;
+        font-size: 14px;
+        line-height: 20px;
+
+    }
+
+    .places, .places li {
+
+        display: block;
+        list-style-type: none;
+
+    }
+
+    .places li {
+
+        margin: 0;
+        padding: 0 10px 10px 10px;
+        color: #fff;
+
+    }
+
+    .places li .adr {
+
+        border-bottom: 1px dashed #95856a;
+        padding-bottom: 10px;
+
+    }
+
+    .places li:last-child .adr, .places li:only-child .adr {
+
+        border-bottom: 0;
+        padding-bottom: 0;
+
+    }
+
+    .places .adr h3 {
+
+        color: #c7af82;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: bold;
+
+    }
+
+    .places li .adr h3 em {
+
+        color: #da8b91;
+
+    }
+
+    .places .adr a {
+
+        color: #da8b91;
+        font-size: 12px;
+        font-weight: bold;
+        text-decoration: none;
+
+    }
+
+    .places .geo {
+
+        display: none;
+
+    }
+
+    .map {
+
+        display: block;
+        width: 100%;
+        height: 300px;
+        background-color: #c7af82;
+        box-shadow: #625a52 0 0 5px;
+
+    }

@@ -1,10 +1,10 @@
 /* LOVE FOR DESIGN
-/* Layout
+/* Widget Groups
 ----------------------------------------------------------------------------- */
 
 
     $(window).load(function() {
 
-        $('div.tabbed').tabs();
+        $('section.tabbed').tabs();
 
     });

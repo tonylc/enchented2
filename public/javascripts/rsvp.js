@@ -1,47 +1,36 @@
 /* LOVE FOR DESIGN
-/* RSVP
+/* RSVP Widget
 ----------------------------------------------------------------------------- */
-/* Page Load */
+
+
     $(window).load(function() {
 
-        function toggleGroups() {
+        function toggleOptional(event) {
 
-            $(this).parent().parent().find('input').each(function() {
-
-                var group = '#' + $(this).attr('id') + '-' + $(this).val();
-
-                if ($(this).hasClass('toggle') && $(this).is(':checked')) {
-                    $(group).slideDown('slow');
-                } else {
-                    $(group).slideUp();
-                }
-
-            });
+            if ($(this).val().length > 0 || event.type == 'focus') {
+                $(this).prev().addClass('focused');
+            } else {
+                $(this).prev().removeClass('focused');
+            }
 
         }
 
-        $('fieldset input').each(toggleGroups);
-        $('fieldset input').change(toggleGroups);
+        $('label.optional').next().focus(toggleOptional);
+        $('label.optional').next().blur(toggleOptional);
+
+        // RSVP details toggling
+
+        function toggleDetails() {
+
+            if ($(this).parent().children('input:checked').val() == 'true') {
+                $(this).parent().siblings('section').slideDown('slow');
+            } else {
+                $(this).parent().siblings('section').slideUp();
+            }
+
+        }
+
+        $('fieldset.rsvp input').each(toggleDetails);
+        $('fieldset.rsvp input').change(toggleDetails);
 
     });
-
-ct = {
-	placeholder: function() {
-		if (!("placeholder" in document.createElement("input"))) { // no placeholder support
-			$("[placeholder]").focus(function() {
-				var el = $(this), prompt = el.attr("placeholder");
-				if (el.val() == prompt) {
-					el.val("").removeClass("placeholder-empty");
-					if (this.createTextRange) { // make cursor visible in IE
-						this.createTextRange().select();
-					}
-				}
-			}).blur(function() {
-				var el = $(this), prompt = el.attr("placeholder");
-				if (!el.val().replace(/\s/g, "") || el.val().replace(/^\s+|\s+$/, "") == prompt) {
-					el.addClass("placeholder-empty").val(prompt);
-				}
-			}).blur();
-		}
-	}
-}

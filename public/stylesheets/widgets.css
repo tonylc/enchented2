@@ -3,33 +3,9 @@
 ----------------------------------------------------------------------------- */
 
 
-    .widget {
+    section#page > div > * > h1, section#page > div > form > * > h1 {
 
-        display: block;
-        width: 100%;
-        float: left;
-        margin: 0 0 40px 0;
-        padding: 4px;
-        background: url(../images/skin/border-top.png), url(../images/skin/border-bottom.png), url(../images/skin/border-left.png), url(../images/skin/border-right.png);
-        background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
-        background-position: top left, bottom left, top left, top right;
-        list-style-type: none;
-
-    }
-
-    .widget > div {
-
-        width: 90%;
-        float: left;
-        padding: 20px 5%;
-        background: url(../images/skin/widget.png) repeat, top left;
-
-    }
-
-    .widget > div > h2 {
-
-        margin: 0 0 10px 0;
-        padding: 0;
+        margin: 20px 0;
         color: #da8b91;
         font-weight: normal;
         font-size: 30px;
@@ -37,193 +13,37 @@
 
     }
 
-    .widget > div > h2:first-child {
+    section#page > div > * {
 
-        padding-top: 20px;
-        background: url(../images/skin/thread.png) repeat-x;
-
-    }
-
-    .widget > div > h3 {
-
-        margin: 0 0 20px 0;
-        padding: 0;
+        width: 460px;
+        margin: 20px;
+        padding: 5px 0;
+        background: url(../images/skin/thread.png), url(../images/skin/thread.png), url(../images/skin/widget.png);
+        background-repeat: repeat-x, repeat-x, repeat;
+        background-position: top center, bottom center, top left;
         color: #625a52;
-        font-size: 20px;
-        line-height: 30px;
-
-    }
-
-    .widget time {
-
-        display: block;
-        margin-bottom: 20px;
-        padding-left: 22px;
-        background: url(../images/skin/date.png) no-repeat top left;
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 20px;
-
-    }
-
-    .widget time, .widget time a {
-
-        color: #da8b91;
-        text-decoration: none;
-	    cursor: default;
-
-    }
-
-    .widget > div > h3 + time {
-
-        margin-bottom: 20px;
-        clear: left;
-        float: left;
-
-    }
-
-    .widget > div > hr {
-
-        display: block;
-        width: 100%;
-        height: 7px;
-        float: left;
-        margin: 0 0 25px 0;
-        border: 0;
-        padding: 0;
-        background: url(../images/skin/thread.png) repeat-x bottom left;
-        color: transparent;
-
-    }
-
-    div.map {
-
-        display: block;
-        width: 100%;
-        height: 300px;
-        margin-bottom: 20px;
-        background: #888;
-
-        -webkit-box-shadow: 1px 1px 5px #888;
-        -moz-box-shadow: 1px 1px 5px #888;
 
     }
 
 
-/* Events */
+/* Events Widget
+----------------------------------------------------------------------------- */
 
 
-    .widget.events .geo span {
+    section.events .event h4.location {
 
         display: none;
 
     }
 
-    .widget.events p.location {
 
-        display: block;
-        margin: -20px 0 20px 0;
-        padding: 10px;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-        background: #c8c8c4;
-        color: #625a52;
-        font-size: 14px;
-        line-height: 20px;
-
-    }
-
-    .widget.events p.location strong {
-
-        color: #fff;
-        font-size: 18px;
-        line-height: 28px;
-        font-weight: bold;
-
-    }
-
-    .widget.events p.location a {
-
-        font-size: 12px;
-        font-weight: bold;
-        text-decoration: none;
-
-    }
+/* RSVP Widget
+----------------------------------------------------------------------------- */
 
 
-/* Gallery */
+    .rsvp section, .rsvp section h1 {
 
-
-    .widget.gallery {
-
-        background: none;
-        width: 100%;
-        height: 400px;
-        margin: 0 0 20px -5px;
-        border: 10px solid #625a52;
-        padding: 0;
-        overflow: hidden;
-
-        -webkit-box-shadow: 1px 1px 10px #625a52;
-        -moz-box-shadow: 1px 1px 10px #625a52;
-
-    }
-
-    .widget.gallery ul {
-
-        float: left;
-        width: 100%;
-        position: relative;
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-
-    }
-
-    .widget.gallery ul > li {
-
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 0;
-        list-style-type: none;
-
-    }
-
-    .widget.gallery img {
-
-        width: auto;
-        height: 400px;
-
-    }
-
-
-/* RSVP */
-
-
-    .widget.rsvp h3 {
-
-        margin-bottom: 5px;
-
-    }
-
-
-/* Text */
-
-
-    section.text div > p:first-child {
-
-        display: block;
-        padding-top: 20px;
-        background: url(../images/skin/thread.png) repeat-x;
-
-    }
-
-    section.text div > p:last-child {
-
-        display: block;
-        margin-bottom: 0;
-        padding-bottom: 20px;
-        background: url(../images/skin/thread.png) repeat-x bottom left;
+        clear: left;
+        display: none;
 
     }

@@ -5,9 +5,15 @@
 
     $(window).load(function() {
 
+        $('ol.places').each(function() {
+
+            $('<div id="map-' + Date.parse(new Date()) + '" class="map"></div>').insertBefore($(this));
+
+        });
+
         function mapPlaces() {
 
-            if ($(this).prev().hasClass('map')) {
+            if ($(this).prev().hasClass('mapped')) {
                 return false;
             }
 
@@ -23,8 +29,7 @@
             });
 
             var start = new google.maps.LatLng(places[0][0], places[0][1]);
-            var random = Date.parse(new Date());
-            var $map = $('<div id="map-' + random + '" class="map"></div>').insertBefore($(this));
+            var $map = $(this).prev('div.map');
             var map = new google.maps.Map($map[0], {
 
                 center: start,
@@ -65,8 +70,16 @@
 
             }
 
+            $map.addClass('mapped');
+
         }
 
+        $('section.accordion div.ui-accordion-content-active ol.places').each(mapPlaces);
+        $('section.accordion').bind('accordionchange', function(event, ui) {
+
+            $(ui.newContent).children('ol.places').each(mapPlaces);
+
+        });
         $('section.tabbed div:not(.ui-tabs-hide) ol.places').each(mapPlaces);
         $('section.tabbed').bind('tabsshow', function(event, ui) {
 

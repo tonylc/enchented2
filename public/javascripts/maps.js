@@ -74,7 +74,11 @@
 
         }
 
-        $('section.accordion div.ui-accordion-content-active ol.places').each(mapPlaces);
+        $('section.accordion').bind('accordioncreate', function(event, ui) {
+
+            $(this).find('div.ui-accordion-content-active ol.places').each(mapPlaces);
+
+        });
         $('section.accordion').bind('accordionchange', function(event, ui) {
 
             $(ui.newContent).children('ol.places').each(mapPlaces);

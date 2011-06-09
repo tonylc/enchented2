@@ -7,7 +7,7 @@
 
         width: 90%;
         clear: left;
-        margin: 20px auto;
+        margin: 0 auto 20px auto;
         padding: 0;
         font-size: 14px;
         line-height: 20px;
@@ -487,11 +487,5 @@
         float: left;
         background-color: #c7af82;
         box-shadow: #625a52 0 0 5px;
-
-    }
-
-    section.accordion .map {
-
-        margin-top: -20px;
 
     }

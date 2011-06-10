@@ -70,7 +70,7 @@
 
             }
 
-            $map.addClass('mapped');
+            $map.addClass('mapped').css('visibility','visible');
 
         }
 

@@ -7,7 +7,7 @@
 
         width: 90%;
         clear: left;
-        margin: 20px auto;
+        margin: 0 auto 20px auto;
         padding: 0;
         font-size: 14px;
         line-height: 20px;
@@ -26,16 +26,22 @@
         float: left;
         clear: left;
         width: 90%;
-        margin: 0 5% 20px 5%;
+        margin: 0 5%;
         padding: 0;
 
     }
 
     menu li {
 
-        margin: 0 0 20px 0;
+        margin: 0;
         padding: 0;
         list-style-type: none;
+
+    }
+
+    menu li + li {
+
+        margin-top: 20px;
 
     }
 
@@ -373,6 +379,7 @@
     .freeform p {
 
         width: 100%;
+        float: left;
 
     }
 
@@ -396,6 +403,7 @@
     .places {
 
         display: block;
+        width: 100%;
         margin: 0 0 20px 0;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
@@ -411,6 +419,7 @@
     .places, .places li {
 
         display: block;
+        float: left;
         list-style-type: none;
 
     }
@@ -425,6 +434,8 @@
 
     .places li .adr {
 
+        width: 100%;
+        float: left;
         border-bottom: 1px dashed #95856a;
         padding-bottom: 10px;
 
@@ -470,8 +481,11 @@
     .map {
 
         display: block;
+        visibility: hidden;
         width: 100%;
         height: 300px;
+        clear: left;
+        float: left;
         background-color: #c7af82;
         box-shadow: #625a52 0 0 5px;
 

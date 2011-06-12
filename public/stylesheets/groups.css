@@ -3,18 +3,76 @@
 ----------------------------------------------------------------------------- */
 
 
+    section.accordion > h1, section.tabbed > h1 {
+
+        text-align: center;
+
+    }
+
+
+/* Accordion Format */
+
+
+    section.accordion > h2 {
+
+        display: block;
+        width: 100%;
+        clear: left;
+        float: left;
+        margin: 0 0 10px 0;
+        border-radius: 5px;
+        outline: none;
+        background-color: #c7af82;
+        opacity: 0.5;
+        line-height: 40px;
+
+    }
+
+    section.accordion > h2.ui-state-active {
+
+        margin-bottom: 20px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        opacity: 1;
+        background-color: #da8b91;
+
+    }
+
+    section.accordion > h2 a {
+
+        display: block;
+        color: #f7f7f7;
+        text-align: center;
+        text-decoration: none;
+        text-shadow: #8a4a4e 1px 1px 1px;
+
+    }
+
+    section.accordion > h2.ui-state-active a {
+
+        color: #fff;
+        text-shadow: #625a52 1px 1px 1px;
+
+    }
+
+    section.accordion > h2 + * {
+
+        display: block;
+        width: 100%;
+        clear: left;
+        float: left;
+        margin-bottom: 20px;
+        background: none;
+
+    }
+
+
 /* Tabbed Format */
 
 
     .ui-tabs-hide {
 
         display: none;
-
-    }
-
-    section.tabbed > h1 {
-
-        text-align: center;
 
     }
 

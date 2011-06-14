@@ -82,6 +82,12 @@
 
     }
 
+    nav li.selected {
+
+        background: url(../images/skin/navigation-current.png) no-repeat 0 0;
+
+    }
+
     nav li.current {
 
         background-image: url(../images/skin/navigation-current.png);

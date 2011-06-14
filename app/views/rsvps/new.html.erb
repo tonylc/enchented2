@@ -8,7 +8,7 @@
                     <div class="event vevent"> 
  
                         <h3 class="summary"><%= @wedding.bride_first_name.titleize %> &amp; <%= @wedding.groom_first_name.titleize %>'s Wedding </h3> 
-                        <time class="dtstart" datetime="<%= @wedding.date.strftime('%Y-%m-%d') %>"><a href="#"><%= nice_date(@wedding.date) %></a></time> 
+                        <time class="dtstart" datetime="<%= @wedding.date.strftime('%Y-%m-%d') %>"><a href="#" style="cursor: default;"><%= nice_date(@wedding.date) %></a></time>
  
                     </div> 
 

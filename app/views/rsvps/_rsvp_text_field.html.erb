@@ -1,4 +1,7 @@
-<label>
-	<em><%= rsvp_question.question.html_safe %><% if rsvp_question.is_required? %><span class=required>*</span><% end %></em>
-	<input type="text" name="rsvp_questions[<%= rsvp_question.id %>]"/>
-</label><br>
+<label<%= raw(' class="optional"') unless rsvp_question.is_required? %> for="rsvp_questions_<%= rsvp_question.id %>">
+	<%= rsvp_question.question.html_safe %></label>
+	<input id=rsvp_questions_<%= rsvp_question.id %> type="text" name="rsvp_questions[<%= rsvp_question.id %>]"/>
+
+<% unless rsvp_question.is_required? %>
+<small>Optional</small>
+<% end %>

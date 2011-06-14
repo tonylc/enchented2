@@ -35,94 +35,34 @@
 				<input checked="checked" id="rsvp_can_attend_false" name="rsvp[can_attend]" type="radio" value="false" required /><label for="#">No</label> 
                             </fieldset> 
  
-                            <label<%= error_for(@rsvp, :name) %> for="#">Your Name</label> 
-			    <input id="rsvp_name" name="rsvp[name]" type="text" required /> <strong<% if @rsvp.errors.on(:name) %> class="error"<% end %>>Required</strong> 
+                            <label<%= error_for(@rsvp, :name) %> for="rsvp_name">Your Name</label> 
+			    <input id="rsvp_name" name="rsvp[name]" type="text" required /> <% if @rsvp.errors.on(:name) %><strong class="error">Required</strong><% end %>
 
-
-<%# I AM HERE!! %> 
                             <section> 
  
                                 <h1>Details</h1> 
 
-                               <fieldset> 
-                                    <legend>Food Preference:</legend> 
-                                    <input type="radio" name="#" value="1" required  /> <label for="#">BBQ</label> 
-                                    <input type="radio" name="#" value="2" required  /> <label for="#">Vegetarian</label> 
-                                </fieldset> 
- 
-                                <label class="optional" for="#">Have you booked accommodations for your stay? If so, please let us know where:</label> 
-                                <input type="text" name="#" /><small>Optional</small> 
- 
-                                <fieldset> 
-                                    <legend>Transportation is provided to/from the wedding at the Omni Austin Downtown Hotel. Please indicate if you'd like a ride:</legend> 
-                                    <input type="radio" name="#" value="3" required /> <label>Yes, I'd like a ride</label> 
-                                    <input type="radio" name="#" value="4" required /> <label>No, I will not need a ride</label> 
-                                </fieldset> 
- 
-                                <p>For more information, visit the Guest &amp; Travel tab.</p> 
- 
-                                <label class="optional" for="#">Additional Notes <small>Optional</small></label> 
-                                <textarea cols="40" id="#" name="#" placeholder="Please let us know if you have any special requests" rows="4"></textarea> 
- 
+
+				<% @wedding.rsvp_questions.each do |rsvp_question| %>
+				<%= render_rsvp_form_element(rsvp_question) %>
+				<% end %>
+
+<%# I AM HERE!! %> 
+
+                              <label class="optional" for="rsvp_additional_notes">Additional Notes <small>Optional</small></label> 
+			      <%= f.text_area :additional_notes, :placeholder => 'Please let us know if you have any special requests', :cols => 40, :rows => 4 %>
+
                             </section> 
  
                         </div> 
-<% end %>
  
                     <menu class="actions"> 
                         <li><input type="submit" value="Submit" /></li> 
                     </menu> 
- 
+ <% end %>
                 </div> 
                 <!-- / RSVP WIDGET --> 
 
-
-
-
-
-
-
-
-<% form_for @rsvp do |f| %>
-	<section class="widget rsvp vevent">
-		<div>
-			<h2>RSVP</h2>
-			<h3 class="summary"><%= @wedding.bride_first_name.titleize %> &amp; <%= @wedding.groom_first_name.titleize %>'s Wedding</h3>
-			<time class="dtstart" title="<%= @wedding.date.strftime('%Y-%m-%d') %>"><a href="#"><%= nice_date(@wedding.date) %></a></time>
-
-			<% if flash[:error] %>
-			<div class="error">
-				<h3>Sorry, your RSVP wasn't accepted.</h3>
-				<p>Please double-check the following for any highlighted mistakes.</p>
-			</div>
-			<% end %>
-
-	    <%= f.hidden_field :wedding_id %>
-
-	    <p class=rsvp-text><%= @wedding.rsvp_message %></p>
-
-			<fieldset>
-				<legend><span class=required>*</span> Will you be able to attend?</legend>
-				<label><%= f.radio_button :can_attend, true, {:class => "toggle"} %><em>Yes</em></label>
-				<label><%= f.radio_button :can_attend, false %><em>No</em></label>
-			</fieldset>
-			<label<%= error_for(@rsvp, :name) %>><em><span class=required>*</span> Your Name:</em><span class="error<%= ' off' unless @rsvp.errors.on(:name) %>"><strong>Required</strong></span><%= f.text_field :name,  :size => nil %></label><br>
-
-			<div id="rsvp_can_attend_true-true" class="group toggle">
-				<% @wedding.rsvp_questions.each do |rsvp_question| %>
-				<%= render_rsvp_form_element(rsvp_question) %>
-				<% end %>
-				<fieldset>
-					<legend>Additional Notes</legend>
-					<%= f.text_area :additional_notes, :placeholder => 'Please let us know if you have any special requests', :cols => 40, :rows => 4 %>
-				</fieldset><br>
-			</div>
-			<menu>
-				<li><input type="submit" value="Submit"/></li>
-			</menu>
-		</div>
-	</section>
-<% end %>
 
 <% content_for :script do %>
 <script>

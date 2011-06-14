@@ -1,13 +1,13 @@
 <fieldset<%= error_for_selection(rsvp_question) %>>
     
-  <legend><% if rsvp_question.is_required? %><span class=required>*</span> <% end %><%= rsvp_question.question %></legend>
+  <legend><%= rsvp_question.question %></legend>
 
   <% rsvp_question.rsvp_options.each do |rsvp_option| %>
-  <label>
-   <input type="radio" name="rsvp_questions[<%= rsvp_question.id %>]" value="<%= rsvp_option.id %>" /><em><%= rsvp_option.option %></em>
-  </label>
+
+   <input type="radio" id="rsvp_questions_<%= rsvp_option.id %>" name="rsvp_questions[<%= rsvp_question.id %>]" value="<%= rsvp_option.id %>"<% if rsvp_question.is_required? %> required <% end %> />
+   <label for="rsvp_questions_<%= rsvp_option.id %>"><%= rsvp_option.option %></label>
+
   <% end %>
 
   <% if error_on_selection?(rsvp_question)  %><strong>Required</strong><% end %>
- 
 </fieldset>

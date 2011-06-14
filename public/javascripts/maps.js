@@ -84,7 +84,7 @@
             $(ui.newContent).children('ol.places').each(mapPlaces);
 
         });
-        $('section.tabbed div:not(.ui-tabs-hide) ol.places').each(mapPlaces);
+        $('section.tabbed > ul + div ol.places').each(mapPlaces);
         $('section.tabbed').bind('tabsshow', function(event, ui) {
 
             $('#' + ui.panel.id).children('ol.places').each(mapPlaces);

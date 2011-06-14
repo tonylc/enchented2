@@ -39,7 +39,7 @@ module PagesHelper
   def widget_group_class(widget_group)
     case widget_group.page_widgets.first.widget_type
     when "WidgetEvent"
-      "event"
+      "events"
     when "WidgetInformation"
       "info"
     end

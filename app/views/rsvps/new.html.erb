@@ -1,10 +1,87 @@
 <% add_to_js('rsvp') %>
 
-<% content_for :head do %>
-<style>
-	p { letter-spacing: 0; }
-</style>
+<!-- RSVP WIDGET --> 
+                <div class="rsvp"> 
+ 
+                    <h1>RSVP</h1> 
+ 
+                    <div class="event vevent"> 
+ 
+                        <h3 class="summary"><%= @wedding.bride_first_name.titleize %> &amp; <%= @wedding.groom_first_name.titleize %>'s Wedding </h3> 
+                        <time class="dtstart" datetime="<%= @wedding.date.strftime('%Y-%m-%d') %>"><a href="#"><%= nice_date(@wedding.date) %></a></time> 
+ 
+                    </div> 
+
+<% form_for @rsvp do |f| %> 
+                       <div class="form"> 
+ 
+	<% if flash[:error] %>
+                            <aside class="error"> 
+ 
+                                <h3>Sorry, your RSVP wasn't accepted</h3> 
+                                <p>Please double-check the following for any highlighted mistakes.</p> 
+ 
+                            </aside> 
+        <% end %>
+
+	    <%= f.hidden_field :wedding_id %>
+ 
+                            <p><%= @wedding.rsvp_message %></p> 
+ 
+                            <fieldset class="rsvp"> 
+                                <legend>Will you be able to attend?</legend> 
+
+				<input class="toggle" id="rsvp_can_attend_true" name="rsvp[can_attend]" type="radio" value="true" required /><label for="#">Yes</label> 
+				<input checked="checked" id="rsvp_can_attend_false" name="rsvp[can_attend]" type="radio" value="false" required /><label for="#">No</label> 
+                            </fieldset> 
+ 
+                            <label<%= error_for(@rsvp, :name) %> for="#">Your Name</label> 
+			    <input id="rsvp_name" name="rsvp[name]" type="text" required /> <strong<% if @rsvp.errors.on(:name) %> class="error"<% end %>>Required</strong> 
+
+
+<%# I AM HERE!! %> 
+                            <section> 
+ 
+                                <h1>Details</h1> 
+
+                               <fieldset> 
+                                    <legend>Food Preference:</legend> 
+                                    <input type="radio" name="#" value="1" required  /> <label for="#">BBQ</label> 
+                                    <input type="radio" name="#" value="2" required  /> <label for="#">Vegetarian</label> 
+                                </fieldset> 
+ 
+                                <label class="optional" for="#">Have you booked accommodations for your stay? If so, please let us know where:</label> 
+                                <input type="text" name="#" /><small>Optional</small> 
+ 
+                                <fieldset> 
+                                    <legend>Transportation is provided to/from the wedding at the Omni Austin Downtown Hotel. Please indicate if you'd like a ride:</legend> 
+                                    <input type="radio" name="#" value="3" required /> <label>Yes, I'd like a ride</label> 
+                                    <input type="radio" name="#" value="4" required /> <label>No, I will not need a ride</label> 
+                                </fieldset> 
+ 
+                                <p>For more information, visit the Guest &amp; Travel tab.</p> 
+ 
+                                <label class="optional" for="#">Additional Notes <small>Optional</small></label> 
+                                <textarea cols="40" id="#" name="#" placeholder="Please let us know if you have any special requests" rows="4"></textarea> 
+ 
+                            </section> 
+ 
+                        </div> 
 <% end %>
+ 
+                    <menu class="actions"> 
+                        <li><input type="submit" value="Submit" /></li> 
+                    </menu> 
+ 
+                </div> 
+                <!-- / RSVP WIDGET --> 
+
+
+
+
+
+
+
 
 <% form_for @rsvp do |f| %>
 	<section class="widget rsvp vevent">

@@ -124,7 +124,7 @@
 
     }
 
-    nav li.selected a {
+    nav li strong a {
 
         background-color: #fff;
         color: #da8b91;

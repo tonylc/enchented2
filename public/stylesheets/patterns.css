@@ -328,6 +328,12 @@
 
     .freeform a {
 
+        color: #625a52;
+
+    }
+
+    .freeform a:hover {
+
         color: #da8b91;
 
     }

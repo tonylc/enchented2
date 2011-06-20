@@ -1,15 +1,27 @@
+<!-- WIDGET GROUP --> 
 <section class="<%= widget_group_class(widget_group) %><%= widget_group_type_class(widget_group) %>" style="text-align: center">
+
+<% if widget_group.type_id == WidgetGroup::TYPE_ACCORDION %>
+<div>
+<% end %>
 
  <h1><%= raw(widget_group.title) %></h1>
   
+<% if widget_group.type_id == WidgetGroup::TYPE_TABBED %>
  <ul> 
    <% widget_group.page_widgets.each do |page_widget| %>
    <li><a href="#<%= widget_dom_id(page_widget.widget) %>"><%= raw(tab_name(page_widget.widget)) %></a></li> 
    <% end %>
  </ul> 
+<% end %>
 
- <% widget_group.page_widgets.each do |page_widget| %>
- <%= render_page_widget(page_widget) %> 
+<% widget_group.page_widgets.each do |page_widget| %>
+<%= render_page_widget(page_widget, widget_group.type_id) %> 
  <% end %>
 
+<% if widget_group.type_id == WidgetGroup::TYPE_ACCORDION %>
+</div>
+<% end %>
+
 </section>
+<!-- / WIDGET GROUP -->

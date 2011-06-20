@@ -1,6 +1,6 @@
 module PagesHelper
-  def render_page_widget(page_widget)
-    render :partial => page_widget.widget.class.to_s.underscore, :object => page_widget.widget
+  def render_page_widget(page_widget, group_type = nil)
+    render :partial => page_widget.widget.class.to_s.underscore, :object => page_widget.widget, :locals => {:group_type => group_type}
   end
 
   def render_page_widget_group(page_widget)
@@ -13,8 +13,8 @@ module PagesHelper
     render :partial => 'widget_group', :object => page_widget.widget_group
   end
 
-  def render_content(content)
-    render :partial => content.class.to_s.underscore, :object => content
+  def render_content(content, index = nil)
+    render :partial => content.class.to_s.underscore, :object => content, :locals => {:index => index}
   end
 
   def widget_dom_id(widget)
@@ -55,5 +55,11 @@ module PagesHelper
     else
       content_link.url
     end
+  end
+
+  def location_index(index)
+    @@index_mapping ||= %w{A B C D E F G H I J K L M N O P Q R S T U V W X Y Z}
+    
+    raw("<em>#{@@index_mapping[index]}.</em>") unless index.nil?
   end
 end

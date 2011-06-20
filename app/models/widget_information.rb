@@ -3,9 +3,10 @@ class WidgetInformation < ActiveRecord::Base
   :class_name => "ContentText"
   
   has_many :widget_contents, :as => :widget
-
+  
   def widget_content_count(type)
-    widget_contents_by_type(type).count
+    @widget_content_count ||= {}
+    @widget_content_count[type] ||= widget_contents_by_type(type).count    
   end
 
   def widget_contents_by_type(type)

@@ -4,7 +4,7 @@
 
   <% rsvp_question.rsvp_options.each do |rsvp_option| %>
 
-   <input type="radio" id="rsvp_questions_<%= rsvp_option.id %>" name="rsvp_questions[<%= rsvp_question.id %>]" value="<%= rsvp_option.id %>"<% if rsvp_question.is_required? %> required <% end %> />
+   <input type="radio" id="rsvp_questions_<%= rsvp_question.id %>_<%= rsvp_option.id %>" name="rsvp_questions[<%= rsvp_question.id %>]" value="<%= rsvp_option.id %>"<% if rsvp_question.is_required? %> required="required" <% end %> />
    <label for="rsvp_questions_<%= rsvp_option.id %>"><%= rsvp_option.option %></label>
 
   <% end %>

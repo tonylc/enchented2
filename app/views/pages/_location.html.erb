@@ -1,5 +1,5 @@
 <div class="adr"> 
-  <h3><em>A.</em><%= raw(location.name) %></h3> 
+  <h3><%= location_index(index) %><%= raw(location.name) %></h3> 
   <span class="street-address"><%= nice_address(location) %></span><br /> 
   <span class="locality"><%= location.city.capitalize %></span>,&nbsp;
   <span class="region"><%= location.state.short_name %></span><br /> 

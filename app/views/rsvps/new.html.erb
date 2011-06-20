@@ -31,14 +31,14 @@
                             <fieldset class="rsvp"> 
                                 <legend>Will you be able to attend?</legend> 
 
-				<input class="toggle" id="rsvp_can_attend_true" name="rsvp[can_attend]" type="radio" value="true" required /><label for="#">Yes</label> 
-				<input checked="checked" id="rsvp_can_attend_false" name="rsvp[can_attend]" type="radio" value="false" required /><label for="#">No</label> 
+				<input id="rsvp_can_attend_true" name="rsvp[can_attend]" type="radio" value="true" required="required" /><label for="#">Yes</label> 
+				<input checked="checked" id="rsvp_can_attend_false" name="rsvp[can_attend]" type="radio" value="false" required="required" /><label for="#">No</label> 
                             </fieldset> 
  
                             <label<%= error_for(@rsvp, :name) %> for="rsvp_name">Your Name</label> 
-			    <input id="rsvp_name" name="rsvp[name]" type="text" required /> <% if @rsvp.errors.on(:name) %><strong class="error">Required</strong><% end %>
+			    <input id="rsvp_name" name="rsvp[name]" type="text" required="required" /> <% if @rsvp.errors.on(:name) %><strong class="error">Required</strong><% end %>
 
-                            <section> 
+                            <section id="details"> 
  
                                 <h1>Details</h1> 
 
@@ -47,9 +47,7 @@
 				<%= render_rsvp_form_element(rsvp_question) %>
 				<% end %>
 
-<%# I AM HERE!! %> 
-
-                              <label class="optional" for="rsvp_additional_notes">Additional Notes <small>Optional</small></label> 
+                             <label class="optional" for="rsvp_additional_notes">Additional Notes <small>Optional</small></label> 
 			      <%= f.text_area :additional_notes, :placeholder => 'Please let us know if you have any special requests', :cols => 40, :rows => 4 %>
 
                             </section> 
@@ -66,10 +64,38 @@
 
 <% content_for :script do %>
 <script>
-	ct.placeholder();
-	$('#rsvp_name').blur(function() {
-		var rsvpErr = $(this).closest('label').find('.error');
-		rsvpErr[$(this).val().match(/^\s*$/) ? 'removeClass' : 'addClass']('off');
-	});
+
+  var required_fields;
+
+  $(document).ready(function() {
+  required_fields = new Array()
+  $('#rsvp_can_attend_true').change(function(){toggleCanAttend();});
+  $('#rsvp_can_attend_false').change(function(){toggleCanAttend();});
+  toggleCanAttend();
+  });
+
+  function toggleCanAttend(){
+ if($('#rsvp_can_attend_true').is(':checked')){
+
+ for (var i = 0; i < required_fields.length; i++){
+ $('#' +required_fields[i]).attr('required', true);
+  }
+
+  required_files = new Array();
+
+  }else{
+
+ $('#details :input').each(function (index, field) {
+  if($(this).attr('required') === 'required'){
+  required_fields.push($(this).attr('id'));
+  $(this).removeAttr('required');
+  }
+  });
+
+  }
+}
+
 </script>
+
+
 <% end %>

@@ -1,17 +1,24 @@
 <% add_to_js %w{http://maps.google.com/maps/api/js?sensor=false maps groups rsvp} %>
 
+<!-- INFO WIDGET --> 
+<% if group_type == WidgetGroup::TYPE_ACCORDION %>
+<h2><a href="#<%= widget_dom_id(widget_information) %>"><%= raw(widget_information.title) %></a></h2> 
+<% end %>
 <div id="<%= widget_dom_id(widget_information) %>" class="info"> 
 
+<% if group_type != WidgetGroup::TYPE_ACCORDION %>
   <div class="freeform">  
     <h3><%= raw(widget_information.title) %></h3> 
     <%= render_content(widget_information.description_content_text) unless widget_information.description_content_text.blank?  %>
   </div> 
+<% end %>
 
-  <% if widget_information.widget_content_count(:location) > 0 %>
+ <% if widget_information.widget_content_count(:location) > 0 %>
   <ol class="places"> 
-    <% widget_information.widget_contents_by_type(:location).each do |widget_content| %>
+    <% widget_information.widget_contents_by_type(:location).each_with_index do |widget_content, index| %>
+    <% index = nil if widget_information.widget_contents_by_type(:location).count < 2 %>
     <li> 
-      <%= render_content(widget_content.content) %>
+      <%= render_content(widget_content.content, index) %>
      </li> 
     <% end %>
   </ol> 
@@ -28,3 +35,4 @@
   <% end %>
  
 </div> 
+<!-- / INFO WIDGET --> 

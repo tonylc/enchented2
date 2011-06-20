@@ -49,7 +49,7 @@
 	<header>
 		<h1><%= raw(@wedding.name_html) %></h1>
 		<time datetime="<%= @wedding.date.strftime('%Y-%m-%d') %>"><%= nice_date(@wedding.date) %></time>
-		<em>&mdash; <%= nice_location(@wedding.location) %></em>
+		<em><%= nice_location(@wedding.location) %></em>
 	</header>
 
 	<nav>

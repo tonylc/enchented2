@@ -1,6 +1,6 @@
 class AddAustinSeeDoPage < ActiveRecord::Migration
   def self.up
-    p = Page.create(:url_name => "things_to_do", :wedding_id => 1, :title => "Things To Do", :navigation_order => 9, :class_name => "things_to_do", :show_page => true)
+    p = Page.create(:url_name => "things_to_do", :wedding_id => 1, :title => "Things To Do", :navigation_order => 9, :class_name => "things_to_do", :show_page => true, :show_title => false)
     texas = State.first
 
     wg = WidgetGroup.create(:title => "Food", :type_id => WidgetGroup::TYPE_ACCORDION)
@@ -23,7 +23,7 @@ class AddAustinSeeDoPage < ActiveRecord::Migration
     
     l1 = ContentLink.create(:name => "More Info",
                             :is_internal => false,
-                            :url => "http://www.ci.austin.tx.us/austinairport/default.htm")
+                            :url => "http://www.rudys.com/")
     
     WidgetContent.create(:widget => w1, :content => l1, :verticle_order => 2)
     
@@ -51,7 +51,7 @@ class AddAustinSeeDoPage < ActiveRecord::Migration
                             :is_internal => false,
                             :url => "http://yelp.com/chuys")
     
-    WidgetContent.create(:widget => w1, :content => l1, :verticle_order => 2)
+    WidgetContent.create(:widget => w2, :content => l1, :verticle_order => 2)
 
     PageWidget.create(:page_id => p.id, :widget => w2, :verticle_order => 2, :widget_group_id => wg.id)
 

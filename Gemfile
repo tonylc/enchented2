@@ -7,9 +7,9 @@ gem 'fleakr', '0.7.1'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-group :development, :test do
-  gem 'sqlite3-ruby', :require => 'sqlite3'
-end
+#group :development, :test do
+#  gem 'sqlite3-ruby', :require => 'sqlite3'
+#end
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -33,6 +33,4 @@ gem 'capistrano'
 #   gem 'webrat'
 # end
 
-group :production do 
-  gem 'mysql'
-end
+gem 'mysql'

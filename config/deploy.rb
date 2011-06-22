@@ -1,7 +1,7 @@
 set :user, 'deploy'
 set :application, "lovefordesign_cap"
 set :repository,  "git@github.com:LoveForDesign/websites.git"
-set :domain, 'staging.lovefordesing.com'
+set :domain, 'staging.lovefordesign.com'
 
 # If you aren't deploying to /u/apps/#{application} on the target
 # servers (which is the default), you can specify the actual location

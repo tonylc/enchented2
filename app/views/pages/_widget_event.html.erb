@@ -17,7 +17,7 @@
         <span class="street-address"><%= full_address(widget_event.location) %></span><br />
         <span class="locality"><%= widget_event.location.city.capitalize %></span>,&nbsp;
         <span class="region"><%= widget_event.location.state.short_name.upcase %></span><br /> 
-        <a class="directions" href="<%= widget_event.location.map_url %>">Get Directions</a> 
+        <a class="directions" href="<%= widget_event.location.map_url %>" target=_blank>Get Directions</a> 
       </div> 
       <div class="geo"> 
         <span class="latitude"><%= widget_event.location.latitude %></span> 

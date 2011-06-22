@@ -40,6 +40,9 @@ TEXT
 
     w = WidgetEvent.find(3)
     w.update_attribute(:description, "The outdoor ceremony will be followed by cocktail hour and a bbq dinner reception.")
+
+    Location.find(3).update_attribute(:map_url, "http://maps.google.com/maps?q=Austin-Bergstrom+International+Airport+(AUS)&hl=en&sll=37.0625,-95.677068&sspn=45.197878,93.076172&z=14")
+    Location.find(4).update_attribute(:map_url, "http://maps.google.com/maps?q=Omni+Austin+Downtown+Hotel&hl=en&ll=30.269298,-97.740297&spn=0.011638,0.022724&sll=30.269048,-97.740289&sspn=0.012102,0.022724&z=16&iwloc=A")
   end
 
   def self.down

@@ -8,7 +8,7 @@
         min-width: 980px;
         margin: 0 0 20px 0;
         padding: 0;
-        background: #c7af82 url(../images/skin/body.jpg);
+        background: #c7af82 url(/images/skin/body.jpg);
 
     }
 
@@ -16,18 +16,18 @@
 /* Page */
 
 
-    section#page {
+    div#page {
 
         width: 500px;
         margin: 0 auto;
-        padding: 5px;
-        background: url(../images/skin/border-top.png), url(../images/skin/border-bottom.png), url(../images/skin/border-left.png), url(../images/skin/border-right.png);
+				padding: 5px;
+        background: url(/images/skin/border-top.png), url(/images/skin/border-bottom.png), url(/images/skin/border-left.png), url(/images/skin/border-right.png);
         background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
         background-position: top left, bottom left, top left, top right;
-
+				display: block;
     }
 
-    section#page:after, section#page > div > *:after {
+    div#page:after, div#page > div > *:after {
 
         content: ".";
         display: block;
@@ -37,10 +37,10 @@
 
     }
 
-    section#page > div {
+    div#page > div {
 
-        width: 100%;
-        float: left;
-        background: url(../images/skin/background-page.png) repeat, top left;
+        width: 500px;
+				float: left;
+        background: url(/images/skin/background-page.png) repeat top left;
 
     }

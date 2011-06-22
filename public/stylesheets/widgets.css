@@ -3,7 +3,7 @@
 ----------------------------------------------------------------------------- */
 
 
-    section#page > div > * > h1, section#page > div > form > * > h1 {
+    div#page > div > * > h1, div#page > div > form > * > h1 {
 
         margin: 0 0 20px 0;
         color: #da8b91;
@@ -13,24 +13,24 @@
 
     }
 
-    section#page > div > * {
+    div#page > div > * {
 
         float: left;
         width: 460px;
         margin: 20px;
         padding: 25px 5px 25px 5px;
-        background: url(../images/skin/thread.png), url(../images/skin/thread.png), url(../images/skin/widget.png);
+        background: url(/images/skin/thread.png), url(/images/skin/thread.png), url(/images/skin/widget.png);
         background-repeat: repeat-x, repeat-x, repeat;
         background-position: top center, bottom center, top left;
         color: #625a52;
 
     }
 
-    section#page > div > section + section {
+    div#page > div > section + section {
 
         margin-top: 0;
         padding-top: 0;
-        background: url(../images/skin/thread.png), url(../images/skin/widget.png);
+        background: url(/images/skin/thread.png), url(/images/skin/widget.png);
         background-repeat: repeat-x, repeat;
         background-position: bottom center, top left;
 

@@ -35,7 +35,11 @@
     */
     -->
 
-	<%= stylesheet_link_tag ['master',@page_css].flatten.uniq.compact %>
+    <!--[if lte IE 8]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<%= stylesheet_link_tag ['master','layout','global','groups','patterns','widgets',@page_css].flatten.uniq.compact %>
 
 	<%= yield :head %>
 

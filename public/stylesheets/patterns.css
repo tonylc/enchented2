@@ -364,6 +364,7 @@
         padding: 0;
         background: url(../images/skin/thread.png) repeat-x bottom left;
         color: transparent;
+	clear: both;
 
     }
 

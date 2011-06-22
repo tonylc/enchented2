@@ -387,6 +387,8 @@
 
     }
 
+		#wedding_party .freeform figure { width: 175px; }
+
     .freeform img {
 
         margin-bottom: 20px;

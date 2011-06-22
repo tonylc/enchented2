@@ -1,5 +1,5 @@
 set :user, 'deploy'
-set :application, "lovefordesign_cap"
+set :application, "lfd"
 set :repository,  "git@github.com:LoveForDesign/websites.git"
 set :domain, 'staging.lovefordesign.com'
 

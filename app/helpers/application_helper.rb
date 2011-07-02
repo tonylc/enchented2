@@ -153,10 +153,6 @@ module ApplicationHelper
   end
 
   def custom_page_path(page)
-    # haxing sorry
-    if page.is_static
-      return '/' + page.url_name
-    end
     if @custom_domain
       readable_page_url(:page_name => page.url_name, :only_path => true)
     else

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110622084246) do
+ActiveRecord::Schema.define(:version => 20110702183548) do
 
   create_table "content_links", :force => true do |t|
     t.string  "name"
@@ -55,13 +55,11 @@ ActiveRecord::Schema.define(:version => 20110622084246) do
     t.string  "url_name"
     t.integer "wedding_id"
     t.string  "title"
-    t.string  "class_name"
     t.integer "navigation_order"
     t.boolean "is_locked",        :default => false
     t.boolean "is_home",          :default => false
     t.boolean "show_title",       :default => true
     t.boolean "show_page",        :default => false, :null => false
-    t.boolean "is_static",        :default => false
   end
 
   create_table "rsvp_options", :force => true do |t|
@@ -146,10 +144,8 @@ ActiveRecord::Schema.define(:version => 20110622084246) do
   end
 
   create_table "widget_albums", :force => true do |t|
-    t.integer  "service_provider"
-    t.string   "gallery_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer "service_provider"
+    t.string  "gallery_id"
   end
 
   create_table "widget_contents", :force => true do |t|
@@ -165,17 +161,12 @@ ActiveRecord::Schema.define(:version => 20110622084246) do
     t.string   "title"
     t.datetime "start_time"
     t.datetime "end_time"
-    t.boolean  "is_rsvp_event", :default => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.string   "description"
   end
 
   create_table "widget_galleries", :force => true do |t|
-    t.string   "title"
-    t.text     "src"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "title"
+    t.text   "src"
   end
 
   create_table "widget_group_widgets", :force => true do |t|

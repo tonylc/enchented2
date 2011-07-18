@@ -11,6 +11,7 @@ class PagesController < ApplicationController
     respond_to do |format|
 
       format.html {
+        render :page => @page, :layout => !request.xhr?
       }
       format.pjax {
         render :page => @page, :layout => nil

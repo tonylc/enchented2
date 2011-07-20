@@ -3,7 +3,7 @@
 ----------------------------------------------------------------------------- */
 
 
-    $(window).load(function() {
+    function maps() {
 
         $('ol.places').each(function() {
 
@@ -91,4 +91,6 @@
 
         });
 
-    });
+    }
+
+    $(window).load(maps);

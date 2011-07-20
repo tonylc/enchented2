@@ -3,7 +3,7 @@
 ----------------------------------------------------------------------------- */
 
 
-    $(window).load(function() {
+    function rsvp() {
 
         function toggleOptional(event) {
 
@@ -33,4 +33,6 @@
         $('fieldset.rsvp input').each(toggleDetails);
         $('fieldset.rsvp input').change(toggleDetails);
 
-    });
+    }
+
+    $(window).load(rsvp);

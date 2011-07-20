@@ -30,7 +30,7 @@
 
         margin-top: 0;
         padding-top: 0;
-        background: url(/images/skin/thread.png), url(/images/skin/widget.png);
+        background: url(/images/skin/thread.png);
         background-repeat: repeat-x, repeat;
         background-position: bottom center, top left;
 

@@ -72,10 +72,10 @@
     </div>
   </div>
 
-  <script type="text/javascript" src="/javascripts/jquery/jquery-1.6.min.js"></script> 
-  <script type="text/javascript" src="/javascripts/jquery/plugins/jquery-ui-1.8.13.min.js"></script> 
-  <%= javascript_include_tag [@page_js].flatten.uniq.compact %>
-  <%= yield :script %>
+    <%= javascript_include_tag "jquery/jquery-1.6.min", "jquery/plugins/jquery-ui-1.8.13.min", "jquery/plugins/jquery-pjax" %>
+    <%= javascript_include_tag [@page_js].flatten.uniq.compact %>
+    <%= yield :script %>
+    <%= javascript_include_tag "navigation" %>
 
 </body>
 </html>

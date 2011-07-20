@@ -7,14 +7,14 @@ class PagesController < ApplicationController
       @page = Page.find(params[:id])
     end
 
-
     respond_to do |format|
 
       format.html {
-        render :page => @page, :layout => !request.xhr?
-      }
-      format.pjax {
-        render :page => @page, :layout => nil
+        if request.headers['X-PJAX']
+          render :page => @page, :layout => "pjax"
+        else
+          render :page => @page
+        end
       }
       format.json {
         render :json => page.to_json(:except => [:is_locked],
